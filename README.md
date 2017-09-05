@@ -1,2 +1,2 @@
 # provenanceindex
-Repository for the project to rebuild the Getty Provenance Index as a Linked Data Application
+Repository for the public user interface as part of the new Getty Provenance Index Linked Data Application.
