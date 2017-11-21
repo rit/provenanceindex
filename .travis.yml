@@ -1,9 +1,18 @@
 ---
 matrix:
   include:
-    - language: node_js
+    - dist: trusty
+      language: node_js
       node_js: 8
-      before_script:
+      addons:
+        chrome: stable
+      before_install:
         - cd gpi/frontend/web
+      install:
+        - npm install
+      before_script:
+        - "export DISPLAY=:99.0"
+        - "sh -e /etc/init.d/xvfb start"
+        - sleep 3  # give xvfb some time to start
       script:
         - npm test
