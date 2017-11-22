@@ -12,7 +12,8 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "report-coverage": "codecov",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
+    "fix": "eslint --fix --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
     "vue": "^2.5.2",
