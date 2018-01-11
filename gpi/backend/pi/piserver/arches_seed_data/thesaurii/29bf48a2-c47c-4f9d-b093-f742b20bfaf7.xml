@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <skos:Concept rdf:about="http://www.archesproject.org/1376e953-5be8-4781-b3cd-e1265d918094">
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/88438148-03b1-4ca0-b53c-0df7334a8a59">
+        <skos:prefLabel xml:lang="de">{"id": "c4f2e4bf-27ae-44e6-8201-88ec3bf64c24", "value": "Danksagung"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "e9e9c443-573d-4d02-be9f-6275df3b89a4", "value": "Schriftliche Anerkennung f\u00fcr Handlungen oder Leistungen."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "dbd772a4-0c87-46cf-8e1e-58d4e1792067", "value": "acknowledgments"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "0aee41cf-4505-40d7-a359-455d0fb59c6a", "value": "Written recognitions of acts or achievements."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/ecb8ac2c-ee93-413a-b725-af5bee641f18">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "1550ea80-af06-43ba-84e0-a6e3b3a53b4e", "value": "Words, texts, lettering, or symbols marked on a work, including texts, legends, documentation notes, or commemoration. For standardized symbols or notations on objects that convey official information, use \"marks (symbols).\""}</skos:scopeNote>
+        <skos:prefLabel xml:lang="de">{"id": "99b7816b-4ec6-4500-83db-c89b396b5bd1", "value": "Inschrift"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "36cebc15-22d6-4c2d-807d-d9259943570d", "value": "Beschriftung, mit der etwas markiert wird, insbesondere zur Dokumentation oder zum Gedenken. Bei einer Drucksache ist dies eine spezielle, in Buchstaben aufgedruckte Information, die f\u00fcr gew\u00f6hnlich nicht Teil eines gr\u00f6\u00dferen Textes ist. Bez\u00fcglich antiker Texte werden damit die meisten erhaltenen schriftlichen \u00c4u\u00dferungen jeder L\u00e4nge, au\u00dfer Papyri, bezeichnet. F\u00fcr standardisierte Symbole oder Bezeichnungen auf Objekten, die wichtige Informationen enthalten, siehe \"Zeichen (Symbol)\"."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "38d7fb63-8be5-4090-80da-593dc6537442", "value": "inscriptions"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/242b765a-09ff-4890-97c8-7013780120a2">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="de">{"id": "c3d9d0f0-86e7-4f46-8a22-52f889110540", "value": "Biografie (Dokument)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "a40af911-f313-4fcc-ab1a-a40774080c0c", "value": "Documents that are written accounts of the lives of individuals. For the genre, prefer \"biography (genre).\""}</skos:scopeNote>
+        <skos:scopeNote xml:lang="de">{"id": "4ea72a85-82ae-4738-afb2-9968b310d60a", "value": "Schriftlicher Bericht \u00fcber das Leben einer Person."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "66990cc1-96b8-483b-98e6-6639df7fd226", "value": "biographies (documents)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:inScheme>
+      <skos:ConceptScheme rdf:about="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7">
+        <skos:hasTopConcept rdf:resource="http://www.archesproject.org/47fbc0e8-372d-4dce-9d94-5050d10e0143"/>
+        <dcterms:title xml:lang="en-US">{"id": "8d6f23ef-8fac-4b92-867d-779d903d079a", "value": "AAT"}</dcterms:title>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/a8750e01-651f-4c69-8048-354f553cb5cc">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "ee1603b8-0bd4-42d3-ac2b-fa637c786a6d", "value": "provenance"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">{"id": "946943ec-1cde-4ddc-baad-4db7f8827ea4", "value": "provenance"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "21b88f60-ecb3-4fcb-94b3-fa5327423d2c", "value": "The history of the ownership and transmission of an object, including previous locations of a work. "}</skos:scopeNote>
+        <skos:prefLabel xml:lang="de">{"id": "374b314b-f1a1-4f54-8573-04f13021bae2", "value": "Provenienz"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/20cacb1e-444d-46ae-b439-6dfa1bee820c">
+        <skos:prefLabel xml:lang="en">{"id": "5eefa07d-3bf0-4109-9964-2a8f8d7595db", "value": "editions"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">{"id": "10748946-db79-4927-be2e-b660365dbe4e", "value": "Auflage (editions)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "900c8ff1-e62b-4308-9511-4f0ee98da726", "value": "Groups of multiples of one work issued together, such as of a book, print, photograph, or cast sculpture. All copies of a book, print, etc., produced from substantially the same master, and issued at one time are part of the same edition."}</skos:scopeNote>
+        <skos:scopeNote xml:lang="de">{"id": "4796e91e-66ee-4b06-a22c-c68e61fb2344", "value": "Gesamtheit der Reproduktionen eines einzigen Werks, beispielsweise eines Buches, Drucks, einer Fotografie oder einer gegossenen Skulptur. Alle Kopien eines Buches, Drucks etc. werden im Wesentlichen von der gleichen Vorlage erstellt und zur gleichen Zeit als Teil der gleichen Auflage ver\u00f6ffentlicht."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/93bb100d-d6b0-4c86-897e-f2e25f226831">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "2f7e65ca-eb7f-436b-9470-2ed8c8c3b966", "value": "Social science concepts related to law."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "e9eddc85-9db2-4902-b73f-7d8ebe96f821", "value": "legal concepts"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/b8824327-3aae-42d5-bf08-3b007eafd66d">
+        <skos:prefLabel xml:lang="en">{"id": "9fd51182-dd88-4311-8a04-a7222d95791b", "value": "descriptions (documents)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "487795fb-604f-4f5a-bae2-8304819cb77c", "value": "Written, digital, spoken, or signed representations of the attributes or qualities of something or someone."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/9bc45b0e-146e-451a-bedd-3446f0ff2032">
+        <skos:scopeNote xml:lang="en">{"id": "2188d6c8-aa11-42ae-bc01-dfd4fcc681d5", "value": "Measurable or spatial extent of any kind, such as length, breadth, thickness, area, volume, measure, magnitude, or size."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "6b2d428b-4085-49ad-ae42-32170410fe56", "value": "dimensions"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/842ffb79-e646-4081-a558-6d119de81e3d">
+        <skos:prefLabel xml:lang="fr">{"id": "e708afda-b640-48cf-8374-6496fafac989", "value": "mat\u00e9riaux (materials concept)"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "35321da6-2fd0-494c-945c-815a556750f9", "value": "The matter or substance from which a thing is or may be made; the tangible substance that goes into the makeup of an art work or other physical object. Physical substances, either naturally or synthetically derived, range from specific materials to types of material. Materials may be designated by their properties, or by function or form. Included are raw materials and processed materials."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "be57063f-5318-4862-b38a-152220e342b1", "value": "materials (substances)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:prefLabel xml:lang="en-US">{"id": "82fad05b-6049-4bb4-a89c-f85657796177", "value": "Linguistic Object Types"}</skos:prefLabel>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/5eacc8e6-900b-4633-9486-1208af310737">
+        <skos:scopeNote xml:lang="de">{"id": "8572fb30-1598-4f90-b0fd-99eb619c58f8", "value": "Der eigenh\u00e4ndig geschriebene Name einer Person."}</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">{"id": "ffc30a5b-3661-48a0-8cd3-e3a23aab37c7", "value": "Persons' names written in their own hand."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="de">{"id": "7e0e5e71-8a18-4e0c-8b65-c60a54c21c3e", "value": "Unterschrift"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "344ef942-0945-463f-9897-68980015fd4a", "value": "signatures (names)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/3ff1a197-5d33-4891-afd8-8f3c3d62fc04">
+    <skos:scopeNote xml:lang="en">{"id": "8363e253-a7a2-4eb9-b2da-52689e8df652", "value": "Numeric, alphanumeric, or other identifying codes of various types assigned to an art object, book, other item, or group of works by the repository that holds that item or group. Any item or group in a repository may have multiple types of repository numbers. For numbers specifically assigned at the time of accession by a repository, prefer \"accession numbers.\""}</skos:scopeNote>
+    <skos:prefLabel xml:lang="en">{"id": "49f31840-7f78-44d6-8b92-aec1ad5983b8", "value": "repository numbers"}</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/9ef499e9-e9b6-4eee-a8fa-14009b340250">
+    <skos:scopeNote xml:lang="en">{"id": "20fda276-5f76-489d-8eda-4345759c6afd", "value": "Refers to the lowest or deepest parts of objects. For the adjective describing the location of something at or near the bottom of something, use \"bottom (positional attribute).\""}</skos:scopeNote>
+    <skos:prefLabel xml:lang="en">{"id": "bbf4ca0d-df2d-4d38-8f31-8a4dadbbf48d", "value": "bottoms (object portions)"}</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:scopeNote xml:lang="de">{"id": "d1e58514-959f-4353-a890-e71863885f58", "value": "Bezieht sich auf den niedrigsten oder tiefsten Teil eines Objektes. Das Adjektiv, das die Lage von etwas beschreibt, das auf oder nahe dem Boden von etwas ist, lautet \"unten\"."}</skos:scopeNote>
+    <skos:prefLabel xml:lang="de">{"id": "2f6afc30-d2f0-4dec-b57d-e740f21aec33", "value": "Boden (Objektabschnitt)"}</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/d03881ef-3b9c-4ed4-886a-0553bf8ec8ff">
+    <skos:prefLabel xml:lang="en">{"id": "2e5b73c0-29f0-4635-8494-9cfd1a81dc0f", "value": "textiles (visual works)"}</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:prefLabel xml:lang="fr">{"id": "662dbc44-d2ab-414f-b96c-78b8f87432e5", "value": "textiles"}</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">{"id": "0f23e68f-3159-4b3c-a3e9-9c59ffcbe3fb", "value": "General term for carpets, fabrics, costume, or other works made of textile materials, which are natural or synthetic fibers created by weaving, felting, knotting, twining, or otherwise processing. For works of art or high craft that employ textile as a medium, prefer \"textile art (visual works).\""}</skos:scopeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/7cfd845c-8830-456d-819d-48fe9a566418">
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:prefLabel xml:lang="en-US">{"id": "77950e76-5291-4b3f-9f36-d06082de05cb", "value": "Identifier Types"}</skos:prefLabel>
+    <skos:narrower rdf:resource="http://www.archesproject.org/3ff1a197-5d33-4891-afd8-8f3c3d62fc04"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/b4851013-5b32-4c8e-a48a-e78af856e301">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "cf2ab972-a39e-4002-be0f-84b834d8d01b", "value": "Numbers that firms such as commercial art dealers or galleries may assign to objects when taking them in to stock. These are typically written or affixed on the objects themselves, and can be used to associate particular objects with entries in a stock or sales book. These numbers are not necessarily unique, and objects may have multiple stock numbers."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "a9112232-621a-4c79-aee4-9546aa6ae0f6", "value": "stock numbers"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/019b8bc4-39c0-4b66-beaa-2df1079a7cd9">
+        <skos:scopeNote xml:lang="en">{"id": "f2eb4152-7448-4c2c-a55e-1fade711c4fb", "value": "Numeric, alphanumeric, or other identifying codes assigned when an art object, book, or other item enters the collection of a museum, library, or other repository. Such codes are unique within the set of codes, and specifically identify the particular item at hand. The numbers may be marked on the objects or not."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "15cf1fa2-d8b0-40e7-a0a3-0b28defcc6d6", "value": "accession numbers"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/e4fea48d-399e-45d1-906d-c5d4fbcb534c">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "365157f6-ff1b-42f2-ac98-eba209d0e49f", "value": "Distinguishing identification numbers or codes assigned to either a plot of land or a batch of items, such as at an auction."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "68621926-d5db-4493-bf63-70297c296e0d", "value": "lot numbers"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/db30d6e7-2fe6-4e79-b8bd-d232e7caec97">
+    <skos:prefLabel xml:lang="en">{"id": "7ea5bee5-7d1f-4964-b164-9bc1e43816e9", "value": "prefixes (name additions)"}</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:scopeNote xml:lang="en">{"id": "708a5f66-99cd-4ff6-90e1-59fa9f14252a", "value": "Titles of courtesy, professional titles, military rank, adjectives, or other words used before a personal name. Examples are words to indicate gender, marital status, social position, or included for another purpose, such as the following words and abbreviations: Mr., Mrs., Miss, Ms., Dr., Sir, and Rev."}</skos:scopeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/f43b5a5c-14b6-4442-bd9f-513ba132f6c2">
+    <skos:prefLabel xml:lang="de">{"id": "e3904437-e5a9-49a3-b2c4-ae9f2def8327", "value": "Installation (visuelles Werk)"}</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:prefLabel xml:lang="en">{"id": "b74a4add-c5bc-477c-b6de-8c86892a1731", "value": "installations (visual works)"}</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">{"id": "72fb1acb-77cc-4479-88d7-aeeed2af70de", "value": "Works dating from the 1960s or later that use their exhibition space as part of their design. Demanding a viewer's active engagement, installations are often created by artists in direct opposition to the notion of permanent artwork, or art as a commodity."}</skos:scopeNote>
+    <skos:prefLabel xml:lang="fr">{"id": "694ff146-361c-40f2-819f-d79706e1e980", "value": "installations (visual works)"}</skos:prefLabel>
+    <skos:scopeNote xml:lang="de">{"id": "01527c09-af1c-43e5-91ed-b4ef4f4fa8c8", "value": "Werk, das aus den 1960er Jahren und sp\u00e4ter datiert, das seinen Ausstellungsraum als Teil seiner Gestaltung nutzt. Aktives Engagement eines Betrachters fordernd, sind Installationen oft vom K\u00fcnstler im direkten Gegensatz zu der Vorstellung eines dauerhaften Kunstwerks oder Kunst als Ware geschaffen."}</skos:scopeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/dd18d680-03ad-4a8c-aa8e-d5bdcd6d9b2c">
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/217fc9f6-b993-489e-a8d9-6ca1eb451eb1">
+        <skos:scopeNote xml:lang="en">{"id": "068f6f42-e868-4fa5-84c6-a8bff2066a75", "value": "Indicates the highest or loftiest parts of objects. For the adjective describing the location of something at or near the top of something, use \"top\" from the Attributes and Properties hierarchy."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="de">{"id": "f4083263-2e66-41ff-8346-dcf06e284c77", "value": "Spitze (Teilbereich)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "c62979ce-5caa-456f-80e6-098d2f405c1e", "value": "Bezeichnet das h\u00f6chste oder erhabene Teil eines Objektes. Als Adjektiv zur Beschreibung der Lage von etwas, an oder nahe der Spitze von etwas, verwenden Sie \"Ende\" aus der Hierachie der Attribute und Eigenschaften."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "2c755b81-b052-486c-a921-d14e00ac3f09", "value": "tops (object portions)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/4d607c8d-9e68-4d3b-9867-653dbeb9850b">
+        <skos:prefLabel xml:lang="en">{"id": "60d4aa11-cc5a-4840-99a4-2a25ae1baffb", "value": "picture frames"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "517a08c8-b811-456a-84fa-2b0c61c40257", "value": "Framing for two-dimensional visual works; picture frames may or many not use glass to protect the work, depending upon the type of work framed. "}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/0a3e1e39-507b-4fa8-902c-3108258cf4ba">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "f75b179e-6768-446c-b29c-f6b7661719a3", "value": "panel (wood by form)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "bb9b9266-da41-4f05-b8c1-fd6818159d86", "value": "Wood in the form of broad, thin, flat or sometimes curved pieces that serve as a support for media in visual works; examples are paintings on wood. In architecture and other constructive arts, use \"panels (surface components\" to refer to a panel, whether of wood or another material, that is typically a compartment of a surface either sunken below or raised above the general level, and set in a molding or other border, as in a frame, sometimes of different color or material."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/3209ec3b-3e12-4e96-bf57-9814e8ac211f">
+        <skos:prefLabel xml:lang="de">{"id": "01f561a8-df17-4187-a080-f16c18f4e1cd", "value": "R\u00fccken (Objektansicht)"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">{"id": "2174cb04-4018-4bab-98e7-f584a88e878f", "value": "backs (object portions)"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "4898c686-abb6-431b-b77c-31bc42386a90", "value": "Surfaces or portions of objects that are opposite to those regarded as fronts or to the most important or useful surfaces. For the adjective describing the location of something at or near the back of something, use \"rear.\" For the parts of seating furniture that supports sitters' backs, use \"backs (furniture components).\""}</skos:scopeNote>
+        <skos:scopeNote xml:lang="de">{"id": "7b2f5c09-34d8-4035-81dc-d8dfb62e2b51", "value": "Fl\u00e4che oder Teil eines Objektes, das im Gegensatz zu jener steht, die als Front bezeichnet oder als die wichtigste oder n\u00fctzlichste Oberfl\u00e4che angesehen wird. Das Adjektiv, das die Lage von etwas beschreibt, das an oder in der N\u00e4he der R\u00fcckseite von etwas ist, lautet \"r\u00fcckw\u00e4rtig\". F\u00fcr den Teil eines Sitzm\u00f6bels, der den R\u00fccken des Sitzenden st\u00fctzt, siehe \"Lehne\"."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:prefLabel xml:lang="en-US">{"id": "eecb69e9-f3fe-454a-ac05-003e9df9ce83", "value": "Object Part Types"}</skos:prefLabel>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/65d8c794-1e72-4446-93f9-133dab2ac0af">
+        <skos:prefLabel xml:lang="en">{"id": "29b4f31d-3891-4e69-9b33-8c1867978c3d", "value": "supports (artists' materials)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "8fe64c21-0784-4466-8c0c-a7dde759c7a2", "value": "Materials to which media are applied to create an image or design, or materials to which a work is mounted. For example, with paintings, drawings, prints, or photographs, the media would be applied to the surface of a support such as paper, wood panel, canvas, or glass in order to create the image. Used typically for two-dimensional works, although the concept may apply to any work. To distinguish between \"primary supports\" and \"secondary supports,\" use the appropriate more specific terms."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/63d87236-06ed-4108-91b1-26a4f81dcaf0">
+        <skos:prefLabel xml:lang="en">{"id": "5548da24-f909-47be-8f20-7418a92110e3", "value": "mounts (framing and mounting equipment)"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "c544155b-64f1-4189-b631-7cf7feffb35f", "value": "Secondary surfaces on which works, often drawings, photographs, or other works on paper supports, are pasted, taped, or otherwise attached. "}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/4c763268-4ee9-45bb-af58-88693f24240e">
+        <skos:prefLabel xml:lang="de">{"id": "24db8eb4-26b3-4d93-a333-7134bba7a9d8", "value": "Vorderseite (Objektabschnitt)"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">{"id": "842f0f42-d9e1-4523-9af5-c7045573a779", "value": "fronts (object portions)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "dde519eb-bf25-4c3b-b744-1cf37a739fdd", "value": "Surfaces or portions of objects that face forward or are regarded as the most important or useful. For the adjective describing the location of something at or near the front of something, use \"front\" from the Attributes and Properties hierarchy."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="de">{"id": "e92e90bd-8a6f-4070-9e7d-f56298a9d341", "value": "Oberfl\u00e4che oder Teil eines Objektes, das nach vorne zeigt oder als die wichtigste oder n\u00fctzlichste angesehen wird. F\u00fcr das Adjektiv, das die Lage von etwas beschreibt, das an oder in der N\u00e4he der Vorderseite von etwas ist, ist \"Vorderseite\" aus der Attribute- und Eigenschaftshierarchie zu verwenden."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower rdf:resource="http://www.archesproject.org/9ef499e9-e9b6-4eee-a8fa-14009b340250"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/738c0883-fe5b-4b42-80aa-65ca9adecb9e">
+        <skos:prefLabel xml:lang="en">{"id": "4e520481-a12f-41c9-abd7-89b4c9a656d7", "value": "sides (lateral object portions)"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="de">{"id": "74e5e143-66c1-40d0-8b54-fa3d24ed32f5", "value": "Die Oberfl\u00e4che eines Gegenstandes, die nicht Vorder-, R\u00fcck-, Ober- oder Unterseite ist. F\u00fcr das Adjektiv, das die Lage von etwas an oder nahe der Seite von etwas beschreibt, siehe \"Seite\" der Attribute- und Eigenschaftenhierarchie."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="de">{"id": "ff3fd596-f702-49e3-8153-94e346edf1b5", "value": "Seite (Objektkomponente)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "02316bb0-81c7-4c2a-b742-8251d60ab630", "value": "Surfaces of objects that are not fronts, backs, tops, or bottoms, but located on lateral ends. For the adjective describing the location of something at or near the side of something, use \"side\" from the Attributes and Properties hierarchy."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/646e3264-0474-4523-97cf-3c72b72795a8">
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/41cca0e7-6716-48c4-90d6-48397e52c34f">
+        <skos:prefLabel xml:lang="fr">{"id": "b2613a53-06c1-4425-9712-8e6952f5a7f6", "value": "dessins"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "1e742a6a-636b-4a93-a314-72d8d710168c", "value": "Visuelles Werk, das durch Zeichnen hergestellt wurde, was das Auftragen von Linien auf eine Oberfl\u00e4che ist, oft Papier, unter Verwendung eines Bleistifts, einer Feder, Kreide oder eines anderen Zeichenmittels, mit dem Schwerpunkt eher auf der Darstellung der Form als der Betonung der Farbe. Der Begriff wird oft allgemein definiert und auch auf computergenerierte Bilder angewendet.\t\t\t\r\n"}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "7dd08538-0162-4192-87f8-dfcbb7074deb", "value": "drawings (visual works)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "abb09b29-294d-421d-ab76-a6cfc087b918", "value": "Visual works produced by drawing, which is the application of lines on a surface, often paper, by using a pencil, pen, chalk, or some other tracing instrument to focus on the delineation of form rather than the application of color. This term is often defined broadly to refer to computer-generated images as well."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/68066b80-6092-4b75-bf5f-30124dcdc5ba">
+        <skos:prefLabel xml:lang="en">{"id": "512fa6ee-7104-4e08-a398-c4ddde92d72c", "value": "carvings (visual works)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "48ae53e6-e604-4a28-8e00-2044e0d4aa3f", "value": "Refers to works executed by cutting a figure or design out of a solid material such as stone or wood. It typically refers to works that are relatively small in size, are part of a larger work, or are not considered art. For large and medium-sized three-dimensional works of art, use the broader term \"sculpture\" or another appropriate term."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="de">{"id": "4a81a92e-b51d-4aee-aaef-adf14d81cb34", "value": "Bezeichnet eine durch Schnitzen aus einem harten Material wie Stein oder Holz ausgef\u00fchrte Figur oder ein Muster. Meist bezogen auf relativ kleinformatige Arbeiten, die Teil einer gr\u00f6\u00dferen Arbeit sind oder nicht als Kunst angesehen. F\u00fcr gro\u00dfe und mittelgro\u00dfe dreidimensionale Kunstwerke wird der umfassendere Term \u201cSkulptur\u201d oder ein anderer passender Begriff verwendet."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="de">{"id": "6aa5a753-21da-4177-9df5-6672fd332ba7", "value": "Schnitzerei (Schnitzkunst)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower rdf:resource="http://www.archesproject.org/d03881ef-3b9c-4ed4-886a-0553bf8ec8ff"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/3355290d-eea4-4a5b-8589-06f0fa0f8f35">
+        <skos:prefLabel xml:lang="de">{"id": "0f64ae31-e98c-4d75-a7ce-6b8007e32084", "value": "Skulptur"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">{"id": "c3ac2099-44c3-4fcf-a6d2-01c2eccb7735", "value": "sculpture (\u0153uvres visuelles)"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">{"id": "7cc26b7e-354d-4b52-b45f-24999e9afbd4", "value": "sculpture (visual works)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "7697e52d-09a2-41d8-9540-b7903ed666bf", "value": "Three-dimensional works of art in which images and forms are produced in relief, in intaglio, or in the round. The term refers particularly to art works created by carving or engraving a hard material, by molding or casting a malleable material (which usually then hardens), or by assembling parts to create a three-dimensional object. It is typically used to refer to large or medium-sized objects made of stone, wood, bronze, or another metal. Small objects are typically referred to as \"carvings\" or another appropriate term. \"Sculpture\" refers to works that represent tangible beings, objects, or groups of objects, or are abstract works that have defined edges and boundaries and can be measured. As three-dimensional works become more diffused in space or time, or less tangible, use appropriate specific terms, such as \"mail art\" or \"environmental art.\" "}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="de">{"id": "06736201-0858-4a76-8530-82d06f38d29b", "value": "Dreidimensionales Kunstwerk, in dem Bilder und Formen im Relief oder vollplastisch dargestellt werden. Der Begriff bezeichnet Werke, die durch Schnitzen oder Gravieren eines harten Materials, durch Gie\u00dfen oder Formen weichen Materials (in der Regel sp\u00e4ter erh\u00e4rtend) oder durch Montieren verschiedener Teile entstehen. \u00dcblichweise wird der Begriff f\u00fcr gro\u00df oder mittelgro\u00df dimensionierte Objekte aus Stein, Holz, Bronze oder anderem Metall verwendet. Kleinere Objekte werden in der Regel als \"Environmens\" oder mit anderen, geeigneten Begriffen bezeichnet. \"Skulptur\" bezieht sich auf Werke, die fassbare Wesen, Objekte oder Gruppen von Objekten darstellen oder auf abstrakte Werke, die definerte, messbare Kanten und Ausdehnungen besitzen. Dreidimensionale Werke, die unbestimmter im Raum und Zeit oder weniger greifbar sind, sollten mit entsprechend spezifische Begriffen wie \"Mail Art\" oder \"Landart\" bezeichnet werden."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:prefLabel xml:lang="en-US">{"id": "829f563d-1863-45cd-a418-54c17b8dc837", "value": "Object Types"}</skos:prefLabel>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/c2cbb224-c42b-4ea9-9da0-ab7b28e6250c">
+        <skos:scopeNote xml:lang="en">{"id": "26d08673-0f62-4e91-acbb-e6dc35b94357", "value": "Paintings on a very small scale. The term is often applied specifically to small scenes in illuminated manuscripts or to portraits on vellum or ivory that were popular in Europe and America from the Renaissance into the 19th century. For paintings in manuscripts, the term \"illuminations\" may also be appropriate. "}</skos:scopeNote>
+        <skos:scopeNote xml:lang="de">{"id": "82777a19-4fb1-4361-a63e-45fe6ff07db0", "value": "Gem\u00e4lde in einem sehr kleinen Ma\u00dfstab. Der Begriff wird oft speziell auf kleine Szenen in illuminierten Handschriften angewandt oder auf Portr\u00e4ts auf Pergament oder Elfenbein, die in Europa und Amerika von der Renaissance bis ins 19. Jahrhundert popul\u00e4r waren. F\u00fcr Malereien in Handschriften ist auch der Begriff \"Buchmalerei\" geeignet."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "c6f78b00-ef3c-4be8-aaa4-647b3875152c", "value": "miniatures (paintings)"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">{"id": "123f8547-f6dd-4181-a1f8-dff1a147eab2", "value": "Miniatur (painting)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/871138c4-8e21-4bc6-bcdf-a989cfc67144">
+        <skos:prefLabel xml:lang="fr">{"id": "a6953a6d-7366-4c66-9e19-393a5b3e1f48", "value": "photographies"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en"><![CDATA[{"id": "d2382095-2831-476b-88eb-8c93d7832c07", "value": "Refers to still images produced from radiation-sensitive materials (sensitive to light, electron beams, or nuclear radiation), generally by means of the chemical action of light on a sensitive film, paper, glass, or metal. Photographs may be positive or negative, opaque or transparent. The concept does not include reproductive prints of documents and technical drawings, for which descriptors found under \"<reprographic copies>\" are more appropriate. For digital photographs, generally prefer \"digital images.\""}]]></skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "296d174b-ff4d-46e8-be44-8a4aa0d27e42", "value": "photographs"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/1b2bcfa3-35c0-469e-850b-4d3d2cec9995">
+        <skos:prefLabel xml:lang="de">{"id": "7174cece-14fa-48d8-95d6-42a8375b007c", "value": "druckgraphischen Bl\u00e4ttern"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">{"id": "d69d5e3a-f1c2-4b0d-b2cb-6d7ea0087d71", "value": "gravures (g\u00e9n\u00e9ral, \u0153uvres visuelles)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "203c7f80-62d3-4cfe-b378-c68ff0136dfa", "value": "Pictorial works produced by transferring images by means of a matrix such as a plate, block, or screen, using any of various printing processes. When emphasizing the individual printed image, use \"impressions.\" Avoid the controversial expression \"original prints,\" except in reference to discussions of the expression's use. If prints are neither \"reproductive prints\" nor \"popular prints,\" use the simple term \"prints.\" With regard to photographs, prefer \"photographic prints\"; for types of reproductions of technical drawings and documents, see terms found under \"reprographic copies.\" "}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "3de0e029-9c20-4c8b-90be-f63f135ff837", "value": "prints (visual works)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/f1f80efb-56a1-4fde-83b9-250c98799993">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="de">{"id": "dc2e5e64-e8b3-4cfa-82e8-f320fa9675e4", "value": "Kalligraphie (Visuelles Werk)"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">{"id": "967cb010-1ba2-49d9-8107-b3821c31e175", "value": "calligraphie"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "96be7694-1e9b-4a41-8b9d-7717a19e9ec6", "value": "Werk, das haupts\u00e4chlich aus sch\u00f6nen, eleganten Buchstaben oder Schn\u00f6rkeln gebildet ist, die gew\u00f6hnlich von Hand mit einem Schreibstift geschaffen wurden, entweder mit unverbundenen Buchstaben oder in kursiver Schreibschrift. Kann sich auch auf \u00e4hnliche Werke beziehen, die mit dem Computer oder anderen Mitteln geschaffen wurden."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "4e75f084-5648-473d-8a99-0ce92427f22b", "value": "calligraphy (visual works)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "5c27d978-fb19-49eb-813d-893de1ac0fed", "value": "Works composed primarily of beautiful, elegant letters or flourishes that are typically created by hand with a pen, either in unjoined characters or in cursive writing. May also refer to similar works created by computer or another means."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower rdf:resource="http://www.archesproject.org/f43b5a5c-14b6-4442-bd9f-513ba132f6c2"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/85db66a1-7635-4e9e-b40d-a3ff86497039">
+        <skos:scopeNote xml:lang="en">{"id": "8ff59c09-2d1a-4c85-92c6-93c818d17b6b", "value": "Handwritten documents, particularly books and other documents created before the invention of the printing press. May also be used to distinguish certain documents from published or otherwise printed documents, as in the cases of typed personal letters or a typescript from which printed versions are made."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "f5777e28-8f39-441b-934b-f1ec4848eda3", "value": "manuscripts (documents)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "5bb99f1c-a278-4f60-ac2e-703fb8369e94", "value": "Handgeschriebenes Dokument, vor allem B\u00fccher und andere Dokumente vor der Erfindung der Druckmaschine. Die Bezeichnung kann auch verwendet werden, um bestimmte Dokumente von ver\u00f6ffentlichten oder anderweitig gedruckten Dokumenten zu unterscheiden, wie in den F\u00e4llen von pers\u00f6nlichen Briefen oder mit der Scheibmaschinen geschriebenen Dokumenten, aus denen sp\u00e4ter gedruckte Ausgaben entstanden."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="fr">{"id": "e0eb81bf-415f-4f14-a304-1957591dda3b", "value": "manuscrits"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">{"id": "21b2b6df-c529-45a0-aba0-50b83e8821a3", "value": "Manuskript (Dokumentengattung)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/300aa337-399d-47e3-b209-8bf5664bd530">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "a773adaa-c21f-421e-aa47-cbd070ec7582", "value": "Works of art in any medium, including performance art. A work of art may exist as a part of a larger object, e.g., a mural painting or a painting on a piece of furniture. When referring to the study or practice of the fine arts or the fine and decorative arts together, use \"art.\" In reference to pieces of fine or decorative arts as collectables rather than museum objects, in English use either \"art objects\" or the French term \"objets d'art,\" which emphasizes this meaning."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "ee7fe532-7f2e-4db3-a131-8764e3aba561", "value": "works of art"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/8a88fbdd-8bfd-49e3-8449-b09c98051de3">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="de">{"id": "f456d3d2-be5d-4c2d-b8a9-a0977f92b31e", "value": "Keramik"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "224b808b-7986-4687-a0c0-de40520db698", "value": "Object genre including visual works and other articles made of ceramic, which is any of various hard, brittle, heat-resistant and corrosion-resistant materials made by shaping and then firing a nonmetallic mineral, such as clay, at a high temperature. Ceramic ware, earthenware, porcelain ware, and brick products are examples of ceramics."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "33177413-9423-499c-9477-97f45aefb5f0", "value": "ceramics (object genre)"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/104010f3-968e-43ed-bba9-bcf4f5922446">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "f0e3a499-2f5e-4ecd-9431-212df1ad7c74", "value": "Works in two dimensions or very low relief that were made by gluing paper, fabrics, photographs, or other materials onto a flat surface"}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "ae9d38a6-fcb9-4a9f-8055-8982ead99b81", "value": "collages (visual works)"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">{"id": "34bff4a6-4fe8-48ef-be65-4c80b8d5a7f0", "value": "Collage"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "b99ee6bb-a875-4b51-aa7e-111900d80423", "value": "Zweidimensionales Werk oder mit sehr flachem Relief, das durch Kleben von Papier, Stoff, Fotografien oder anderen Materialien auf eine flache Oberfl\u00e4che hergestellt wurde."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/f6a276c3-ff4d-4346-9525-aa46bc89c098">
+        <skos:prefLabel xml:lang="en">{"id": "61d6c222-bbf5-4275-ab65-ec8e67c8b97d", "value": "paintings (visual works)"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "f73919dd-70d6-4f91-9e62-2b52ac3da86d", "value": "Unique works in which images are formed primarily by the direct application of pigments suspended in oil, water, egg yolk, molten wax, or other liquid, arranged in masses of color, onto a generally two-dimensional surface."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="fr">{"id": "a69ab81e-b1d9-40e7-b6ab-0010832fbd4d", "value": "peintures (visual works)"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">{"id": "8fe6e7b9-783d-4847-8b06-4bcd02e70ee5", "value": "Gem\u00e4lde"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "9d9c94cd-cb0b-4502-8743-d00d0912b687", "value": "Individuelles Werk, bei dem die Darstellungen haupts\u00e4chlich durch das direkte Auftragen von Farbstoffen gebildet werden, die in \u00d6l, Wasser, Eigelb, geschmolzenem Wachs oder anderer Fl\u00fcssigkeit aufgel\u00f6st sind und bei dem die Farbmasse auf eine meist zweidimensionale Oberfl\u00e4che aufgetragen wird. \r\n"}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/995a4a8d-1eed-42c4-89d6-666a6bdf98aa">
+        <skos:prefLabel xml:lang="de">{"id": "967d947d-6368-42ef-92e2-835da31941d1", "value": "Mosaik"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "26e04381-6294-422d-8bfb-394b2c67d6c7", "value": "Bild oder Muster, das aus kleinen, gleichm\u00e4\u00dfig geformten St\u00fccken aus dauerhaftem Material, gew\u00f6hnlich Stein oder farbiges Glas, zusammengesetzt ist. Zu unterscheiden von \"Opus sectile\", das aus individuell geformten St\u00fccken aus dauerhaftem Material, gew\u00f6hnlich Stein oder Glas, zusammengesetzt wird, die sich der Darstellung oder dem Muster anpassen."}</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">{"id": "261fe3d7-0591-4aa4-b285-e17836bcae39", "value": "Images or patterns composed of small, regularly shaped pieces of durable material, usually stone or colored glass. Distinguished from \"opus sectile,\" which is composed of individually shaped pieces of durable material, usually stone or glass, which conform to the design or pattern."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "0a227735-06fd-48e1-98de-e9e79773dd46", "value": "mosaics (visual works)"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/01592319-54ee-4e22-a4c6-e8bf01b5f3c7">
+    <skos:prefLabel xml:lang="de">{"id": "af7a34b6-1c0e-4d5e-bbda-bc1bbdbb6b1c", "value": "Werkverzeichnis"}</skos:prefLabel>
+    <skos:scopeNote xml:lang="de">{"id": "23609baa-509d-4134-a49c-2979dc6eb4d3", "value": "Vollst\u00e4ndiges, systematisches und kritisches Verzeichnis aller bekannten Werke eines einzelnen K\u00fcnstlers, das ausf\u00fchrliche Informationen \u00fcber jedes Einzelwerk bietet, einschlie\u00dflich seiner Herkunft."}</skos:scopeNote>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:prefLabel xml:lang="en">{"id": "8d80190d-e7bb-4931-ac10-0009b6d6a512", "value": "catalogues raisonn\u00e9s"}</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">{"id": "711b7e8e-9363-41d2-8591-4ec9cf228d5c", "value": "Complete, systematic, and critical listings of all the known works of a single artist, providing comprehensive information, including provenance, for each work."}</skos:scopeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/fe906a94-0387-4c24-872d-cce02c47b3be">
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:scopeNote xml:lang="en">{"id": "b1d19425-f4b1-4c32-964f-0085cbce42fe", "value": "Hypertext documents of text or images that are accessible via the World Wide Web, hosted on a web site."}</skos:scopeNote>
+    <skos:prefLabel xml:lang="en">{"id": "627bc175-dc0b-49fd-a0a0-6238f0f9c678", "value": "Web pages (documents)"}</skos:prefLabel>
+    <skos:scopeNote xml:lang="de">{"id": "cf72561b-05f5-4739-a790-bc800702e252", "value": "Hypertextdokument mit Text oder Bildern, das \u00fcber das World Wide Web abrufbar ist und auf einer Website gehostet wird."}</skos:scopeNote>
+    <skos:prefLabel xml:lang="de">{"id": "a1b5450e-a19a-4bc7-9c8f-8b5ae7457710", "value": "Webseite"}</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/c2fec1fa-f770-4c41-bea2-f1aa09a87018">
+    <skos:narrower rdf:resource="http://www.archesproject.org/01592319-54ee-4e22-a4c6-e8bf01b5f3c7"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/39a12971-33da-434e-8179-dcf431f8b8ff">
+        <skos:scopeNote xml:lang="de">{"id": "c2bee049-abcf-41e6-a042-6764768fd765", "value": "Druckwerk, das die in einer Ausstellung gezeigten Werke dokumentiert."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en-US">{"id": "9d359182-8e73-4499-821c-be1cb46099f4", "value": "Exhibition Catalogs"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "a1bdfea7-d4e1-43c4-9a79-ac5d98d59f77", "value": "Publications that document the works displayed in an exhibition."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="de">{"id": "94edac6f-3e25-4f5e-a195-d6925f6053e5", "value": "Ausstellungskatalog"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/79bd4233-c475-4f08-86fc-4608ca52a3a1">
+        <skos:scopeNote xml:lang="de">{"id": "a0776a73-2a10-4474-b0f8-8b4d8c845614", "value": "Katalog, in dem Gegenst\u00e4nde aufgelistet sind, die zum Verkauf stehen."}</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">{"id": "1235ce1f-71f9-42ef-9eb6-8e21f5a688bd", "value": "Catalogs that enumerate items that are for sale."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="de">{"id": "3524a37c-aa7f-47f1-ae19-c24bf07c6bc2", "value": "Verkaufskatalog"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-US">{"id": "49b28ef4-558d-402a-afb9-e1cd86146567", "value": "sales catalogs"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:prefLabel xml:lang="en-US">{"id": "a6e6ac57-d89f-42a6-a56c-d2dda1b3e94d", "value": "Information Object Types"}</skos:prefLabel>
+    <skos:narrower rdf:resource="http://www.archesproject.org/fe906a94-0387-4c24-872d-cce02c47b3be"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/f011d040-e6c8-45fd-8111-0696c94912d6">
+        <skos:scopeNote xml:lang="de">{"id": "c6c9e2df-cac5-40f6-8314-7d5ddd71c187", "value": "Buch, in das finanzielle Transaktionen eingetragen werden. "}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "0030951f-874e-4b46-b553-95761b1f1f6a", "value": "account books"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="de">{"id": "27bce020-f813-4cde-afa4-3db854d74337", "value": "Gesch\u00e4ftsbuch"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "2a756984-c312-4bdf-96a7-4988744c2c46", "value": "Books in which financial accounts are kept."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/05782387-c9ee-4ca4-98a6-e001d8dcb99b">
+        <skos:prefLabel xml:lang="en-US">{"id": "1718898a-e2f3-4657-88da-4b80f4c2f60f", "value": "Auction Catalogs"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "0e738a1e-36b4-4777-91dc-a2bab257c926", "value": "A listing of items, including works of art, manuscripts, books, or other items, that are for sale by auction."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/9c4965e2-a90c-48a6-a795-d5b6bb97f18c">
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="de">{"id": "80b895cc-27df-430e-978b-1da366dd1ab5", "value": "Register (list)"}</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">{"id": "abc8d5b1-4b63-4c62-9cc0-0f8c818c63ab", "value": "registers (lists)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="de">{"id": "9758a0cb-3b08-4dfc-8741-75d882ba27b0", "value": "Offizielle Liste von Eintr\u00e4gen mit Informationen, die als wichtig genug erachtet werden, um genau und in formeller Weise verzeichnet zu werden, in der Regel in numerischer oder chronologischer Reihenfolge."}</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">{"id": "296dc191-d648-4ebf-bbd8-5105c4b6e81f", "value": "Official lists of entries of any information considered sufficiently important to be exactly and formally recorded, typically maintained in numerical or chronological order in a regular manner."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/8a04408b-bd3c-4bbf-a0c5-46d978ab77a1">
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:scopeNote xml:lang="en">{"id": "3a949963-9ad9-44dc-99df-55bad79a3715", "value": "Appellations, words, or phrases that follow a personal name. For example words or numerals denoting family relationships, usually between members having the same first name, such as the senior and junior of two indicated persons."}</skos:scopeNote>
+    <skos:prefLabel xml:lang="en">{"id": "fdb86762-5c59-4511-a490-943b32d759a8", "value": "suffixes (name additions)"}</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/f6c61f4b-eba0-4643-be11-630797a781ef">
+    <skos:scopeNote xml:lang="en">{"id": "51d8106c-75da-4514-ac0c-c6a331fe1492", "value": "In the context of personal names, particularly in western culture, a first name is the name given to a person at birth or an early period of life, historically at baptism and historically chosen to signify or honor a saint, an earlier family member, or a personal characteristic. In modern western usage, a first name is combined with a family name or other names to distinguish between multiple people having the same first name. In other traditions, such as Islamic tradition, the first name may be a religious name or another sort of name."}</skos:scopeNote>
+    <skos:prefLabel xml:lang="en">{"id": "93ff959b-856d-44d9-8bc1-416c03210f91", "value": "first names"}</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/922e16ff-22c6-40ed-957d-d36eb8f17ef3">
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:scopeNote xml:lang="en">{"id": "fe097257-517d-41d0-8438-cca61a87d129", "value": "The length of a straight line passing through the center of a circle or sphere, terminated at each end by its circumference or surface."}</skos:scopeNote>
+    <skos:prefLabel xml:lang="en">{"id": "a9085f3e-dbf6-456c-b2ef-4e9efbcb100d", "value": "diameter"}</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/2285301a-54c0-43ec-9216-fc72c6177e73">
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:prefLabel xml:lang="en">{"id": "b5ac7d79-ef4c-42f3-a073-c06d3a6a735d", "value": "weight (heaviness attribute)"}</skos:prefLabel>
+    <skos:scopeNote xml:lang="en">{"id": "0bdd625d-60ba-42ad-aaec-43da9edc74dd", "value": "Measurement of the relative heaviness of an object or other body; the force with which a body is attracted toward the earth or a celestial body by gravity."}</skos:scopeNote>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/1d8a3c4b-f891-458f-bc69-497c6ee5a9bf">
+    <skos:prefLabel xml:lang="en-US">{"id": "b8f226ae-c31b-4351-af3b-e7f34c132707", "value": "Dimension Types"}</skos:prefLabel>
+    <skos:narrower rdf:resource="http://www.archesproject.org/922e16ff-22c6-40ed-957d-d36eb8f17ef3"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/fab83715-51fa-4f7b-8826-3c220287d888">
+        <skos:scopeNote xml:lang="en">{"id": "b7b84c02-ff6f-4f0f-950d-2dc367832ed8", "value": "The length of a straight vertical line extending from the bottom to the top of a form."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:prefLabel xml:lang="en">{"id": "8b264ab3-ae62-45d5-bad9-3264ba9978cb", "value": "height"}</skos:prefLabel>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/a223cd54-306c-4ad0-a1b3-637d93830eaf">
+        <skos:scopeNote xml:lang="en">{"id": "c9a2ca21-59fc-4d05-a9ab-48b34a53d6b4", "value": "The length of a straight horizontal line extending from one side to the other of a form. For the measure or distance of the extent across a surface, prefer \"breadth,\" although usage overlaps."}</skos:scopeNote>
+        <skos:prefLabel xml:lang="en">{"id": "489a3535-3bfd-422c-8eb9-eabb88a4a05b", "value": "width"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:narrower rdf:resource="http://www.archesproject.org/2285301a-54c0-43ec-9216-fc72c6177e73"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/c9b84c7e-0d1a-4b15-9c23-a11a96ada6c5">
+        <skos:prefLabel xml:lang="en">{"id": "79374f4a-d72e-412d-a53f-aa3a87edf341", "value": "depth (size/dimension)"}</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">{"id": "a476472c-03ba-4caa-8fc8-9ffe154f1226", "value": "Length of a straight line measured downward from a plane or surface, or inward from a plane or surface. For the measurement or extension through or between opposite surfaces, prefer \"thickness,\" although usage overlaps."}</skos:scopeNote>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+      </skos:Concept>
+    </skos:narrower>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/37236e70-211b-4d09-86bd-a9cc2c3e24be">
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:scopeNote xml:lang="en">{"id": "67250513-36cb-432a-9858-d97a8b3178c1", "value": "In the context of modern western personal names, the names that are hereditary and common to all members of a family; used with a first name to distinguish an individual from others with the same first name. In other cultural traditions, last names may not be hereditary family names or they may not be used at all. Before last names became common in western tradition, personal names were qualified with the addition of epithets, place names, ancestors' names, or terms for professions; these were added to a first name on an individual basis, not necesssarily hereditary for a family."}</skos:scopeNote>
+    <skos:prefLabel xml:lang="en">{"id": "14875271-ef39-4d5e-b4ce-bb28b6295d84", "value": "last names"}</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/84512011-9811-4c5b-9a6f-a3a585e960a9">
+    <skos:narrower rdf:resource="http://www.archesproject.org/8a04408b-bd3c-4bbf-a0c5-46d978ab77a1"/>
+    <skos:narrower rdf:resource="http://www.archesproject.org/f6c61f4b-eba0-4643-be11-630797a781ef"/>
+    <skos:narrower>
+      <skos:Concept rdf:about="http://www.archesproject.org/be988b9b-6b83-4dbe-bdbd-e6d165da3c41">
+        <skos:prefLabel xml:lang="en">{"id": "fbb9ecba-705c-4fa2-ab63-066b0e8f2878", "value": "middle names"}</skos:prefLabel>
+        <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+        <skos:scopeNote xml:lang="en">{"id": "f83c3660-b73d-4816-b3c4-d978abab1400", "value": "In the context of personal names, particularly in western culture, names that are positioned between a first name and a last name, possibly comprising an additional familiar name or a maternal family name. In other traditions, such as Islamic tradition, the middle name may be the primary personal name (analogous to the first name in western tradition) or another sort of name."}</skos:scopeNote>
+      </skos:Concept>
+    </skos:narrower>
+    <skos:narrower rdf:resource="http://www.archesproject.org/db30d6e7-2fe6-4e79-b8bd-d232e7caec97"/>
+    <skos:prefLabel xml:lang="en">{"id": "8f4b82ef-d58b-4090-81a7-08eb52d3adcf", "value": "Person Appellation Types"}</skos:prefLabel>
+    <skos:narrower rdf:resource="http://www.archesproject.org/37236e70-211b-4d09-86bd-a9cc2c3e24be"/>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://www.archesproject.org/47fbc0e8-372d-4dce-9d94-5050d10e0143">
+    <skos:narrower rdf:resource="http://www.archesproject.org/1d8a3c4b-f891-458f-bc69-497c6ee5a9bf"/>
+    <skos:inScheme rdf:resource="http://www.archesproject.org/29bf48a2-c47c-4f9d-b093-f742b20bfaf7"/>
+    <skos:narrower rdf:resource="http://www.archesproject.org/c2fec1fa-f770-4c41-bea2-f1aa09a87018"/>
+    <skos:narrower rdf:resource="http://www.archesproject.org/dd18d680-03ad-4a8c-aa8e-d5bdcd6d9b2c"/>
+    <skos:narrower rdf:resource="http://www.archesproject.org/7cfd845c-8830-456d-819d-48fe9a566418"/>
+    <skos:narrower rdf:resource="http://www.archesproject.org/1376e953-5be8-4781-b3cd-e1265d918094"/>
+    <skos:narrower rdf:resource="http://www.archesproject.org/84512011-9811-4c5b-9a6f-a3a585e960a9"/>
+    <skos:prefLabel xml:lang="en-US">{"id": "fee8aa42-44bb-49e7-904e-572c77593d23", "value": "Concept"}</skos:prefLabel>
+    <skos:narrower rdf:resource="http://www.archesproject.org/646e3264-0474-4523-97cf-3c72b72795a8"/>
+  </skos:Concept>
+</rdf:RDF>

@@ -1,107 +1,68 @@
-version: '2'
+---
+version: '3.2'
 services:
-
-  arches:
-    container_name: arches
-    image: archesproject/arches:latest
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    command: run_arches
-    volumes:
-      - arches-log:/arches/arches/logs
-      - arches-static:/static_root
+  pira:
+    container_name: pir_local
+    image: pir_local:dev
+    command: python manage.py runserver 0.0.0.0:8000
     environment:
-      # - ARCHES_PROJECT=insert_project_name
       - INSTALL_DEFAULT_GRAPHS=True
       - INSTALL_DEFAULT_CONCEPTS=True
       - PGUSERNAME=postgres
       - PGPASSWORD=postgres
-      - PGDBNAME=arches
-      - PGHOST=db
+      - PGDBNAME=pir_arches_db
+      - PGHOST=pirpg
       - PGPORT=5432
-      - ESHOST=elasticsearch
+      - ESHOST=pires
       - ESPORT=9200
       # - ELASTICSEARCH_PREFIX=insert_project_name
       - DJANGO_MODE=PROD
       - DJANGO_DEBUG=False
       # - DJANGO_REMOTE_DEBUG=False
-      - DOMAIN_NAMES=localhost
+      - DOMAIN_NAMES=0.0.0.0
       - TZ=PST
     ports:
       - '8000:8000'
     depends_on:
-      - db
-      - elasticsearch
-
-  nginx:
-    container_name: nginx
-    image: cvast/cvast-nginx:1.2.0
-    restart: unless-stopped
-    ports:
-      - '80:80'
-      - '443:443'
+      - pirpg
+      - pires
     volumes:
-      - arches-static:/www/static
-      - letsencrypt-acme-challenge:/var/www
-      - letsencrypt:/etc/letsencrypt
-    environment:
-      - NGINX_PROXY_MODE=local
-      - NGINX_PROTOCOL=http
-      - LOCAL_PROXY_HOST=arches
-      - LOCAL_PROXY_PORT=8000
-      - DOMAIN_NAMES=localhost
-      - PUBLIC_MODE=False
-      - TZ=PST
-    depends_on:
-      - arches
-
-  db:
-    container_name: db
+      - type: bind
+        source: .
+        target: /app/piserver
+  pirpg:
+    container_name: pirpg
     image: mdillon/postgis:9.6-alpine
     volumes:
-      - postgres-data:/var/lib/postgresql/data
-      - postgres-log:/var/log/postgresql
+      - pgdatadir:/var/lib/postgresql/data
+      - pglogdir:/var/log/postgresql
     ports:
       - '5432:5432'
     environment:
       - POSTGRES_PASSWORD=postgres
       - TZ=PST
-
-  elasticsearch:
-    container_name: elasticsearch
-    image: elasticsearch:5.2
+  pires:
+    container_name: pires
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.2.1
     volumes:
-      - elasticsearch-data:/usr/share/elasticsearch/data
+      - esdatadir:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
       - "9300:9300"
     environment:
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - TZ=PST
-
-  letsencrypt:
-    container_name: letsencrypt
-    image: cvast/cvast-letsencrypt:1.1
-    volumes:
-      - letsencrypt-acme-challenge:/var/www
-      - letsencrypt:/etc/letsencrypt
-      - letsencrypt-log:/var/log/letsencrypt
-    command: get_certificate
-    environment:
-      - MODE=regular
-      - LETSENCRYPT_EMAIL=info@example.com
-      - DOMAIN_NAMES=localhost
-      - PRODUCTION_MODE=False
-      - PERSISTENT_MODE=True
-      - TZ=PST
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
 
 volumes:
   arches-log:
   arches-static:
   arches-bowercomponents:
-  postgres-data:
-  postgres-log:
-  elasticsearch-data:
-  letsencrypt:
-  letsencrypt-log:
-  letsencrypt-acme-challenge:
+  pgdatadir:
+  pglogdir:
+  esdatadir:

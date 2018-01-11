@@ -10,9 +10,10 @@ try:
     from arches.settings import *
 except ImportError:
     pass
+    # TODO raise error and exit early
 
 APP_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-STATICFILES_DIRS =  (os.path.join(APP_ROOT, 'media'),) + STATICFILES_DIRS
+STATICFILES_DIRS = (os.path.join(APP_ROOT, 'media'),) + STATICFILES_DIRS
 
 DATATYPE_LOCATIONS.append('piserver.datatypes')
 FUNCTION_LOCATIONS.append('piserver.functions')
@@ -30,6 +31,12 @@ ROOT_URLCONF = 'piserver.urls'
 
 # a prefix to append to all elasticsearch indexes, note: must be lower case
 ELASTICSEARCH_PREFIX = 'piserver'
+ELASTICSEARCH_HOSTS = [
+    {
+        "host": "elasticsearch",
+        "port": 9200
+    }
+]
 
 DATABASES = {
     "default": {
@@ -37,10 +44,10 @@ DATABASES = {
         "AUTOCOMMIT": True,
         "CONN_MAX_AGE": 0,
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "localhost",
+        "HOST": "db",
         "NAME": "piserver",
         "OPTIONS": {},
-        "PASSWORD": "postgis",
+        "PASSWORD": "postgres",
         "PORT": "5432",
         "POSTGIS_TEMPLATE": "template_postgis_20",
         "TEST": {
@@ -55,6 +62,7 @@ DATABASES = {
 }
 
 
+# TODO allow qa, staging, and prod
 ALLOWED_HOSTS = []
 
 SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(APP_ROOT, 'system_settings', 'System_Settings.json')
@@ -88,6 +96,14 @@ TILE_CACHE_CONFIG = {
     # "access": "<access key>",
     # "secret": "<secret key>"
 }
+
+# NOTE: Extracted from Rob's settings.py
+# TODO: Should theses be set in the arches settings.py upstream?
+# ONTOLOGIES LISTED HERE WILL NOT BE PREFIXED WITH ANY XMLNS IDENTIFIER IN THE UI
+CRM_ONTOLOGIES = [
+    'http://www.cidoc-crm.org/cidoc-crm/'
+]
+VECTOR_TILE_SIMPLIFICATION = 0.3
 
 try:
     from settings_local import *

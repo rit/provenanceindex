@@ -1,0 +1,305 @@
+{
+    "graph": [
+        {
+            "author": " ", 
+            "cards": [
+                {
+                    "active": true, 
+                    "cardid": "2e7aae57-8f61-11e7-ac15-a4d18cec433a", 
+                    "description": "", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "helpenabled": false, 
+                    "helptext": null, 
+                    "helptitle": null, 
+                    "instructions": null, 
+                    "name": "Payment", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "sortorder": null, 
+                    "visible": true
+                }
+            ], 
+            "cards_x_nodes_x_widgets": [], 
+            "deploymentdate": null, 
+            "deploymentfile": null, 
+            "description": "", 
+            "edges": [
+                {
+                    "description": null, 
+                    "domainnode_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "edgeid": "2e7ab959-8f61-11e7-a3fa-a4d18cec433a", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "name": null, 
+                    "ontologyproperty": "http://www.w3.org/2002/07/owl#sameAs", 
+                    "rangenode_id": "2e7ab2e8-8f61-11e7-b7d7-a4d18cec433a"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "45eadbeb-8f61-11e7-8e3d-a4d18cec433a", 
+                    "edgeid": "79e911ca-8f61-11e7-8cbd-a4d18cec433a", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "name": null, 
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label", 
+                    "rangenode_id": "79e90e8c-8f61-11e7-a2c2-a4d18cec433a"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "45eadbeb-8f61-11e7-8e3d-a4d18cec433a", 
+                    "edgeid": "6758b61c-8f61-11e7-97cf-a4d18cec433a", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "name": null, 
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P180_has_currency", 
+                    "rangenode_id": "6758b20c-8f61-11e7-9f9e-a4d18cec433a"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "edgeid": "45eae02e-8f61-11e7-93ff-a4d18cec433a", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "name": null, 
+                    "ontologyproperty": "https://linked.art/ns/paid_amount", 
+                    "rangenode_id": "45eadbeb-8f61-11e7-8e3d-a4d18cec433a"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "edgeid": "2e7ab9fa-8f61-11e7-9768-a4d18cec433a", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "name": null, 
+                    "ontologyproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at", 
+                    "rangenode_id": "2e7ab035-8f61-11e7-aedf-a4d18cec433a"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "edgeid": "a34ca497-8f61-11e7-ba16-a4d18cec433a", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "name": null, 
+                    "ontologyproperty": "https://linked.art/ns/paid_to", 
+                    "rangenode_id": "a34ca18a-8f61-11e7-bf5a-a4d18cec433a"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "edgeid": "2e7ab87d-8f61-11e7-b31c-a4d18cec433a", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "name": null, 
+                    "ontologyproperty": "http://www.w3.org/2000/01/rdf-schema#label", 
+                    "rangenode_id": "2e7ab1c5-8f61-11e7-bd88-a4d18cec433a"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "45eadbeb-8f61-11e7-8e3d-a4d18cec433a", 
+                    "edgeid": "52e0b6f8-8f61-11e7-9a26-a4d18cec433a", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "name": null, 
+                    "ontologyproperty": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", 
+                    "rangenode_id": "52e0b4b5-8f61-11e7-a33a-a4d18cec433a"
+                }, 
+                {
+                    "description": null, 
+                    "domainnode_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "edgeid": "892f2ecf-8f61-11e7-9f3d-a4d18cec433a", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "name": null, 
+                    "ontologyproperty": "https://linked.art/ns/paid_from", 
+                    "rangenode_id": "892f2ca8-8f61-11e7-b009-a4d18cec433a"
+                }
+            ], 
+            "forms": [], 
+            "forms_x_cards": [], 
+            "functions_x_graphs": [], 
+            "graphid": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+            "iconclass": "", 
+            "is_editable": true, 
+            "isactive": true, 
+            "isresource": false, 
+            "name": "Payment", 
+            "nodegroups": [
+                {
+                    "cardinality": "1", 
+                    "legacygroupid": null, 
+                    "nodegroupid": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "parentnodegroup_id": null
+                }
+            ], 
+            "nodes": [
+                {
+                    "config": {
+                        "graphid": "8cb5109c-8c32-11e7-939f-a4d18cec433a"
+                    }, 
+                    "datatype": "resource-instance", 
+                    "description": "Represents a single node in a graph", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "Place", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "2e7ab035-8f61-11e7-aedf-a4d18cec433a", 
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E53_Place", 
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"
+                }, 
+                {
+                    "config": null, 
+                    "datatype": "semantic", 
+                    "description": "Represents a single node in a graph", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "label", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "79e90e8c-8f61-11e7-a2c2-a4d18cec433a", 
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string", 
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                {
+                    "config": null, 
+                    "datatype": "semantic", 
+                    "description": "", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": true, 
+                    "issearchable": true, 
+                    "istopnode": true, 
+                    "name": "Payment", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "ontologyclass": "https://linked.art/ns/Payment", 
+                    "parentproperty": ""
+                }, 
+                {
+                    "config": {
+                        "rdmCollection": null
+                    }, 
+                    "datatype": "concept", 
+                    "description": "Represents a single node in a graph", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "Classification", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "2e7ab2e8-8f61-11e7-b7d7-a4d18cec433a", 
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E55_Type", 
+                    "parentproperty": "http://www.w3.org/2002/07/owl#sameAs"
+                }, 
+                {
+                    "config": {
+                        "rdmCollection": null
+                    }, 
+                    "datatype": "concept", 
+                    "description": "Represents a single node in a graph", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "Currency", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "6758b20c-8f61-11e7-9f9e-a4d18cec433a", 
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E98_Currency", 
+                    "parentproperty": "http://www.cidoc-crm.org/cidoc-crm/P180_has_currency"
+                }, 
+                {
+                    "config": {
+                        "graphid": "391e7a9c-8c30-11e7-b508-a4d18cec433a"
+                    }, 
+                    "datatype": "resource-instance", 
+                    "description": "Represents a single node in a graph", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "Paid To", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "a34ca18a-8f61-11e7-bf5a-a4d18cec433a", 
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor", 
+                    "parentproperty": "https://linked.art/ns/paid_to"
+                }, 
+                {
+                    "config": null, 
+                    "datatype": "string", 
+                    "description": "Represents a single node in a graph", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "label", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "2e7ab1c5-8f61-11e7-bd88-a4d18cec433a", 
+                    "ontologyclass": "http://www.w3.org/2001/XMLSchema#string", 
+                    "parentproperty": "http://www.w3.org/2000/01/rdf-schema#label"
+                }, 
+                {
+                    "config": null, 
+                    "datatype": "semantic", 
+                    "description": "Represents a single node in a graph", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "Amount", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "45eadbeb-8f61-11e7-8e3d-a4d18cec433a", 
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E97_Monetary_Amount", 
+                    "parentproperty": "https://linked.art/ns/paid_amount"
+                }, 
+                {
+                    "config": null, 
+                    "datatype": "number", 
+                    "description": "Represents a single node in a graph", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "value", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "52e0b4b5-8f61-11e7-a33a-a4d18cec433a", 
+                    "ontologyclass": "http://www.w3.org/2000/01/rdf-schema#Literal", 
+                    "parentproperty": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+                }, 
+                {
+                    "config": {
+                        "graphid": "391e7a9c-8c30-11e7-b508-a4d18cec433a"
+                    }, 
+                    "datatype": "resource-instance", 
+                    "description": "Represents a single node in a graph", 
+                    "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                    "is_collector": false, 
+                    "issearchable": true, 
+                    "istopnode": false, 
+                    "name": "Paid From", 
+                    "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                    "nodeid": "892f2ca8-8f61-11e7-b009-a4d18cec433a", 
+                    "ontologyclass": "http://www.cidoc-crm.org/cidoc-crm/E39_Actor", 
+                    "parentproperty": "https://linked.art/ns/paid_from"
+                }
+            ], 
+            "ontology_id": "e6e8db47-2ccf-11e6-927e-b8f6b115d7dd", 
+            "relatable_resource_model_ids": [], 
+            "reports": [], 
+            "resource_2_resource_constraints": [], 
+            "root": {
+                "config": null, 
+                "datatype": "semantic", 
+                "description": "", 
+                "graph_id": "2e7aa73a-8f61-11e7-a22f-a4d18cec433a", 
+                "is_collector": true, 
+                "issearchable": true, 
+                "istopnode": true, 
+                "name": "Payment", 
+                "nodegroup_id": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                "nodeid": "2e7aa975-8f61-11e7-b31c-a4d18cec433a", 
+                "ontologyclass": "https://linked.art/ns/Payment", 
+                "parentproperty": ""
+            }, 
+            "subtitle": "", 
+            "version": ""
+        }
+    ], 
+    "metadata": {
+        "db": "PostgreSQL 9.5.4 on x86_64-apple-darwin14.5.0, compiled by Apple LLVM version 7.0.0 (clang-700.1.76), 64-bit", 
+        "git hash": "24f3e51 2017-09-07 16:07:53 -0700", 
+        "os": "Darwin", 
+        "os version": "14.5.0"
+    }
+}
