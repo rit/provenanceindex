@@ -1,7 +1,7 @@
 ---
 version: '3.2'
 services:
-  pira:
+  pir:
     container_name: pir_local
     image: pir_local:dev
     command: python manage.py runserver 0.0.0.0:8000
@@ -15,9 +15,9 @@ services:
       - PGPORT=5432
       - ESHOST=pires
       - ESPORT=9200
-      # - ELASTICSEARCH_PREFIX=insert_project_name
-      - DJANGO_MODE=PROD
-      - DJANGO_DEBUG=False
+      - ELASTICSEARCH_PREFIX=pir
+      - DJANGO_MODE=dev
+      - DJANGO_DEBUG=True
       # - DJANGO_REMOTE_DEBUG=False
       - DOMAIN_NAMES=0.0.0.0
       - TZ=PST
@@ -60,9 +60,6 @@ services:
         hard: -1
 
 volumes:
-  arches-log:
-  arches-static:
-  arches-bowercomponents:
   pgdatadir:
   pglogdir:
   esdatadir:

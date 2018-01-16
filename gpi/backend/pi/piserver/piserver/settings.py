@@ -29,42 +29,6 @@ DEBUG = True
 
 ROOT_URLCONF = 'piserver.urls'
 
-# a prefix to append to all elasticsearch indexes, note: must be lower case
-ELASTICSEARCH_PREFIX = 'piserver'
-ELASTICSEARCH_HOSTS = [
-    {
-        "host": "elasticsearch",
-        "port": 9200
-    }
-]
-
-DATABASES = {
-    "default": {
-        "ATOMIC_REQUESTS": False,
-        "AUTOCOMMIT": True,
-        "CONN_MAX_AGE": 0,
-        "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "db",
-        "NAME": "piserver",
-        "OPTIONS": {},
-        "PASSWORD": "postgres",
-        "PORT": "5432",
-        "POSTGIS_TEMPLATE": "template_postgis_20",
-        "TEST": {
-            "CHARSET": None,
-            "COLLATION": None,
-            "MIRROR": None,
-            "NAME": None
-        },
-        "TIME_ZONE": None,
-        "USER": "postgres"
-    }
-}
-
-
-# TODO allow qa, staging, and prod
-ALLOWED_HOSTS = []
-
 SYSTEM_SETTINGS_LOCAL_PATH = os.path.join(APP_ROOT, 'system_settings', 'System_Settings.json')
 WSGI_APPLICATION = 'piserver.wsgi.application'
 STATIC_ROOT = '/var/www/media'

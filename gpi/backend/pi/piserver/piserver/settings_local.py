@@ -1,6 +1,3 @@
-"""
-Test
-"""
 import ast
 import os
 import sys
