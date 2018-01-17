@@ -7,7 +7,7 @@ You will need docker-compose_ (included with `Docker for Mac`_)
 Creating PIR development docker image:
 --------------------------------------
 
-From the root directory of the this repo, cd into `gpi/backend/pi`, then run: 
+From the root directory of the this repo, cd into ``gpi/backend/pi``, then run:
 
   make pir_local_docker_image
 
@@ -15,7 +15,7 @@ From the root directory of the this repo, cd into `gpi/backend/pi`, then run:
 Starting arches locally:
 ------------------------
 
-cd into `gpi/backend/pi/piserver`, then run:
+cd into ``gpi/backend/pi/piserver``, then run:
 
   docker-compose up -d
 
@@ -35,7 +35,7 @@ You should be greeted at the bash shell where you would enter Django commands.
 Install Bower Components:
 -------------------------
 
-From inside the running container, cd into `/app/piserver/piserver`, then run:
+From inside the running container, cd into ``/app/piserver/piserver``, then run:
 
   bower install --allow-root
 
