@@ -1,5 +1,6 @@
 CONTEXT=.
 FLAVORS ?= local remote
+APT_PACKAGES = $(shell ./bin/join.py < apt_packages.txt)
 
 pir_local_docker_image: dockerfile
 	docker build -f build/local.dockerfile --rm -t pir_local:dev $(CONTEXT)
@@ -9,10 +10,11 @@ pir_remote_docker_image: dockerfile
 
 dockerfile: Dockerfile.j2
 	@@$(foreach FLAVOR, $(FLAVORS), \
-	 jinja2 \
-	   -D flavor='$(FLAVOR)' \
-	   Dockerfile.j2 > build/$(FLAVOR).dockerfile; \
-	) \
+	jinja2 \
+		-D flavor='$(FLAVOR)' \
+		-D apt_packages='$(APT_PACKAGES)' \
+		Dockerfile.j2 > build/$(FLAVOR).dockerfile; \
+	)
 
 remove_dangling_docker_images:
 	docker images -qa -f "dangling=true" | xargs docker rmi -f

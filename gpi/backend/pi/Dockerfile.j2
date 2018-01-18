@@ -7,27 +7,7 @@ CMD ["/sbin/my_init"]
 WORKDIR /tmp
 RUN apt-get update -y &&\
 	apt-get upgrade -y &&\
-	apt-get install -y wget \
-		build-essential \
-		libxml2-dev \
-		libjson0-dev \
-		libproj-dev \
-		xsltproc docbook-xsl \
-		docbook-mathml \
-		libgdal1-dev \
-		python-setuptools \
-		python-dev \
-		python-software-properties \
-		dos2unix \
-		curl \
-		libpq-dev \
-		libgeos-dev \
-		default-jre-headless \
-		git-all \
-		zlib1g-dev \
-        clang \
-        make \
-        pkg-config &&\
+	apt-get install -y {{ apt_packages }} &&\
 	curl -sL https://deb.nodesource.com/setup_8.x | bash - &&\
 	apt-get install nodejs &&\
 	npm install -g bower
