@@ -19,7 +19,7 @@ services:
       - DJANGO_MODE=dev
       - DJANGO_DEBUG=True
       # - DJANGO_REMOTE_DEBUG=False
-      - DOMAIN_NAMES=0.0.0.0
+      - DOMAIN_NAMES=0.0.0.0 localhost
       - TZ=PST
     ports:
       - '8000:8000'
