@@ -3,7 +3,7 @@ FLAVORS ?= local remote
 APT_PACKAGES = $(shell ./bin/join.py < apt_packages.txt)
 
 pir_local_docker_image: dockerfile
-	docker build -f build/local.dockerfile --rm -t pir_local:dev $(CONTEXT)
+	docker build -f build/local.dockerfile --rm -t pir_local:$(PISERVER_VERSION) $(CONTEXT)
 
 pir_remote_docker_image: dockerfile
 	docker build -f build/remote.dockerfile --rm -t pir_remote:$(PISERVER_VERSION) $(CONTEXT)
