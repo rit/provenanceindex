@@ -3,7 +3,7 @@ version: '3.2'
 services:
   pir:
     container_name: pir_local
-    image: pir_local:dev
+    image: pir_local:${PISERVER_VERSION}
     command: python manage.py runserver 0.0.0.0:8000
     environment:
       - INSTALL_DEFAULT_GRAPHS=True
@@ -19,7 +19,7 @@ services:
       - DJANGO_MODE=dev
       - DJANGO_DEBUG=True
       # - DJANGO_REMOTE_DEBUG=False
-      - DOMAIN_NAMES=0.0.0.0
+      - DOMAIN_NAMES=0.0.0.0 localhost
       - TZ=PST
     ports:
       - '8000:8000'

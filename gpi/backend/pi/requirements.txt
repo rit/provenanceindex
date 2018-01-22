@@ -1,5 +1,3 @@
--e git+https://github.com/thegetty/arches.git@master#egg=arches
-
 Django==1.11.6
 Pillow==3.1.0
 PyYAML==3.12

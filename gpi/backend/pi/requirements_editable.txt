@@ -1,0 +1,6 @@
+-e git+https://github.com/thegetty/arches.git@master#egg=arches
+
+
+# Leave the following line commented so that pip install will ignore this
+# The installer uses the following line to download the proper version of ES
+# https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.1.zip
