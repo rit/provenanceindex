@@ -4,7 +4,8 @@ services:
   pir:
     container_name: pir_local
     image: pir_local:${PISERVER_VERSION}
-    command: python manage.py runserver 0.0.0.0:8000
+    # command: python manage.py runserver 0.0.0.0:8000
+    command: uwsgi --ini pir_uwsgi.ini
     environment:
       - INSTALL_DEFAULT_GRAPHS=True
       - INSTALL_DEFAULT_CONCEPTS=True
@@ -16,7 +17,6 @@ services:
       - ESHOST=pires
       - ESPORT=9200
       - ELASTICSEARCH_PREFIX=pir
-      - DJANGO_MODE=dev
       - DJANGO_DEBUG=True
       # - DJANGO_REMOTE_DEBUG=False
       - DOMAIN_NAMES=0.0.0.0 localhost
