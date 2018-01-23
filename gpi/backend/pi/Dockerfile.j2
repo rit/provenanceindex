@@ -48,6 +48,15 @@ RUN	pip install --no-cache-dir -r requirements_editable.txt
 EXPOSE 8000
 
 {% if flavor == 'remote' -%}
+
+# Install nginx from nginx.org
+RUN echo "deb http://nginx.org/packages/ubuntu/ xenial nginx" >> /etc/apt/sources.list.d/nginx.list &&\
+  echo "deb-src http://nginx.org/packages/ubuntu/ xenial nginx" >> /etc/apt/sources.list.d/nginx.list &&\
+  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62 &&\
+	apt-get update -y &&\
+  apt-get install -y nginx
+
+# Put application code in the image
 COPY ./piserver /app/piserver
 
 # # Install Bower components
