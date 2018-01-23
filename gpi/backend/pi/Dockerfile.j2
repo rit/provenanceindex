@@ -60,12 +60,16 @@ RUN echo "deb http://nginx.org/packages/ubuntu/ xenial nginx" >> /etc/apt/source
 COPY ./piserver /app/piserver
 
 # # Install Bower components
-WORKDIR /app/piserver/piserver
-RUN bower --allow-root install
+# WORKDIR /app/piserver/piserver
+# RUN bower --allow-root install
+
+COPY ./ops /app/ops
+
 {% endif %}
 
 # # Set default workdir
 WORKDIR /app/piserver
+CMD /app/ops/entry.sh
 
 
 # vim: ft=Dockerfile
