@@ -59,10 +59,6 @@ RUN echo "deb http://nginx.org/packages/ubuntu/ xenial nginx" >> /etc/apt/source
 # Put application code in the image
 COPY ./piserver /app/piserver
 
-# # Install Bower components
-# WORKDIR /app/piserver/piserver
-# RUN bower --allow-root install
-
 COPY ./ops /app/ops
 
 {% endif %}

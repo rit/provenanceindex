@@ -2,11 +2,14 @@ CONTEXT=.
 FLAVORS ?= local remote
 APT_PACKAGES = $(shell ./bin/join.py < apt_packages.txt)
 
-pir_local_docker_image: dockerfile
+image_local: dockerfile
 	docker build -f build/local.dockerfile --rm -t pir_local:$(PISERVER_VERSION) $(CONTEXT)
 
-pir_remote_docker_image: dockerfile
+image_remote: dockerfile
 	docker build -f build/remote.dockerfile --rm -t pir_remote:$(PISERVER_VERSION) $(CONTEXT)
+
+image_static: image_remote
+	docker build -f Dockerfile.static --build-arg baseimage=pir_remote:$(PISERVER_VERSION) --rm -t pir_static:$(PISERVER_VERSION) $(CONTEXT)
 
 dockerfile: Dockerfile.j2
 	@@$(foreach FLAVOR, $(FLAVORS), \
