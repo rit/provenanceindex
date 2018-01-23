@@ -19,8 +19,6 @@ def get_optional_env_variable(var_name):
     except KeyError:
         return None
 
-# Options are either "PROD" or "DEV" (installing with Dev mode set, get's you extra dependencies)
-MODE = get_env_variable('DJANGO_MODE')
 DEBUG = ast.literal_eval(get_env_variable('DJANGO_DEBUG'))
 
 DATABASES = {
