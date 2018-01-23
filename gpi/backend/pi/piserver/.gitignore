@@ -1,2 +1,6 @@
 bower_components
 *.pyc
+
+# uwsgi optimized file
+*.pyo
+*.log
