@@ -30,6 +30,23 @@ services:
       - type: bind
         source: .
         target: /app/piserver
+  pirstatic:
+    container_name: pirstatic
+    image: pir_static:${PISERVER_VERSION}
+    environment:
+      - PGUSERNAME=postgres
+      - PGPASSWORD=postgres
+      - PGDBNAME=pir_arches_db
+      - PGHOST=pirpg
+      - PGPORT=5432
+      - ESHOST=pires
+      - ESPORT=9200
+      - ELASTICSEARCH_PREFIX=pir
+      - DJANGO_DEBUG=True
+      - DOMAIN_NAMES=0.0.0.0 localhost
+      - TZ=PST
+    ports:
+      - '8080:8000'
   pirpg:
     container_name: pirpg
     image: mdillon/postgis:9.6-alpine

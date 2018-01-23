@@ -2,14 +2,12 @@ ARG baseimage
 
 FROM ${baseimage}
 
-# # Install Bower components
+# Install Bower components
 WORKDIR /app/piserver/piserver
 RUN bower --allow-root install
 
-# # Set default workdir
 WORKDIR /app/piserver
-# TODO Use nginx to serve static assets
-# CMD /app/ops/entry.sh
+CMD /app/ops/static_entry.sh
 
 
 # vim: ft=Dockerfile
