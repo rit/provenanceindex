@@ -9,7 +9,7 @@ Creating PIR development docker image:
 
 From the root directory of the this repo, cd into ``gpi/backend/pi``, then run:
 
-  make pir_local_docker_image
+  make image_local
 
 
 Starting arches locally:
