@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pirpgdata-pv
+  labels:
+    volume: pirpgdata-disk
+spec:
+  storageClassName: "ssd"
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  gcePersistentDisk:
+    pdName: pirpgdata-pd
+    fsType: ext4
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pglogdir-pv
+  labels:
+    volume: pglogdir-disk
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  gcePersistentDisk:
+    pdName: pglogdir-pd
+    fsType: ext4

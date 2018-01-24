@@ -1,0 +1,67 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f ../docker-compose.yml
+    kompose.version: 1.7.0 (767ab4b)
+  creationTimestamp: null
+  labels:
+    app: pir
+  name: pir
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pir
+    spec:
+      containers:
+      - args:
+        - python
+        - manage.py
+        - runserver
+        - 0.0.0.0:8000
+        env:
+        - name: DJANGO_DEBUG
+          value: "True"
+        - name: DOMAIN_NAMES
+          value: 0.0.0.0 localhost
+        - name: ELASTICSEARCH_PREFIX
+          value: pir
+        - name: ESHOST
+          value: pires
+        - name: ESPORT
+          value: "9200"
+        - name: INSTALL_DEFAULT_CONCEPTS
+          value: "True"
+        - name: INSTALL_DEFAULT_GRAPHS
+          value: "True"
+        - name: PGDBNAME
+          value: pir_arches_db
+        - name: PGHOST
+          value: pirpg
+        - name: PGPASSWORD
+          value: postgres
+        - name: PGPORT
+          value: "5432"
+        - name: PGUSERNAME
+          value: postgres
+        - name: TZ
+          value: PST
+        image: pir_remote:v0.11
+        name: pira
+        ports:
+        - containerPort: 8000
+        resources: {}
+        volumeMounts:
+        - mountPath: /app/piserver
+          name: pir-claim0
+      restartPolicy: Always
+      volumes:
+      - name: pir-claim0
+        persistentVolumeClaim:
+          claimName: pir-claim0
+status: {}

@@ -1,5 +1,6 @@
 CONTEXT=.
 FLAVORS ?= local remote
+PIR_IMAGES = pir_remote pir_static
 APT_PACKAGES = $(shell ./bin/join.py < apt_packages.txt)
 
 image_local: dockerfile
@@ -21,3 +22,9 @@ dockerfile: Dockerfile.j2
 
 remove_dangling_docker_images:
 	docker images -qa -f "dangling=true" | xargs docker rmi -f
+
+image_push:
+	$(foreach IMAGE, $(PIR_IMAGES), \
+	docker tag $(IMAGE):$(PISERVER_VERSION) us.gcr.io/$(GCP_PROJECT_ID_PIR)/$(IMAGE):$(PISERVER_VERSION); \
+	gcloud docker -- push us.gcr.io/$(GCP_PROJECT_ID_PIR)/$(IMAGE):$(PISERVER_VERSION); \
+	)

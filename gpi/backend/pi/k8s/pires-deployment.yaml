@@ -1,0 +1,67 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: pires
+    ver: v0.11
+  name: pires
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: pires
+    spec:
+      containers:
+      - env:
+        - name: ES_JAVA_OPTS
+          value: -Xms512m -Xmx512m
+        - name: TZ
+          value: PST
+        - name: xpack.security.enabled
+          value: "false"
+        image: docker.elastic.co/elasticsearch/elasticsearch:5.2.1
+        name: pires
+        ports:
+        - containerPort: 9200
+        - containerPort: 9300
+        volumeMounts:
+        - mountPath: /usr/share/elasticsearch/data
+          name: esdatadir
+      restartPolicy: Always
+      volumes:
+      - name: esdatadir
+        emptyDir: {}
+
+---
+# Taken from https://github.com/pires/kubernetes-elasticsearch-cluster/issues/85
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  labels:
+    name: pires-ds
+  name: pires-ds
+spec:
+  selector:
+    matchLabels:
+      app: pires-ds
+  template:
+    metadata:
+      labels:
+        app: pires-ds
+    spec:
+      containers:
+      - name: pires-ds
+        image: gcr.io/google-containers/startup-script:v1
+        imagePullPolicy: IfNotPresent
+        securityContext:
+          privileged: true
+        env:
+        - name: STARTUP_SCRIPT
+          value: |
+            #! /bin/bash
+            sysctl -w vm.max_map_count=262144
+            echo "done"

@@ -1,11 +1,10 @@
 ---
-version: '3.2'
+version: '3'
 services:
   pir:
     container_name: pira
-    image: pir_remote:${PISERVER_VERSION}
-    # command: python manage.py runserver 0.0.0.0:8000
-    # command: uwsgi --ini pir_uwsgi.ini
+    image: pir_local:${PISERVER_VERSION}
+    command: python manage.py runserver 0.0.0.0:8000
     environment:
       - INSTALL_DEFAULT_GRAPHS=True
       - INSTALL_DEFAULT_CONCEPTS=True
@@ -27,9 +26,7 @@ services:
       - pirpg
       - pires
     volumes:
-      - type: bind
-        source: .
-        target: /app/piserver
+      - .:/app/piserver
   pirstatic:
     container_name: pirstatic
     image: pir_static:${PISERVER_VERSION}

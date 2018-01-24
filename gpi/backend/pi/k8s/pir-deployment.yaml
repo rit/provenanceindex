@@ -1,0 +1,45 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: pira
+  name: pira
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: pira
+    spec:
+      containers:
+      - image: us.gcr.io/liquid-engine-192523/pir_remote:v0.14
+        name: pira
+        env:
+        - name: DJANGO_DEBUG
+          value: "True"
+        - name: DOMAIN_NAMES
+          value: 0.0.0.0 localhost .gritty.team .gritech.team
+        - name: ELASTICSEARCH_PREFIX
+          value: pir
+        - name: ESHOST
+          value: pires
+        - name: ESPORT
+          value: "9200"
+        - name: PGDBNAME
+          value: pir_arches_db
+        - name: PGHOST
+          value: pirpg
+        - name: PGPASSWORD
+          value: postgres
+        - name: PGPORT
+          value: "5432"
+        - name: PGUSERNAME
+          value: postgres
+        - name: TZ
+          value: PST
+        ports:
+        - containerPort: 8000
+      restartPolicy: Always
