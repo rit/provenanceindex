@@ -49,4 +49,4 @@ if USER_SECRET_KEY:
     # Make this unique, and don't share it with anybody.
     SECRET_KEY = USER_SECRET_KEY
 
-STATIC_ROOT = '/static_root'
+STATIC_ROOT = '/static_root/media'
