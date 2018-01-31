@@ -15,7 +15,7 @@ spec:
         app: pira
     spec:
       containers:
-      - image: us.gcr.io/liquid-engine-192523/pir_remote:v0.15
+      - image: us.gcr.io/liquid-engine-192523/pir_remote:{{.Env.PISERVER_VERSION}}
         name: pira
         env:
         - name: DJANGO_DEBUG
