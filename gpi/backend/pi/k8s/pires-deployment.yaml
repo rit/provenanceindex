@@ -32,9 +32,12 @@ spec:
         - mountPath: /usr/share/elasticsearch/data
           name: esdatadir
       restartPolicy: Always
+      securityContext:
+        fsGroup: 1000
       volumes:
       - name: esdatadir
-        emptyDir: {}
+        persistentVolumeClaim:
+          claimName: arches-esdata-qa-pvc
 
 ---
 # Taken from https://github.com/pires/kubernetes-elasticsearch-cluster/issues/85

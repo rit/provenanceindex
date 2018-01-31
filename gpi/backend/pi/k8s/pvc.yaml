@@ -32,3 +32,21 @@ spec:
   resources:
     requests:
       storage: 5Gi
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app: arches-esdata-qa-pvc
+  name: arches-esdata-qa-pvc
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: "standard"
+  selector:
+    matchLabels:
+      volume: arches-esdata-qa-disk
+  resources:
+    requests:
+      storage: 256Gi
