@@ -1,4 +1,4 @@
--e git+https://github.com/thegetty/arches.git@master#egg=arches
+-e git+https://github.com/thegetty/arches.git@v0.21#egg=arches
 
 
 # Leave the following line commented so that pip install will ignore this
