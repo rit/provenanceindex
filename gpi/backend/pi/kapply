@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+
+"""
+Generate yaml and config files
+"""
+
+from __future__ import print_function
+import os
+import sys
+from mako.template import Template
+
+
+def render(template):
+    compiled = Template(template)
+    return compiled.render(**os.environ)
+
+
+def main(inp=sys.stdin, out=sys.stdout):
+    template = inp.read()
+    out.write(render(template))
+
+
+if __name__ == '__main__':
+    main()
