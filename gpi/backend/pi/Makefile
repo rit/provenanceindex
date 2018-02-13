@@ -3,11 +3,15 @@ FLAVORS ?= local remote
 PIR_IMAGES = pir_remote pir_static
 APT_PACKAGES = $(shell ./bin/join.py < apt_packages.txt)
 
+pir-arches-runtime:
+	./bin/kapply.py pir-arches-runtime.sh.mako | sh -s
+
 image_local: dockerfile
 	docker build -f build/local.dockerfile --rm -t pir_local:$(PISERVER_VERSION) $(CONTEXT)
 
 image_remote: dockerfile
 	docker build -f build/remote.dockerfile --rm -t pir_remote:$(PISERVER_VERSION) $(CONTEXT)
+
 
 image_static: image_remote
 	docker build -f Dockerfile.static --build-arg baseimage=pir_remote:$(PISERVER_VERSION) --rm -t pir_static:$(PISERVER_VERSION) $(CONTEXT)

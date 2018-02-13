@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cat $@ | ./kapply | kubectl apply -f -
+cat $@ | ./bin/kapply | kubectl apply -f -
