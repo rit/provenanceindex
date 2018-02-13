@@ -2,9 +2,9 @@
 with open('apt_packages.txt') as lines:
   apt_packages = ' '.join([line.strip() for line in lines])
 
+baseimage_name = "pir-arches-runtime"
 basename = "pir-arches-runtime.dockerfile"
 docker_context = "."
-baseimage_name = "pir-arches-runtime"
 image_names = {
   "remote": baseimage_name,
   "local": "{}_local".format(baseimage_name)
