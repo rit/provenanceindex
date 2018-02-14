@@ -3,7 +3,7 @@ CONTEXT=.
 pir-arches-runtime:
 	./bin/kapply.py pir-arches-runtime.sh.mako | sh -s
 
-pir-arches-assets:
+pir-arches-assets: pir-arches-runtime
 	./bin/kapply.py pir-arches-assets.sh.mako | sh -s
 
 pir-push-images:
