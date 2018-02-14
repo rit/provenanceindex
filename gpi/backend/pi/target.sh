@@ -5,5 +5,5 @@
 if [[ $@ == *.sh ]] ; then
   sh $@
 elif [[ $@ == *.yaml ]] ; then
-  ./kapply.sh $@
+  ./apply.sh $@
 fi

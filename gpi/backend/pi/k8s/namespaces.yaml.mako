@@ -3,7 +3,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: arches-${flavor}
+  name: pir-arches-${flavor}
   labels:
-    flavor: arches-${flavor}
+    flavor: pir-arches-${flavor}
 %endfor

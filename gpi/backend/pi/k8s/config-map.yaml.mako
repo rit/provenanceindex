@@ -4,7 +4,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: pir-arches-runtime-configmap
-  namespace: arches-${flavor}
+  namespace: pir-arches-${flavor}
 data:
   DJANGO_DEBUG: "False"
   DOMAIN_NAMES: 0.0.0.0 localhost .gritech.team
