@@ -2,9 +2,9 @@
 
 assert FLAVOR, "Please set FLAVOR environment variable"
 
-PIR_PD_ARCHES_POSTGRES_DATA = "pir-pd-arches-postgres_data"
-PIR_PD_ARCHES_POSTGRES_LOGS = "pir-pd-arches-postgres_logs"
-PIR_PD_ARCHES_ES_DATA = "pir-pd-arches-es_data"
+PIR_PD_ARCHES_POSTGRES_DATA = "pir-pd-arches-postgres-data"
+PIR_PD_ARCHES_POSTGRES_LOGS = "pir-pd-arches-postgres-logs"
+PIR_PD_ARCHES_ES_DATA = "pir-pd-arches-es-data"
 
 disks = [
   {
