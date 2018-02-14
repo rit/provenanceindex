@@ -97,3 +97,18 @@ spec:
     requests:
       storage: ${claim['size']}
 % endfor
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: pirpg
+  name: pirpg
+spec:
+  ports:
+  - name: "5432"
+    port: 5432
+    targetPort: 5432
+  selector:
+    app: pirpg
