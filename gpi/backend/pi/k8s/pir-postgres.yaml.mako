@@ -42,7 +42,7 @@ spec:
         name: pirpg
         envFrom:
         - configMapRef:
-            name: pir-arches-runtime-configmap
+            name: pir-arches-postgres
         ports:
         - containerPort: 5432
         volumeMounts:
@@ -97,6 +97,22 @@ spec:
     requests:
       storage: ${claim['size']}
 % endfor
+
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pir-arches-postgres
+  namespace: pir-arches-${FLAVOR}
+data:
+  POSTGRES_PASSWORD: postgres
+  POSTGRES_USER: postgres
+  POSTGRES_DB: pir_arches_db
+  PGDATA: /var/lib/postgresql/data/pgdata
+  PGTZ: UTC
+  PGPASSWORD: postgres
+
 
 ---
 apiVersion: v1

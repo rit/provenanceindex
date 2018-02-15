@@ -16,12 +16,5 @@ data:
   PGPASSWORD: postgres
   PGPORT: "5432"
   PGUSERNAME: postgres
-
-  # postgres docker image
-  POSTGRES_PASSWORD: postgres
-  POSTGRES_USER: postgres
-  PGDATA: /var/lib/postgresql/data/pgdata
-  POSTGRES_DB: pir_arches_db
-
   TZ: UTC
 % endfor

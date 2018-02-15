@@ -20,6 +20,13 @@ spec:
         envFrom:
         - configMapRef:
             name: pir-arches-runtime-configmap
+        env:
+        - name: DJANGO_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: pir-arches-secrets
+              key: django-secret-key
+              optional: yes
         ports:
         - containerPort: 8000
       - image: us.gcr.io/${GCP_PROJECT_ID_PIR}/${PIR_ARCHES_ASSETS_IMAGE}:${PIR_ARCHES_RUNTIME_VERSION}
