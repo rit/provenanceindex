@@ -2,12 +2,35 @@ import os
 from StringIO import StringIO
 
 from pytest import mark
+from pytest import fixture
 
 from kapply import drive
 from kapply import parse_args
 from kapply import render
 from kapply import transform
 
+
+@fixture
+def sample_path(tmpdir):
+    template = tmpdir.join('add.txt')
+    template.write('${THREE} = ${1+2}\n')
+    path = str(template.realpath())
+    return path
+
+
+@fixture
+def envyaml(tmpdir):
+    template = tmpdir.join('env.yaml')
+    template.write(\
+"""
+---
+ONE: 1
+TWO: 2
+THREE: 3
+"""
+    )
+    path = str(template.realpath())
+    return path
 
 def test_environment_variables():
     home = render("HOME: ${HOME}")
@@ -42,10 +65,17 @@ def test_parse_args():
 
 
 def test_read_input_from_file(tmpdir):
-    template = tmpdir.join('home.txt')
+    template = tmpdir.join('add.txt')
     template.write('math: ${1+2}\n')
     path = str(template.realpath())
     args = [path]
     out = StringIO()
     drive(args, out)
     assert out.getvalue() == 'math: 3\n'
+
+
+def test_load_envar_from_file(sample_path, envyaml):
+    args = ['-e', envyaml, sample_path]
+    out = StringIO()
+    drive(args, out)
+    assert out.getvalue() == '3 = 3\n'
