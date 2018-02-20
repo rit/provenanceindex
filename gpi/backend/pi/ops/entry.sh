@@ -1,6 +1,7 @@
 #!/bin/bash
 
 USER=www-data
+NGINX_CONF=/app/ops/nginx/pir_uwsgi.conf
 
 # Arches needs write permission to log
 chown -R $USER /app/piserver/piserver
@@ -12,4 +13,5 @@ chown -R $USER /app/shared
 
 cd /app/piserver
 uwsgi --uid www-data --ini pir_uwsgi.ini
-nginx -g 'daemon off;' -c /app/ops/nginx/pir_uwsgi.conf
+envsubst < $NGINX_CONF.template > $NGINX_CONF
+nginx -g 'daemon off;' -c $NGINX_CONF

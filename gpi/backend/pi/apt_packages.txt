@@ -5,6 +5,7 @@ default-jre-headless
 docbook-mathml
 docbook-xsl
 dos2unix
+gettext
 git-all
 libgdal1-dev
 libgeos-dev

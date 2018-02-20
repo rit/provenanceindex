@@ -29,10 +29,22 @@ spec:
               optional: yes
         ports:
         - containerPort: 8000
+        livenessProbe:
+          httpGet:
+            path: /auth/
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 3
       - image: us.gcr.io/${GCP_PROJECT_ID_PIR}/${PIR_ARCHES_ASSETS_IMAGE}:${PIR_ARCHES_RUNTIME_VERSION}
         name: pir-arches-assets
         ports:
         - containerPort: 9000
+        livenessProbe:
+          httpGet:
+            path: /media/css/index.css
+            port: 9000
+          initialDelaySeconds: 3
+          periodSeconds: 3
       restartPolicy: Always
 
 ---
