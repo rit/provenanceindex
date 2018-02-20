@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-docker exec pir_local $@
+docker run --rm -it $PIR_ARCHES_RUNTIME_IMAGE:$PIR_ARCHES_RUNTIME_VERSION $@

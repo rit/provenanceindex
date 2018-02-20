@@ -7,7 +7,7 @@ CMD ["/sbin/my_init"]
 WORKDIR /tmp
 RUN apt-get update -y &&\
 	apt-get upgrade -y &&\
-	apt-get install -y {{ apt_packages }} &&\
+	apt-get install -y ${APT_PACKAGES} &&\
 	curl -sL https://deb.nodesource.com/setup_8.x | bash - &&\
 	apt-get install nodejs &&\
 	npm install -g bower
@@ -47,7 +47,7 @@ RUN	pip install --no-cache-dir -r requirements_editable.txt
 # Expose port 8000
 EXPOSE 8000
 
-{% if flavor == 'remote' -%}
+% if DEPLOYMENT_FLAVOR == 'remote':
 
 # Install nginx from nginx.org
 RUN echo "deb http://nginx.org/packages/ubuntu/ xenial nginx" >> /etc/apt/sources.list.d/nginx.list &&\
@@ -61,7 +61,11 @@ COPY ./piserver /app/piserver
 
 COPY ./ops /app/ops
 
-{% endif %}
+# Install Bower components
+WORKDIR /app/piserver/piserver
+RUN bower --allow-root install
+
+% endif
 
 # # Set default workdir
 WORKDIR /app/piserver

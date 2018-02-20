@@ -1,10 +1,24 @@
+<%
+
+assert FLAVOR, "Please set FLAVOR environment variable"
+
+PIR_PD_ARCHES_ES_DATA = "pir-pd-arches-es-data"
+
+name = "{}-{}".format(PIR_PD_ARCHES_ES_DATA, FLAVOR)
+disk = {
+  "size": "256Gi",
+  "name": name,
+  "mount": "/usr/share/elasticsearch/data"
+}
+
+%>
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
     app: pires
-    ver: v0.11
+    ver: ${PIR_ARCHES_RUNTIME_VERSION}
   name: pires
 spec:
   replicas: 1
@@ -20,7 +34,7 @@ spec:
         - name: ES_JAVA_OPTS
           value: -Xms512m -Xmx512m
         - name: TZ
-          value: PST
+          value: UTC
         - name: xpack.security.enabled
           value: "false"
         image: docker.elastic.co/elasticsearch/elasticsearch:5.2.1
@@ -29,18 +43,19 @@ spec:
         - containerPort: 9200
         - containerPort: 9300
         volumeMounts:
-        - mountPath: /usr/share/elasticsearch/data
-          name: esdatadir
+        - mountPath: ${disk['mount']}
+          name: ${disk['name']}
       restartPolicy: Always
       securityContext:
         fsGroup: 1000
       volumes:
-      - name: esdatadir
+      - name: ${disk['name']}
         persistentVolumeClaim:
-          claimName: arches-esdata-qa-pvc
+          claimName: ${disk['name']}
 
 ---
 # Taken from https://github.com/pires/kubernetes-elasticsearch-cluster/issues/85
+
 apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
@@ -68,3 +83,56 @@ spec:
             #! /bin/bash
             sysctl -w vm.max_map_count=262144
             echo "done"
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ${disk['name']}-volume
+  labels:
+    volume: ${disk['name']}
+spec:
+  storageClassName: ""
+  capacity:
+    storage: ${disk['size']}
+  accessModes:
+    - ReadWriteOnce
+  gcePersistentDisk:
+    pdName: ${disk['name']}
+    fsType: ext4
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ${disk['name']}
+  labels:
+    app: pir-es
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: ""
+  selector:
+    matchLabels:
+      volume: ${disk['name']}
+  resources:
+    requests:
+      storage: ${disk['size']}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: pires
+  name: pires
+spec:
+  ports:
+  - name: "9200"
+    port: 9200
+    targetPort: 9200
+  - name: "9300"
+    port: 9300
+    targetPort: 9300
+  selector:
+    app: pires
