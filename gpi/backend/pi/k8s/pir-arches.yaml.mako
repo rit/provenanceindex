@@ -33,6 +33,12 @@ spec:
         name: pir-arches-assets
         ports:
         - containerPort: 9000
+        livenessProbe:
+          httpGet:
+            path: /media/css/index.css
+            port: 9000
+          initialDelaySeconds: 3
+          periodSeconds: 3
       restartPolicy: Always
 
 ---
