@@ -6,7 +6,7 @@ metadata:
   name: pir-arches-runtime-configmap
   namespace: pir-arches-${flavor}
 data:
-  DJANGO_DEBUG: "True"
+  DJANGO_DEBUG: "False"
   DOMAIN_NAMES: "*"
   ELASTICSEARCH_PREFIX: pir
   ESHOST: pires
