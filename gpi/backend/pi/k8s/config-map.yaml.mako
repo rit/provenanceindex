@@ -6,8 +6,8 @@ metadata:
   name: pir-arches-runtime-configmap
   namespace: pir-arches-${flavor}
 data:
-  DJANGO_DEBUG: "False"
-  DOMAIN_NAMES: 0.0.0.0 localhost .gritech.team
+  DJANGO_DEBUG: "True"
+  DOMAIN_NAMES: "*"
   ELASTICSEARCH_PREFIX: pir
   ESHOST: pires
   ESPORT: "9200"
