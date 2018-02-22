@@ -2,7 +2,6 @@
 
 assert FLAVOR, "Please set FLAVOR environment variable"
 
-PIR_PD_ARCHES_ES_DATA = "pir-pd-arches-es-data"
 
 name = "{}-{}".format(PIR_PD_ARCHES_ES_DATA, FLAVOR)
 disk = {
