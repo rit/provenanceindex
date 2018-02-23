@@ -45,6 +45,8 @@ if USER_ELASTICSEARCH_PREFIX:
 PIRA_SERVICE_HOST = get_optional_env_variable('PIRA_SERVICE_HOST')
 ALLOWED_HOSTS = get_env_variable('DOMAIN_NAMES').split() + [PIRA_SERVICE_HOST]
 
+USE_X_FORWARDED_HOST = True
+
 USER_SECRET_KEY = get_optional_env_variable('DJANGO_SECRET_KEY')
 if USER_SECRET_KEY:
     # Make this unique, and don't share it with anybody.
