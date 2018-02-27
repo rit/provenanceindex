@@ -2,6 +2,7 @@ build-essential
 clang
 curl
 default-jre-headless
+dnsutils
 docbook-mathml
 docbook-xsl
 dos2unix
