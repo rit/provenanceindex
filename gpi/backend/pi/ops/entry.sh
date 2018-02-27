@@ -13,5 +13,5 @@ chown -R $USER /app/shared
 
 cd /app/piserver
 uwsgi --uid www-data --ini pir_uwsgi.ini
-envsubst < $NGINX_CONF.template > $NGINX_CONF
+/app/bin/kapply.py < $NGINX_CONF.template > $NGINX_CONF
 nginx -g 'daemon off;' -c $NGINX_CONF
