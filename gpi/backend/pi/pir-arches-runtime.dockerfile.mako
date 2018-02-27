@@ -60,6 +60,7 @@ RUN echo "deb http://nginx.org/packages/ubuntu/ xenial nginx" >> /etc/apt/source
 COPY ./piserver /app/piserver
 
 COPY ./ops /app/ops
+COPY ./bin/kapply.py /app/bin/kapply.py
 
 # Install Bower components
 WORKDIR /app/piserver/piserver
