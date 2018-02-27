@@ -27,6 +27,10 @@ spec:
               name: pir-arches-secrets
               key: django-secret-key
               optional: yes
+        - name: K8S_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
         ports:
         - containerPort: 8000
         livenessProbe:

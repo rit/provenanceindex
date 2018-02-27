@@ -7,7 +7,7 @@ metadata:
   namespace: pir-arches-${flavor}
 data:
   DJANGO_DEBUG: "False"
-  DOMAIN_NAMES: "*"
+  DOMAIN_NAMES: "localhost .gritech.team .getty.edu"
   ELASTICSEARCH_PREFIX: pir
   ESHOST: pires
   ESPORT: "9200"
