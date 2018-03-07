@@ -33,6 +33,12 @@ http {
     server_name localhost;
     charset     utf-8;
     client_max_body_size 75M;
+
+    # x-forwarded-proto header inserted by the GCE L7
+    if ($http_x_forwarded_proto = "http") {
+      return 301 https://$host$request_uri;
+    }
+
     location / {
       uwsgi_pass  pirserver;
       include     /etc/nginx/uwsgi_params;
