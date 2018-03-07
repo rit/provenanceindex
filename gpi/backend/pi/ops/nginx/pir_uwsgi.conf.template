@@ -43,6 +43,10 @@ http {
       uwsgi_param X-Forwarded-Proto $http_x_forwarded_proto;
     }
 
+    location /.well-known/acme-challenge {
+      proxy_pass http://certbot;
+    }
+
     location /media/ {
       proxy_pass http://localhost:9000;
     }

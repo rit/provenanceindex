@@ -59,12 +59,10 @@ metadata:
     app: pira
   name: pira
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
   - name: "http"
     port: 80
     targetPort: 8000
   selector:
     app: pira
-status:
-  loadBalancer: {}
