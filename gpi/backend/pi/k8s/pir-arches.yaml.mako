@@ -31,6 +31,10 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: status.podIP
+        - name: K8S_NODE_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.hostIP
         ports:
         - containerPort: 8000
         livenessProbe:
