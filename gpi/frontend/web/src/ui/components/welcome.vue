@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'Person',
+  name: 'Welcome',
   data () {
     return {
-      msg: 'fire'
+      msg: 'Welcome to the Getty'
     }
   }
 }
@@ -18,6 +18,6 @@ export default {
 <style scoped>
 h1 {
   font-weight: normal;
-  color: red;
+  color: green;
 }
 </style>
