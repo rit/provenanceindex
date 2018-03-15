@@ -1,7 +1,7 @@
 import Router from 'vue-router'
 import Vue from 'vue'
 
-import Person from '@ui/components/person'
+import Person from '@ui/person'
 
 Vue.use(Router)
 
