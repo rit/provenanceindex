@@ -1,15 +1,16 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
+    <p>{{ $route.params }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Person',
+  name: 'PersonIndex',
   data () {
     return {
-      msg: 'Person'
+      msg: 'Person Index'
     }
   }
 }
