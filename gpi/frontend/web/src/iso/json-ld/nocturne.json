@@ -1,0 +1,309 @@
+{
+  "dimension": [
+    {
+      "value": 39.5,
+      "type": "Dimension",
+      "id": "http://lod.example.org/museum/Dimension/1306",
+      "unit": {
+        "label": "inches",
+        "type": "MeasurementUnit",
+        "id": "aat:300379100"
+      },
+      "classified_as": [
+        {
+          "label": "width",
+          "type": "Type",
+          "id": "aat:300055647"
+        }
+      ]
+    },
+    {
+      "value": 29.0,
+      "type": "Dimension",
+      "id": "http://lod.example.org/museum/Dimension/1307",
+      "unit": {
+        "label": "inches",
+        "type": "MeasurementUnit",
+        "id": "aat:300379100"
+      },
+      "classified_as": [
+        {
+          "label": "height",
+          "type": "Type",
+          "id": "aat:300055644"
+        }
+      ]
+    }
+  ],
+  "id": "http://lod.example.org/museum/ManMadeObject/k-object-702",
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "identified_by": [
+    {
+      "label": "\"Queensborough Nocturne\"",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/1290",
+      "classified_as": [
+        {
+          "label": "preferred terms",
+          "type": "Type",
+          "id": "aat:300404670"
+        }
+      ]
+    },
+    {
+      "label": "Queensborough, Nocturne",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/1291"
+    },
+    {
+      "label": "The Plaza, Nocturne",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/1292"
+    },
+    {
+      "label": "The Plaza, Nocturne  Signed LR \"J.Alden Weir\"",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/1293"
+    },
+    {
+      "label": "Queensborough, Nocturne  Signed LL \"J. Alden Weir\"",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/1294"
+    },
+    {
+      "label": "The Edge Inn, Snaresbrook",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/1295"
+    },
+    {
+      "label": "The Plaza Nocturne",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/1296"
+    },
+    {
+      "label": "Queensborough Nocturne",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/1297"
+    },
+    {
+      "label": "\"The Plaza Nocturne\"",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/1298"
+    }
+  ],
+  "part": [
+    {
+      "label": "Support (canvas, panel)",
+      "type": "ManMadeObject",
+      "id": "http://lod.example.org/museum/ManMadeObject/26",
+      "made_of": [
+        {
+          "label": "canvas (textile material)",
+          "type": "Material",
+          "id": "aat:300014078"
+        },
+        {
+          "label": "panel (wood by form)",
+          "type": "Material",
+          "id": "aat:300014657"
+        }
+      ],
+      "classified_as": [
+        {
+          "label": "supports (artists' materials)",
+          "type": "Type",
+          "id": "aat:300014844"
+        }
+      ]
+    }
+  ],
+  "produced_by": {
+    "label": "Production of Artwork",
+    "type": "Production",
+    "id": "http://lod.example.org/museum/Production/690",
+    "carried_out_by": [
+      "http://lod.example.org/museum/Person/ulan-person-5033"
+    ]
+  },
+  "classified_as": [
+    {
+      "label": "works of art",
+      "type": "Type",
+      "id": "aat:300133025"
+    },
+    {
+      "label": "paintings (visual works)",
+      "type": "Type",
+      "id": "aat:300033618"
+    },
+    {
+      "label": "canvas paintings",
+      "type": "Type",
+      "id": "aat:300410350"
+    },
+    {
+      "label": "panel paintings (paintings by form)",
+      "type": "Type",
+      "id": "aat:300033656"
+    }
+  ],
+  "referred_to_by": [
+    {
+      "value": "26 x 36",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1142",
+      "classified_as": [
+        {
+          "label": "dimensions",
+          "type": "Type",
+          "id": "aat:300266036"
+        }
+      ]
+    },
+    {
+      "value": "26 x 36",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1143",
+      "classified_as": [
+        {
+          "label": "dimensions",
+          "type": "Type",
+          "id": "aat:300266036"
+        }
+      ]
+    },
+    {
+      "value": "39 1/2 x 28 3/4",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1144",
+      "classified_as": [
+        {
+          "label": "dimensions",
+          "type": "Type",
+          "id": "aat:300266036"
+        }
+      ]
+    },
+    {
+      "value": "39 1/2 x 29",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1145",
+      "classified_as": [
+        {
+          "label": "dimensions",
+          "type": "Type",
+          "id": "aat:300266036"
+        }
+      ]
+    },
+    {
+      "value": "21 x 17",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1146",
+      "classified_as": [
+        {
+          "label": "dimensions",
+          "type": "Type",
+          "id": "aat:300266036"
+        }
+      ]
+    },
+    {
+      "value": "39 1/2 x 28 3/4",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1147",
+      "classified_as": [
+        {
+          "label": "dimensions",
+          "type": "Type",
+          "id": "aat:300266036"
+        }
+      ]
+    },
+    {
+      "value": "39 1/2 x 29",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1148",
+      "classified_as": [
+        {
+          "label": "dimensions",
+          "type": "Type",
+          "id": "aat:300266036"
+        }
+      ]
+    },
+    {
+      "value": "39 1/2 x 28 3/4",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1149",
+      "classified_as": [
+        {
+          "label": "dimensions",
+          "type": "Type",
+          "id": "aat:300266036"
+        }
+      ]
+    },
+    {
+      "value": "39 1/2 x 29",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1150",
+      "classified_as": [
+        {
+          "label": "dimensions",
+          "type": "Type",
+          "id": "aat:300266036"
+        }
+      ]
+    },
+    {
+      "value": "C on P [canvas on panel]",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1151",
+      "classified_as": [
+        {
+          "label": "materials (substances)",
+          "type": "Type",
+          "id": "aat:300010358"
+        }
+      ]
+    },
+    {
+      "value": "C on P [canvas on panel]",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/1152",
+      "classified_as": [
+        {
+          "label": "materials (substances)",
+          "type": "Type",
+          "id": "aat:300010358"
+        }
+      ]
+    }
+  ],
+  "type": "ManMadeObject",
+  "shows": [
+    {
+      "type": "VisualItem",
+      "id": "http://lod.example.org/museum/VisualItem/1113",
+      "classified_as": [
+        {
+          "label": "genre (visual works)",
+          "type": "Type",
+          "id": "aat:300139140"
+        }
+      ]
+    },
+    {
+      "type": "VisualItem",
+      "id": "http://lod.example.org/museum/VisualItem/1114",
+      "classified_as": [
+        {
+          "label": "landscapes (representations)",
+          "type": "Type",
+          "id": "aat:300015636"
+        }
+      ]
+    }
+  ]
+}
