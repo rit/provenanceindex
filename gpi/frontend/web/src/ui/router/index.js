@@ -1,7 +1,7 @@
 import Router from 'vue-router'
 import Vue from 'vue'
 
-import Base from '@ui/layout/base'
+import LayoutBase from '@ui/layout/base'
 import Person from '@ui/person'
 import PersonHome from '@ui/person-home'
 import PersonIndex from '@ui/person-index'
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/',
       name: 'Welcome',
-      component: Base,
+      component: LayoutBase,
       children: [
         {
           path: '/person',
