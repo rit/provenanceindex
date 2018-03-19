@@ -10,9 +10,9 @@ export default {
   name: 'PersonIndex',
   data () {
     return {
-      msg: 'Person Index'
+      msg: 'Person Index',
     }
-  }
+  },
 }
 </script>
 

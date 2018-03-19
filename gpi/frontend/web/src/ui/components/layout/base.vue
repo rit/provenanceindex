@@ -5,7 +5,9 @@
         <div class="branding">
           <nav class="level-left">
             <div class="level-item">
-              <img width="35px" src="@static/logo.png">
+              <img
+                width="35px"
+                src="@static/logo.png">
             </div>
             <div class="level-item">
               <h1>The Provenance Index</h1>
@@ -30,7 +32,7 @@
 <script>
 
 export default {
-  name: 'layout-base'
+  name: 'LayoutBase',
 }
 </script>
 

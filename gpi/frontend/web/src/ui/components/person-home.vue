@@ -9,9 +9,9 @@ export default {
   name: 'PersonHome',
   data () {
     return {
-      msg: 'Person Home'
+      msg: 'Person Home',
     }
-  }
+  },
 }
 </script>
 

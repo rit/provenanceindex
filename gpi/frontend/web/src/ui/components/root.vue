@@ -8,7 +8,7 @@
 import 'bulma/css/bulma.css'
 
 export default {
-  name: 'root'
+  name: 'Root',
 }
 </script>
 

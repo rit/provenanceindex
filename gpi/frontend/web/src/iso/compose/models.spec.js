@@ -5,6 +5,6 @@ describe('Artist', () => {
     let name = 'Dragon'
     let artist = new Artist({ name })
 
-    expect(artist.name).to.equal(name);
-  });
-});
+    expect(artist.name).to.equal(name)
+  })
+})

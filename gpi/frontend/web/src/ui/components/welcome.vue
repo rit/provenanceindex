@@ -9,9 +9,9 @@ export default {
   name: 'Welcome',
   data () {
     return {
-      msg: 'Welcome to the Getty'
+      msg: 'Welcome to the Getty',
     }
-  }
+  },
 }
 </script>
 

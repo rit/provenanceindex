@@ -5,7 +5,7 @@ import Base from '@ui/layout/base'
 import Person from '@ui/person'
 import PersonHome from '@ui/person-home'
 import PersonIndex from '@ui/person-index'
-import Welcome from '@ui/welcome'
+// import Welcome from '@ui/welcome'
 
 Vue.use(Router)
 
@@ -20,7 +20,7 @@ export default new Router({
         {
           path: '/person',
           name: 'PersonIndex',
-          component: PersonIndex
+          component: PersonIndex,
         },
         {
           path: '/person/:id',
@@ -28,17 +28,17 @@ export default new Router({
           children: [
             {
               path: '',
-              component: PersonHome
+              component: PersonHome,
             },
             {
               path: 'objects',
-              component: Person
-            }
-          ]
-        }
-      ]
+              component: Person,
+            },
+          ],
+        },
+      ],
     },
-  ]
+  ],
 })
 
 // TODO: /persons/:id/events
