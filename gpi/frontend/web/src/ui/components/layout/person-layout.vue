@@ -1,15 +1,17 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
+    <p>{{ $route.params }}</p>
+    <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Person',
+  name: 'PersonLayout',
   data () {
     return {
-      msg: 'Person',
+      msg: 'Person Layout',
     }
   },
 }

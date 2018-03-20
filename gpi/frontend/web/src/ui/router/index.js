@@ -2,13 +2,15 @@ import Router from 'vue-router'
 import Vue from 'vue'
 
 import LayoutBase from '@ui/layout/base'
-import Person from '@ui/person'
+import ObjectLayout from '@ui/layout/object-layout'
+import PersonLayout from '@ui/layout/person-layout'
+
 import PersonHome from '@ui/person-home'
-import PersonIndex from '@ui/person-index'
-// import Welcome from '@ui/welcome'
 
 Vue.use(Router)
 
+// NOTE: Routable components that have "children" should have have
+// "router-view" in their templates
 export default new Router({
   mode: 'history',
   routes: [
@@ -18,21 +20,17 @@ export default new Router({
       component: LayoutBase,
       children: [
         {
-          path: '/person',
-          name: 'PersonIndex',
-          component: PersonIndex,
-        },
-        {
-          path: '/person/:id',
-          component: PersonHome,
+          path: 'persons/:id',
+          component: PersonLayout,
           children: [
             {
               path: '',
+              name: 'persons',
               component: PersonHome,
             },
             {
               path: 'objects',
-              component: Person,
+              component: ObjectLayout,
             },
           ],
         },
@@ -40,6 +38,3 @@ export default new Router({
     },
   ],
 })
-
-// TODO: /persons/:id/events
-// TODO: /persons/:id/objects
