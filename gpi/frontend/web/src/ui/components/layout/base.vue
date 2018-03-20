@@ -1,6 +1,7 @@
 <template>
   <section class="section">
     <header>
+      <header-explore/>
       <div class="container">
         <div class="branding">
           <nav class="level-left">
@@ -32,9 +33,12 @@
 </template>
 
 <script>
-
+import HeaderExplore from '@ui/header-explore.vue'
 export default {
   name: 'LayoutBase',
+  components: {
+    HeaderExplore,
+  },
 }
 </script>
 
