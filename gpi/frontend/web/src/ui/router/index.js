@@ -20,12 +20,16 @@ export default new Router({
       component: LayoutBase,
       children: [
         {
+          path: 'persons',
+          component: PersonLayout,
+        },
+        {
           path: 'persons/:id',
           component: PersonLayout,
           children: [
             {
               path: '',
-              name: 'persons',
+              name: 'person-home',
               component: PersonHome,
             },
             {
