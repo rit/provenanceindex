@@ -34,9 +34,9 @@ import GettyFooter from '@ui/getty-footer.vue'
 export default {
   name: 'LayoutBase',
   components: {
-    GettyFooter
-  }
-};
+    GettyFooter,
+  },
+}
 </script>
 
 <style scoped>
