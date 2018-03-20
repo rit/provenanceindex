@@ -16,7 +16,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Welcome',
+      name: 'home',
       component: LayoutBase,
       children: [
         {

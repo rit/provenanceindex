@@ -10,7 +10,9 @@
                 src="@static/logo.png">
             </div>
             <div class="level-item">
-              <h1>The Provenance Index</h1>
+              <router-link :to="{name: 'home'}">
+                <h1>The Provenance Index</h1>
+              </router-link>
             </div>
           </nav>
         </div>
@@ -40,5 +42,9 @@ export default {
 h1 {
   font-size: 1.8em;
   font-weight: bold;
+}
+
+.branding a {
+  color: #666;
 }
 </style>
