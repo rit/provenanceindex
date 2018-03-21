@@ -13,13 +13,13 @@
             The J. Paul Getty Trust
           </a>
         </div>
-        <div class="footer-links column is-half-desktop is-two-thirds-tablet has-text-centered has-text-right-tablet-only">
-          <p>
-            &copy; The J. Paul Getty Trust |
-            <a href= "http://www.getty.edu/legal/privacy.html">Privacy Policy</a> |
-            <a href= "http://www.getty.edu/legal/copyright.html">Terms of Use</a> |
-            <a href= "http://www.getty.edu/about/contact_us.html">Contact Us</a>
-          </p>
+        <div class="column is-half-desktop is-two-thirds-tablet has-text-centered has-text-right-tablet-only">
+          <ul>
+            <li>&copy; The J. Paul Getty Trust</li>
+            <li><a href= "http://www.getty.edu/legal/privacy.html">Privacy Policy</a></li>
+            <li><a href= "http://www.getty.edu/legal/copyright.html">Terms of Use</a></li>
+            <li><a href= "http://www.getty.edu/about/contact_us.html">Contact Us</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -36,13 +36,20 @@ export default {
 .footer-logo {
   max-height: 35px;
 }
-.footer-links p{
-  padding-top: 5px;
-}
-.footer-links a{
-  white-space: nowrap;
-}
 a {
   color: #4a4a4a;
+}
+ul{
+  padding-top: 5px;
+}
+li {
+  float: left;
+}
+li a{
+  white-space: nowrap;
+}
+li:not(:last-child):after {
+  content: " | ";
+  white-space: pre;
 }
 </style>
