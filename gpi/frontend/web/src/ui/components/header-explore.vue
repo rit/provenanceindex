@@ -65,8 +65,13 @@
 </template>
 
 <script>
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+
 export default {
   name: 'HeaderExplore',
+  components: {
+    FontAwesomeIcon,
+  },
   data () {
     return {
       isDropdownActive: false,
