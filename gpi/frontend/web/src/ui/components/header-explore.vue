@@ -22,41 +22,15 @@
           class="dropdown-menu"
           role="menu">
           <div class="dropdown-content">
-            <a
-              href="http://www.getty.edu/visit/"
-              class="dropdown-item">
-              Visit
-            </a>
-            <a
-              href="http://www.getty.edu/museum/"
-              class="dropdown-item">
-              Museum
-            </a>
-            <a
-              href="http://www.getty.edu/research/"
-              class="dropdown-item">
-              Research Institute
-            </a>
-            <a
-              href="http://www.getty.edu/conservation/"
-              class="dropdown-item">
-              Conservation Institute
-            </a>
-            <a
-              href="http://www.getty.edu/foundation/"
-              class="dropdown-item">
-              Foundation
-            </a>
-            <a
-              href="http://www.getty.edu/publications/"
-              class="dropdown-item">
-              Publications
-            </a>
-            <a
-              href="http://www.getty.edu/about/"
-              class="dropdown-item">
-              About the Getty
-            </a>
+            <div
+              v-for="(value, key) in dropdownLinks"
+              :key="value">
+              <a
+                :href="value"
+                class="dropdown-item">
+                {{ key }}
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -75,6 +49,15 @@ export default {
   data () {
     return {
       isDropdownActive: false,
+      dropdownLinks: {
+        'Visit': 'http://www.getty.edu/visit/',
+        'Museum': 'http://www.getty.edu/museum/',
+        'Research Institute': 'http://www.getty.edu/research/',
+        'Conservation Institute': 'http://www.getty.edu/conservation/',
+        'Foundation': 'http://www.getty.edu/foundation/',
+        'Publications': 'http://www.getty.edu/publications/',
+        'About the Getty': 'http://www.getty.edu/about/',
+      },
     }
   },
   methods: {
