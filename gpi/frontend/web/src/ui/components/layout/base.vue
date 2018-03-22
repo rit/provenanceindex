@@ -10,18 +10,18 @@
       </div>
     </section>
 
-    <footer class="footer">
-      &copy; 2018 The J. Paul Getty Trust
-    </footer>
+    <getty-footer/>
   </section>
 </template>
 
 <script>
+import GettyFooter from '@ui/getty-footer.vue'
 import HeaderLogo from '@ui/header-logo.vue'
 
 export default {
   name: 'LayoutBase',
   components: {
+    GettyFooter,
     HeaderLogo,
   },
 }
