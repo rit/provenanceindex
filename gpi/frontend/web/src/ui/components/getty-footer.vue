@@ -49,7 +49,7 @@ li a{
   white-space: nowrap;
 }
 li:not(:last-child):after {
-  content: " | ";
-  white-space: pre;
+  content: "|";
+  padding: 0 0.8em;
 }
 </style>
