@@ -23,12 +23,12 @@
           role="menu">
           <div class="dropdown-content">
             <div
-              v-for="(value, key) in dropdownLinks"
-              :key="value">
+              v-for="(url, text) in dropdownLinks"
+              :key="url">
               <a
-                :href="value"
+                :href="url"
                 class="dropdown-item">
-                {{ key }}
+                {{ text }}
               </a>
             </div>
           </div>
