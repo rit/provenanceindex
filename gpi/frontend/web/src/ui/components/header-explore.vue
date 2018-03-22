@@ -3,7 +3,7 @@
     <div class="container">
       <div
         :class="{'is-active': isDropdownActive}"
-        class="dropdown is-hoverable">
+        class="dropdown">
         <div
           class="dropdown-trigger"
           @click="toggleDropdown">
