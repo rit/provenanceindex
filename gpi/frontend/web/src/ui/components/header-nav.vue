@@ -18,11 +18,11 @@
       class="navbar-menu is-centered-nav"
     >
       <div class="navbar-start">
-        <a
-          href="#"
+        <router-link
+          :to="{name: 'home'}"
           class="navbar-item">
           Home
-        </a>
+        </router-link>
         <a
           href="#"
           class="navbar-item">
