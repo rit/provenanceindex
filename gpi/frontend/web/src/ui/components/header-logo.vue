@@ -1,29 +1,24 @@
 <template>
-  <div class="container">
-
-    <div class="level">
-      <div class="level-left">
-        <div class="level-item">
-          <a
-            class= "logo pull-left"
-            href="http://www.getty.edu">
-            <img
-              class="header-logo"
-              width="60px"
-              src="@static/getty_logo_og.png" >
-          </a>
-        </div>
-      </div>
+  <div class="level">
+    <div class="level-left">
       <div class="level-item">
-
-        <router-link :to="{name: 'home'}">
+        <a
+          class= "logo pull-left"
+          href="http://www.getty.edu">
           <img
+            class="header-logo"
             width="60px"
-            src="@static/logo.png">
-          <h1 class="has-text-centered">The Provenance Index</h1>
-        </router-link>
+            src="@static/getty_logo_og.png" >
+        </a>
       </div>
-
+    </div>
+    <div class="level-item">
+      <router-link :to="{name: 'home'}">
+        <img
+          width="60px"
+          src="@static/logo.png">
+        <h1 class="has-text-centered">The Provenance Index</h1>
+      </router-link>
     </div>
   </div>
 </template>

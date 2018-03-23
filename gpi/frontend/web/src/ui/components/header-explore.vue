@@ -1,36 +1,34 @@
 <template>
   <div class="top-bar">
-    <div class="container">
+    <div
+      :class="{'is-active': isDropdownActive}"
+      class="dropdown">
       <div
-        :class="{'is-active': isDropdownActive}"
-        class="dropdown">
-        <div
-          class="dropdown-trigger"
-          @click="toggleDropdown">
-          <button
-            class="button"
-            aria-haspopup="true"
-            aria-controls="dropdown-menu">
-            <span>Explore The Getty</span>
-            <span class="icon is-small">
-              <font-awesome-icon icon="caret-down" />
-            </span>
-          </button>
-        </div>
-        <div
-          id="dropdown-menu"
-          class="dropdown-menu"
-          role="menu">
-          <div class="dropdown-content">
-            <div
-              v-for="(url, text) in dropdownLinks"
-              :key="url">
-              <a
-                :href="url"
-                class="dropdown-item">
-                {{ text }}
-              </a>
-            </div>
+        class="dropdown-trigger"
+        @click="toggleDropdown">
+        <button
+          class="button"
+          aria-haspopup="true"
+          aria-controls="dropdown-menu">
+          <span>Explore The Getty</span>
+          <span class="icon is-small">
+            <font-awesome-icon icon="caret-down" />
+          </span>
+        </button>
+      </div>
+      <div
+        id="dropdown-menu"
+        class="dropdown-menu"
+        role="menu">
+        <div class="dropdown-content">
+          <div
+            v-for="(url, text) in dropdownLinks"
+            :key="url">
+            <a
+              :href="url"
+              class="dropdown-item">
+              {{ text }}
+            </a>
           </div>
         </div>
       </div>
