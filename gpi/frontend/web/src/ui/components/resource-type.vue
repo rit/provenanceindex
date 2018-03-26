@@ -1,7 +1,7 @@
 <template>
-  <div class="card">
+  <div class="card resource">
     <div class="card-image">
-      <figure class="image">
+      <figure class="image is-4by3">
         <img :src="getImgUrl(logo)">
       </figure>
     </div>
@@ -64,8 +64,9 @@ export default {
 </script>
 
 <style scoped>
-.card-content {
-  background: #f2f2f2;
+.resource {
+  height: 100%;
+  background: #e6e6e6;
 }
 a {
   text-decoration: underline;
