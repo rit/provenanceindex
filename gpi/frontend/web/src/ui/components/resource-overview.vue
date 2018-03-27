@@ -1,6 +1,14 @@
 <template>
   <div class="container">
     <div class="columns">
+      <div class="column is-half is-offset-one-quarter">
+        <h1 class="is-size-5 has-text-weight-bold has-text-centered">
+          Resource Types in the Provenance Index
+          <hr>
+        </h1>
+      </div>
+    </div>
+    <div class="columns">
       <div
         v-for="resource in resources"
         :key="resource.name"
@@ -57,6 +65,11 @@ export default {
 </script>
 
 <style scoped>
+hr {
+  height: 2px;
+  margin-top: .5rem;
+  background: #cccccc;
+}
 .resource-description {
   position: relative;
   background: #e6e6e6;
