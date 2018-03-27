@@ -6,9 +6,7 @@
     </header>
 
     <section class="section">
-      <div class="container">
-        <router-view/>
-      </div>
+      <homepage-visualization/>
     </section>
 
     <getty-footer/>
@@ -18,6 +16,7 @@
 <script>
 import HeaderExplore from '@ui/header-explore.vue'
 import HeaderLogo from '@ui/header-logo.vue'
+import HomepageVisualization from '@ui/homepage-visualization'
 import GettyFooter from '@ui/getty-footer.vue'
 
 export default {
@@ -25,6 +24,7 @@ export default {
   components: {
     HeaderExplore,
     HeaderLogo,
+    HomepageVisualization,
     GettyFooter,
   },
 }
