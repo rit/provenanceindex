@@ -21,7 +21,9 @@
           id="dropdown-menu"
           class="dropdown-menu"
           role="menu">
-          <div class="dropdown-content">
+          <div
+            data-cy="explore-the-getty"
+            class="dropdown-content">
             <div
               v-for="(url, text) in dropdownLinks"
               :key="url">
