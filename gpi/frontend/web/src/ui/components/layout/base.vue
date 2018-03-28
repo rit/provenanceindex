@@ -19,6 +19,7 @@
 import HeaderExplore from '@ui/header-explore.vue'
 import HeaderLogo from '@ui/header-logo.vue'
 import GettyFooter from '@ui/getty-footer.vue'
+import Vspec from '@ui/vspec'
 
 export default {
   name: 'LayoutBase',
@@ -26,6 +27,7 @@ export default {
     HeaderExplore,
     HeaderLogo,
     GettyFooter,
+    Vspec,
   },
 }
 </script>
