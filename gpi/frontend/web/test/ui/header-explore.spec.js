@@ -1,13 +1,13 @@
-import { spec } from 'iso/vspec'
+import { encode } from 'iso/vspec'
 
 describe('Explore the Getty', () => {
-  var uri;
+  var uri
   beforeEach(() => {
-    uri = spec({
+    uri = encode({
       component: 'HeaderExplore',
-      data: {
-        one: 1
-      }
+      props: {
+        one: 1,
+      },
     })
   })
 
