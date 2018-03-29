@@ -9,9 +9,6 @@
 import Vue from 'vue'
 import { decode, register } from 'iso/vspec'
 
-import HeaderExplore from '@ui/header-explore'
-Vue.component('HeaderExplore', HeaderExplore)
-
 const Vspec = {
   name: 'Vspec',
   render (h) {
