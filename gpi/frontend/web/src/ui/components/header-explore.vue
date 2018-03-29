@@ -21,7 +21,9 @@
           id="dropdown-menu"
           class="dropdown-menu"
           role="menu">
-          <div class="dropdown-content">
+          <div
+            data-cy="explore-the-getty"
+            class="dropdown-content">
             <div
               v-for="(url, text) in dropdownLinks"
               :key="url">
@@ -39,13 +41,8 @@
 </template>
 
 <script>
-import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-
 export default {
   name: 'HeaderExplore',
-  components: {
-    FontAwesomeIcon,
-  },
   data () {
     return {
       isDropdownActive: false,
@@ -68,9 +65,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "./node_modules/bulma/sass/utilities/all";
+
 .top-bar {
   border-bottom: 2px solid $light;
+  margin-bottom: 0.5em;
 }
 
 .dropdown-menu {
