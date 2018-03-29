@@ -15,7 +15,7 @@ describe('Vspec', () => {
       component: 'Dragon',
       components: {
         'Dragon': Dragon,
-      }
+      },
     })
   })
 

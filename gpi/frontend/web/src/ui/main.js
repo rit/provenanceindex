@@ -3,15 +3,10 @@
 import Vue from 'vue'
 import Root from '@ui/root'
 import router from './router'
-
-import fontawesome from '@fortawesome/fontawesome'
-import {
-  faCaretDown,
-} from '@fortawesome/fontawesome-free-solid'
-
-fontawesome.library.add(faCaretDown)
+import core from '@ui/core'
 
 Vue.config.productionTip = false
+core.init()
 
 /* eslint-disable no-new */
 new Vue({

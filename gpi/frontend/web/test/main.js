@@ -1,10 +1,11 @@
 import Vue from 'vue'
-Vue.config.productionTip = false
-
 import Router from 'vue-router'
-Vue.use(Router)
-
 import VspecRunner from '@ui/vspec-runner'
+import core from '@ui/core'
+
+Vue.config.productionTip = false
+Vue.use(Router)
+core.init()
 
 const router = new Router({
   mode: 'history',
@@ -21,6 +22,8 @@ const router = new Router({
 new Vue({
   el: '#vspec',
   router,
-  components: { VspecRunner },
+  components: {
+    VspecRunner,
+  },
   template: '<vspec-runner/>',
 })
