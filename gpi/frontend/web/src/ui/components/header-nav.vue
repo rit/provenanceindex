@@ -6,6 +6,7 @@
     <div class="navbar-brand">
       <button
         :class="{ 'is-active': showNav }"
+        data-cy="hamburger-button"
         class="button navbar-burger"
         @click="toggleBurger">
         <span/>
@@ -15,6 +16,7 @@
     </div>
     <div
       :class="{ 'is-active': showNav }"
+      data-cy="navbar-content"
       class="navbar-menu is-centered-nav"
     >
       <div class="navbar-start">
