@@ -34,11 +34,15 @@ describe('HeaderNav', () => {
     cy.get('[data-cy=hamburger-button').then($el => {
       expect($el).to.not.be.visible
     })
-  });
+  })
 
-  it.skip('shows submenu on hover', () => {
+  it('shows about submenu on hover', () => {
     cy.visit(uri)
-    cy.contains('a', 'About').invoke('show')
-    cy.contains('History').should('be.visible')
-  });
+    cy.get('[data-cy=navbar-about]').should('have.class', 'is-hoverable')
+  })
+
+  it('shows help submenu on hover', () => {
+    cy.visit(uri)
+    cy.get('[data-cy=navbar-help]').should('have.class', 'is-hoverable')
+  })
 })

@@ -35,7 +35,9 @@
           class="navbar-item">
           Saved Searches
         </a>
-        <div class="navbar-item has-dropdown is-hoverable">
+        <div
+          class="navbar-item has-dropdown is-hoverable"
+          data-cy="navbar-about" >
           <a class="navbar-link">
             About
           </a>
@@ -54,7 +56,9 @@
             </a>
           </div>
         </div>
-        <div class="navbar-item has-dropdown is-hoverable">
+        <div
+          data-cy="navbar-help"
+          class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             Help
           </a>
