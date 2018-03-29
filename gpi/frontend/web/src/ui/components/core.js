@@ -7,4 +7,3 @@ import HeaderNav from '@ui/header-nav'
 
 Vue.component('HeaderExplore', HeaderExplore)
 Vue.component('HeaderNav', HeaderNav)
-
