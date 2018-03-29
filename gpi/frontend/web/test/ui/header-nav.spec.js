@@ -1,6 +1,6 @@
 import { encode } from 'iso/vspec'
 
-describe('Explore the Getty', () => {
+describe('HeaderNav', () => {
   var uri
   beforeEach(() => {
     uri = encode({
