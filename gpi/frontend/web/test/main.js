@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import VspecRunner from '@ui/vspec-runner'
+import VspecRunner from './vspec-runner'
 import '@ui/core'
 
 Vue.config.productionTip = false
