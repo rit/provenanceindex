@@ -1,4 +1,5 @@
 'use strict'
+// Copied from webpack.dev.conf
 const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('../config')
@@ -15,6 +16,9 @@ const HOST = process.env.HOST
 const PORT = 9090
 
 const devWebpackConfig = merge(baseWebpackConfig, {
+  entry: {
+    app: './test/main.js'
+  },
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
   },
@@ -23,10 +27,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
-    clientLogLevel: 'warning',
+    clientLogLevel: 'error',
     historyApiFallback: {
       rewrites: [
-        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
+        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'vspec.html') },
       ],
     },
     hot: true,
@@ -54,8 +58,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'index.html',
+      filename: 'vspec.html',
+      template: 'vspec.html',
       inject: true
     }),
     // copy custom static assets

@@ -6,7 +6,6 @@ import ObjectLayout from '@ui/layout/object-layout'
 import PersonLayout from '@ui/layout/person-layout'
 
 import PersonHome from '@ui/person-home'
-import Vspec from '@ui/vspec'
 
 Vue.use(Router)
 
@@ -40,11 +39,6 @@ export default new Router({
           ],
         },
       ],
-    },
-    {
-      path: '/vspec',
-      name: 'vspec',
-      component: Vspec,
     },
   ],
 })
