@@ -3,10 +3,9 @@
 import Vue from 'vue'
 import Root from '@ui/root'
 import router from './router'
-import core from '@ui/core'
+import '@ui/core'
 
 Vue.config.productionTip = false
-core.init()
 
 /* eslint-disable no-new */
 new Vue({

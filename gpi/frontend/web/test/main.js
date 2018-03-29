@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import VspecRunner from '@ui/vspec-runner'
-import core from '@ui/core'
+import '@ui/core'
 
 Vue.config.productionTip = false
 Vue.use(Router)
-core.init()
 
 const router = new Router({
   mode: 'history',
