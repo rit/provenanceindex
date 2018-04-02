@@ -63,9 +63,12 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  padding-top: 3rem
+}
 hr {
   height: 2px;
-  margin-top: .5rem;
+  margin: .5rem 0;
   background: #cccccc;
 }
 .resource-description {
