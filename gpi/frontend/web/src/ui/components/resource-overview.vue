@@ -36,13 +36,8 @@
 </template>
 
 <script>
-import ResourceType from '@ui/resource-type.vue'
-
 export default {
   name: 'ResourceOverview',
-  components: {
-    ResourceType,
-  },
   data () {
     return {
       resources: [
