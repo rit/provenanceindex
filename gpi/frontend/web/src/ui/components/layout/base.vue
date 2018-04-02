@@ -7,7 +7,14 @@
     </header>
 
     <section class="section">
-      <getty-gallery/>
+      <div class="columns">
+        <div class="column">
+          <getty-gallery/>
+        </div>
+        <div class="column">
+          <getty-gallery/>
+        </div>
+      </div>
     </section>
 
     <getty-footer/>
