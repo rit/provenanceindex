@@ -6,16 +6,30 @@ class Artist {
 }
 
 class ResourceType {
-  constructor ({ name, description, count, position, image }) {
+  constructor ({ name, description, count, position, logo }) {
     this.name = name
     this.description = description
     this.count = count
     this.position = position
-    this.image = image
+    this.image = logo
+  }
+
+  localeCount () {
+    return this.count.toLocaleString()
   }
 
   imageUrl () {
-    return `@static/${this.image}`
+    return `./${this.image}.png`
+  }
+
+  question () {
+    return `What's ${this.article()} ${this.name}`
+  }
+
+  article () {
+    // TODO consult with an English grammar expert
+    if (this.name.startsWith('O')) { return 'an' }
+    return 'a'
   }
 }
 

@@ -14,9 +14,7 @@
         :key="resource.name"
         class="column">
         <resource-type
-          :type="resource.name"
-          :logo="resource.logo"
-          :number="resource.number"
+          :resource="resource"
           data-cy="resource-type"
           @show-description="showDescription"/>
       </div>
