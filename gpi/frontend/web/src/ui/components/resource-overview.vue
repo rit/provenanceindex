@@ -17,14 +17,17 @@
           :type="resource.name"
           :logo="resource.logo"
           :number="resource.number"
+          data-cy="resource-type"
           @show-description="showDescription"/>
       </div>
     </div>
     <div
       v-if="showCallout"
       :class="notchClass"
+      data-cy="description-callout"
       class="notification resource-description first">
       <button
+        data-cy="delete-button"
         class="delete"
         @click="showCallout = false"/>
       {{ descText }}

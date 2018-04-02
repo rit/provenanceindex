@@ -6,7 +6,9 @@
       </figure>
     </div>
     <div class="card-content has-text-centered">
-      <p class="has-text-weight-bold is-size-6">{{ type }}</p>
+      <p
+        data-cy="card-title"
+        class="has-text-weight-bold is-size-6">{{ type }}</p>
       <p class="is-size-6">{{ formatNumber(number) }} Records</p>
       <a
         href="#"
