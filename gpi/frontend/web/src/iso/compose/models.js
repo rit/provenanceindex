@@ -15,10 +15,9 @@ class ResourceType {
   }
 
   imageUrl () {
-    return `@static/${this.image}` 
+    return `@static/${this.image}`
   }
 }
-
 
 module.exports = {
   Artist,
