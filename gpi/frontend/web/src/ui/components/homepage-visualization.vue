@@ -1,5 +1,5 @@
 <template>
-  <div class="hero is-medium">
+  <div class="hero is-medium wrapper">
     <div class="hero-body viz">
       <div class="columns section-title">
         <div class="column is-half is-offset-one-quarter">
@@ -27,6 +27,9 @@ export default {
 </script>
 
 <style scoped>
+.wrapper {
+  padding-top: 3rem;
+}
 .hero .hero-body.viz {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;

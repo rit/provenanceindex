@@ -1,9 +1,19 @@
-import 'bulma/css/bulma.css'
 import '@ui/icons'
+import 'bulma/css/bulma.css'
 import Vue from 'vue'
 
-import HeaderExplore from '@ui/header-explore'
+// Alphabetically import components
+import GettyFooter from '@ui/getty-footer.vue'
+import HeaderExplore from '@ui/header-explore.vue'
+import HeaderLogo from '@ui/header-logo.vue'
 import HeaderNav from '@ui/header-nav'
+import HomepageVisualization from '@ui/homepage-visualization'
+import SearchBar from '@ui/search-bar'
 
+// Alphabetically register components
+Vue.component('GettyFooter', GettyFooter)
 Vue.component('HeaderExplore', HeaderExplore)
+Vue.component('HeaderLogo', HeaderLogo)
 Vue.component('HeaderNav', HeaderNav)
+Vue.component('HomepageVisualization', HomepageVisualization)
+Vue.component('SearchBar', SearchBar)
