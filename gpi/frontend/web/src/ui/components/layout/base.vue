@@ -3,6 +3,7 @@
     <header>
       <header-explore/>
       <header-logo/>
+      <header-nav/>
     </header>
 
     <section class="section">
@@ -16,6 +17,7 @@
 <script>
 import HeaderExplore from '@ui/header-explore.vue'
 import HeaderLogo from '@ui/header-logo.vue'
+import HeaderNav from '@ui/header-nav'
 import HomepageVisualization from '@ui/homepage-visualization'
 import GettyFooter from '@ui/getty-footer.vue'
 
@@ -24,6 +26,7 @@ export default {
   components: {
     HeaderExplore,
     HeaderLogo,
+    HeaderNav,
     HomepageVisualization,
     GettyFooter,
   },

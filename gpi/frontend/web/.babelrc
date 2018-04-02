@@ -1,7 +1,8 @@
 {
   "presets": [
     ["env", {
-      "modules": false,
+      // NOTE: when modules is set to false, module.exports is not working
+      "modules": "commonjs",
       "targets": {
         "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
       }
