@@ -18,7 +18,6 @@
 import HeaderExplore from '@ui/header-explore.vue'
 import HeaderLogo from '@ui/header-logo.vue'
 import HeaderNav from '@ui/header-nav'
-import HomepageVisualization from '@ui/homepage-visualization'
 import GettyFooter from '@ui/getty-footer.vue'
 
 export default {
@@ -27,7 +26,6 @@ export default {
     HeaderExplore,
     HeaderLogo,
     HeaderNav,
-    HomepageVisualization,
     GettyFooter,
   },
 }
