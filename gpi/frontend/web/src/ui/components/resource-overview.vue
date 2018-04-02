@@ -36,20 +36,22 @@
 </template>
 
 <script>
+import fixtures from 'iso/fixtures'
+import { ResourceType } from 'iso/compose/models'
+import { map } from 'lodash'
+
 export default {
   name: 'ResourceOverview',
   data () {
     return {
-      resources: [
-        {name: 'Object', logo: 'object_logo', number: 80012, description: 'An Object is: Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatisefficitur. Sit amet, consectetur adipiscing elit', position: 'first'},
-        {name: 'Person / Institution', logo: 'person_logo', number: 75042, description: 'A Person / Institution is: Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatisefficitur. Sit amet, consectetur adipiscing elit', position: 'second'},
-        {name: 'Provenance Event', logo: 'event_logo', number: 100019, description: 'A Provenance Event is: Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatisefficitur. Sit amet, consectetur adipiscing elit', position: 'third'},
-        {name: 'Document', logo: 'document_logo', number: 50077, description: 'A Document is: Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatisefficitur. Sit amet, consectetur adipiscing elit', position: 'fourth'},
-      ],
+      resources: [],
       showCallout: false,
       descText: '',
       notchClass: '',
     }
+  },
+  created () {
+    this.resources = map(fixtures.ResourceTypes, resource => new ResourceType(resource))
   },
   methods: {
     showDescription (name) {
