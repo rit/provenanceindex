@@ -1,5 +1,5 @@
 <template>
-  <div class="hero is-medium search">
+  <div class="hero search">
     <div class="hero-body">
       <div class="container">
         <div class="columns">
