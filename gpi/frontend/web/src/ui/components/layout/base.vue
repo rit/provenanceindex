@@ -7,12 +7,13 @@
     </header>
 
     <section class="section">
+      <search-bar/>
       <div class="columns">
-        <div class="column">
-          <getty-gallery/>
+        <div class="gallery-one column">
+          <getty-gallery :gallery-label="featured"/>
         </div>
-        <div class="column">
-          <getty-gallery/>
+        <div class="gallery-two column">
+          <getty-gallery :gallery-label="added"/>
         </div>
       </div>
     </section>
@@ -22,24 +23,22 @@
 </template>
 
 <script>
-import HeaderExplore from '@ui/header-explore.vue'
-import HeaderLogo from '@ui/header-logo.vue'
-import HeaderNav from '@ui/header-nav'
-import GettyGallery from '@ui/getty-gallery.vue'
-import GettyFooter from '@ui/getty-footer.vue'
-
 export default {
   name: 'LayoutBase',
-  components: {
-    HeaderExplore,
-    HeaderLogo,
-    HeaderNav,
-    GettyGallery,
-    GettyFooter,
+  data () {
+    return {
+      featured: 'Featured',
+      added: 'Recently Added'
+    }
   },
 }
 </script>
 
 <style scoped>
-
+.gallery-one {
+  padding-right: 3rem;
+}
+.gallery-two {
+  padding-left: 3rem;
+}
 </style>

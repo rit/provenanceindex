@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2 class="is-size-5 has-text-centered has-text-weight-bold">Featured</h2>
+  <div class="wrapper">
+    <h2 class="is-size-5 has-text-centered has-text-weight-bold">{{galleryLabel}}</h2>
     <div class="columns">
       <div class="column">
         <figure class="image is-4by3">
@@ -33,10 +33,21 @@
 <script>
 export default {
   name: 'GettyGallery',
+  props: {
+    galleryLabel: {
+      type: String,
+      default () {
+        return ''
+      },
+    },
+  },
 }
 </script>
 
 <style scoped>
+.wrapper {
+  padding-top: 3rem;
+}
 h2 {
   padding-bottom: 1rem
 }
