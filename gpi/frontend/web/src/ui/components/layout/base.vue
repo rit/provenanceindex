@@ -28,7 +28,7 @@ export default {
   data () {
     return {
       featured: 'Featured',
-      added: 'Recently Added'
+      added: 'Recently Added',
     }
   },
 }

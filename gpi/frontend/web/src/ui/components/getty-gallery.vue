@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <h2 class="is-size-5 has-text-centered has-text-weight-bold">{{galleryLabel}}</h2>
+    <h2 class="is-size-5 has-text-centered has-text-weight-bold">{{ galleryLabel }}</h2>
     <div class="columns">
       <div class="column">
         <figure class="image is-4by3">
