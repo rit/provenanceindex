@@ -13,7 +13,7 @@
       <a
         href="#"
         class="is-size-7"
-        @click="showDescription">{{ resource.question() }}</a>
+        @click.prevent="showDescription">{{ resource.question() }}</a>
     </div>
   </div>
 </template>
