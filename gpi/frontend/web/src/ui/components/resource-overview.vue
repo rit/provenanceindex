@@ -9,25 +9,39 @@
       </div>
     </div>
     <div class="columns">
-      <div
-        v-for="resource in resources"
-        :key="resource.name"
-        class="column">
-        <resource-type
-          :resource="resource"
-          data-cy="resource-type"
-          @show-description="showDescription(resource)"/>
-      </div>
+      <template v-for="resource in resources">
+        <div
+          :key="resource.name"
+          class="column">
+          <div>
+            <resource-type
+              :resource="resource"
+              data-cy="resource-type"
+              @show-description="showDescription(resource)"/>
+          </div>
+          <div
+            v-show="showMobile(resource)"
+            :class="'center'"
+            data-cy="description-callout-mobile"
+            class="notification resource-description mobile is-hidden-tablet">
+            <button
+              data-cy="delete-button"
+              class="delete mobile"
+              @click="showCallout = false"/>
+            {{ descText }}
+          </div>
+        </div>
+      </template>
     </div>
     <div
-      v-if="showCallout"
+      v-show="showCallout"
       :class="notchClass"
       data-cy="description-callout"
-      class="notification resource-description first">
+      class="notification resource-description first is-hidden-mobile">
       <button
         data-cy="delete-button"
-        class="delete"
-        @click="showCallout = false"/>
+        class="delete large"
+        @click="hideCallout"/>
       {{ descText }}
     </div>
   </div>
@@ -58,6 +72,15 @@ export default {
       this.descText = resource.description
       this.notchClass = resource.position
     },
+    showMobile (resource) {
+      if (this.showCallout && this.notchClass === resource.position) {
+        return true
+      }
+      return false
+    },
+    hideCallout () {
+      this.showCallout = false
+    },
   },
 }
 </script>
@@ -70,6 +93,10 @@ hr {
   height: 2px;
   margin: .5rem 0;
   background: #cccccc;
+}
+.mobile {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 .resource-description {
   position: relative;
@@ -96,5 +123,8 @@ hr {
 }
 .resource-description.fourth:before {
   left: 87%;
+}
+.resource-description.center:before {
+  left: 50%;
 }
 </style>

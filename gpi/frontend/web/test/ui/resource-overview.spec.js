@@ -21,7 +21,7 @@ describe('ResourceOverview', () => {
 
   it('hides callout by default', () => {
     cy.visit(uri)
-    cy.get('[data-cy=description-callout').should('not.be.visible')
+    cy.get('[data-cy=description-callout]').should('not.be.visible')
   })
 
   it('shows Object callout on click', () => {
@@ -29,8 +29,8 @@ describe('ResourceOverview', () => {
     cy.get('[data-cy=resource-type]').eq(0).within(() => {
       cy.get('a').click()
     })
-    cy.get('[data-cy=description-callout').should('be.visible')
-    cy.get('[data-cy=description-callout').then($el => {
+    cy.get('[data-cy=description-callout]').should('be.visible')
+    cy.get('[data-cy=description-callout]').then($el => {
       expect($el).to.contain('An Object is: ')
     })
   })
@@ -40,8 +40,8 @@ describe('ResourceOverview', () => {
     cy.get('[data-cy=resource-type]').eq(1).within(() => {
       cy.get('a').click()
     })
-    cy.get('[data-cy=description-callout').should('be.visible')
-    cy.get('[data-cy=description-callout').then($el => {
+    cy.get('[data-cy=description-callout]').should('be.visible')
+    cy.get('[data-cy=description-callout]').then($el => {
       expect($el).to.contain('A Person / Institution is: ')
     })
   })
@@ -51,8 +51,8 @@ describe('ResourceOverview', () => {
     cy.get('[data-cy=resource-type]').eq(3).within(() => {
       cy.get('a').click()
     })
-    cy.get('[data-cy=description-callout').should('be.visible')
-    cy.get('[data-cy=description-callout').then($el => {
+    cy.get('[data-cy=description-callout]').should('be.visible')
+    cy.get('[data-cy=description-callout]').then($el => {
       expect($el).to.contain('A Document is: ')
     })
   })
@@ -62,8 +62,8 @@ describe('ResourceOverview', () => {
     cy.get('[data-cy=resource-type]').eq(2).within(() => {
       cy.get('a').click()
     })
-    cy.get('[data-cy=description-callout').should('be.visible')
-    cy.get('[data-cy=description-callout').then($el => {
+    cy.get('[data-cy=description-callout]').should('be.visible')
+    cy.get('[data-cy=description-callout]').then($el => {
       expect($el).to.contain('A Provenance Event is: ')
     })
   })
@@ -73,7 +73,27 @@ describe('ResourceOverview', () => {
     cy.get('[data-cy=resource-type]').first().within(() => {
       cy.get('a').click()
     })
-    cy.get('.delete').click()
+    cy.get('.delete.large').click()
     cy.get('[data-cy=description-callout]').should('not.be.visible')
+  })
+
+  it('hides mobile callout on larger screens', () => {
+    cy.visit(uri)
+    cy.get('[data-cy=description-callout-mobile]').should('not.be.visible')
+  })
+
+  it('uses mobile callout on mobile', () => {
+    cy.viewport(700, 1000)
+    cy.visit(uri)
+    cy.get('[data-cy=resource-type]').eq(0).within(() => {
+      cy.get('a').click()
+    })
+    cy.get('[data-cy=description-callout-mobile]').should('be.visible')
+    cy.get('[data-cy=description-callout-mobile]').then($el => {
+      expect($el).to.contain('An Object is: ')
+    })
+    cy.get('[data-cy=description-callout]').should('not.be.visible')
+    cy.get('.delete.mobile').first().click()
+    cy.get('[data-cy=description-callout-mobile]').should('not.be.visible')
   })
 })
