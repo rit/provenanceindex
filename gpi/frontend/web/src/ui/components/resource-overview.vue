@@ -16,7 +16,7 @@
         <resource-type
           :resource="resource"
           data-cy="resource-type"
-          @show-description="showDescription"/>
+          @show-description="showDescription(resource)"/>
       </div>
     </div>
     <div
@@ -49,14 +49,14 @@ export default {
     }
   },
   created () {
+    // TODO Replace fixtures.ResourceTypes with API response
     this.resources = map(fixtures.ResourceTypes, resource => new ResourceType(resource))
   },
   methods: {
-    showDescription (name) {
+    showDescription (resource) {
       this.showCallout = true
-      const activeIndex = this.resources.findIndex(resource => resource.name === name)
-      this.descText = this.resources[activeIndex].description
-      this.notchClass = this.resources[activeIndex].position
+      this.descText = resource.description
+      this.notchClass = resource.position
     },
   },
 }
