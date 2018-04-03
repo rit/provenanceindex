@@ -9,6 +9,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "test-server": "cross-env PORT=9090 webpack-dev-server --inline --progress --config build/webpack.uitest.conf.js",
     "test-unit": "mocha src/iso/**/*.spec.js",
+    "nyc": "nyc mocha src/iso/**/*.spec.js",
     "cypress-ui-test": "cypress open -c integrationFolder=test/ui",
     "lint": "eslint --fix --ext .js,.vue src test",
     "build": "node build/build.js"
@@ -97,6 +98,12 @@
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js",
+      "test"
+    ]
   },
   "browserslist": [
     "> 1%",

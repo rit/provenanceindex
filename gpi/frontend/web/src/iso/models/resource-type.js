@@ -1,10 +1,3 @@
-class Artist {
-  constructor ({ id, name }) {
-    this.id = id
-    this.name = name
-  }
-}
-
 class ResourceType {
   constructor ({ name, description, count, position, logo }) {
     this.name = name
@@ -33,7 +26,4 @@ class ResourceType {
   }
 }
 
-module.exports = {
-  Artist,
-  ResourceType,
-}
+module.exports = ResourceType

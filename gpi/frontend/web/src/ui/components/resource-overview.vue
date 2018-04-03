@@ -35,7 +35,7 @@
 
 <script>
 import fixtures from 'iso/fixtures'
-import { ResourceType } from 'iso/compose/models'
+import ResourceType from 'iso/models/resource-type'
 import { map } from 'lodash'
 
 export default {

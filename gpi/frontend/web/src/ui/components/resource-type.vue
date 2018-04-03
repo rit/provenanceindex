@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { ResourceType } from 'iso/compose/models'
+import ResourceType from 'iso/models/resource-type'
 
 export default {
   name: 'ResourceType',
