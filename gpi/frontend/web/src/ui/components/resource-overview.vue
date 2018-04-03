@@ -13,7 +13,7 @@
         <div
           :key="resource.name"
           class="column">
-          <div>
+          <div class="resource-wrapper">
             <resource-type
               :resource="resource"
               data-cy="resource-type"
@@ -93,6 +93,9 @@ hr {
   height: 2px;
   margin: .5rem 0;
   background: #cccccc;
+}
+.resource-wrapper {
+  height: 100%;
 }
 .mobile {
   margin-left: 0.75rem;
