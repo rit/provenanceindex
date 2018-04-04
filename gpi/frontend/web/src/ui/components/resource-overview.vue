@@ -8,7 +8,7 @@
         </h1>
       </div>
     </div>
-    <div class="columns">
+    <div class="columns resource-types">
       <template v-for="resource in resources">
         <div
           :key="resource.name"
@@ -20,10 +20,14 @@
               @show-description="showDescription(resource)"/>
           </div>
           <div
-            v-show="showMobile(resource)"
+            v-show="showActive(resource)"
+            :class="notchClass"
+            class="notch"/>
+          <div
+            v-show="showActive(resource)"
             :class="'center'"
             data-cy="description-callout-mobile"
-            class="notification resource-description mobile is-hidden-tablet">
+            class="notification resource-description is-hidden-tablet notch">
             <button
               data-cy="delete-button"
               class="delete mobile"
@@ -37,7 +41,7 @@
       v-show="showCallout"
       :class="notchClass"
       data-cy="description-callout"
-      class="notification resource-description first is-hidden-mobile">
+      class="notification resource-description is-hidden-mobile">
       <button
         data-cy="delete-button"
         class="delete large"
@@ -72,7 +76,7 @@ export default {
       this.descText = resource.description
       this.notchClass = resource.position
     },
-    showMobile (resource) {
+    showActive (resource) {
       if (this.showCallout && this.notchClass === resource.position) {
         return true
       }
@@ -94,18 +98,21 @@ hr {
   margin: .5rem 0;
   background: #cccccc;
 }
+.resource-types {
+  margin-bottom: 0.4rem;
+}
 .resource-wrapper {
   height: 100%;
-}
-.mobile {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
 }
 .resource-description {
   position: relative;
   background: #e6e6e6;
 }
-.resource-description:before {
+.notch {
+  position: relative;
+  margin-top: 1rem;
+}
+.notch:before {
   content: "";
   width: 0px;
   height: 0px;
@@ -114,20 +121,5 @@ hr {
   left: 45%;
   top: -20px;
   border-bottom: 10px solid #e6e6e6;
-}
-.resource-description.first:before {
-  left: 11%;
-}
-.resource-description.second:before {
-  left: 37%;
-}
-.resource-description.third:before {
-  left: 62%;
-}
-.resource-description.fourth:before {
-  left: 87%;
-}
-.resource-description.center:before {
-  left: 50%;
 }
 </style>
