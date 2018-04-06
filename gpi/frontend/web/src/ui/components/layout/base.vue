@@ -6,9 +6,7 @@
       <header-nav/>
     </header>
 
-    <section class="section">
-      <search-bar/>
-    </section>
+    <router-view/>
 
     <getty-footer/>
   </section>
