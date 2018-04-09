@@ -29,9 +29,27 @@
             class="is-size-7"><b>Active:</b> {{ person.active }}</p>
         </div>
       </div>
-      <p
+      <div
         v-if="person.description"
-        class="is-size-7"><b>Description:</b> {{ person.description }}</p>
+        :class="{ 'pi-hideContent': hideContent, 'pi-showContent': showContent }"
+        class="pi-hideContent is-size-7"><b>Description:</b> {{ person.description }}
+      </div>
+      <div
+        v-if="hideContent"
+        class="pi-read-more">
+        <a
+          class="is-uppercase is-size-7"
+          href="#"
+          @click.prevent="toggleContent()">Read More...</a>
+      </div>
+      <div
+        v-if="showContent"
+        class="pi-read-less">
+        <a
+          class="is-uppercase is-size-7"
+          href="#"
+          @click.prevent="toggleContent()">Show Less</a>
+      </div>
     </div>
   </div>
 </template>
@@ -45,15 +63,34 @@ export default {
       required: true,
     },
   },
+  data () {
+    return {
+      hideContent: true,
+      showContent: false,
+    }
+  },
   methods: {
     getImageUrl () {
       var images = require.context('@static', false, /\.png$/)
       return images(this.person.imageUrl())
+    },
+    toggleContent () {
+      this.hideContent = !this.hideContent
+      this.showContent = !this.showContent
     },
   },
 }
 </script>
 
 <style scoped>
+.pi-hideContent {
+  overflow: hidden;
+  line-height: 1rem;
+  height: 3rem;
+}
+.pi-showContent {
+  line-height: 1rem;
+  height: auto;
+}
 
 </style>
