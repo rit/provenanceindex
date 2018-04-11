@@ -1,5 +1,7 @@
 <template>
-  <div class="container">
+  <div
+    data-cy="resource-overview"
+    class="container">
     <div class="columns">
       <div class="column is-half is-offset-one-quarter">
         <h1 class="is-size-5 has-text-weight-bold has-text-centered">
@@ -16,73 +18,54 @@
           <div class="resource-wrapper">
             <resource-type
               :resource="resource"
+              :handler="_self"
               data-cy="resource-type"
-              @show-description="showDescription(resource)"/>
-          </div>
-          <div
-            v-show="showActive(resource)"
-            :class="notchClass"
-            class="notch"/>
-          <div
-            v-show="showActive(resource)"
-            :class="'center'"
-            data-cy="description-callout-mobile"
-            class="notification resource-description is-hidden-tablet notch">
-            <button
-              data-cy="delete-button"
-              class="delete mobile"
-              @click="showCallout = false"/>
-            {{ descText }}
+            />
           </div>
         </div>
       </template>
     </div>
-    <div
-      v-show="showCallout"
-      :class="notchClass"
-      data-cy="description-callout"
-      class="notification resource-description is-hidden-mobile">
-      <button
-        data-cy="delete-button"
-        class="delete large"
-        @click="hideCallout"/>
-      {{ descText }}
+    <div class="is-hidden-mobile">
+      <getty-callout
+        v-show="showCallout"
+        :text="descText"
+        :handler="_self"
+        data-cy="getty-callout"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import fixtures from 'iso/fixtures'
-import ResourceType from 'iso/models/resource-type'
-import { map } from 'lodash'
+import { noop } from 'iso/utils'
 
 export default {
   name: 'ResourceOverview',
+  props: {
+    resources: {
+      type: Array,
+      default: () => [],
+    },
+  },
   data () {
     return {
-      resources: [],
       showCallout: false,
       descText: '',
-      notchClass: '',
     }
   },
   created () {
-    // TODO Replace fixtures.ResourceTypes with API response
-    this.resources = map(fixtures.ResourceTypes, resource => new ResourceType(resource))
+    this.activeResource = noop('deactivate')
   },
   methods: {
-    showDescription (resource) {
-      this.showCallout = true
+    showDescription (resource, resourceTypeVm) {
+      if (this.activeResource === resourceTypeVm) return
+
+      this.activeResource.deactivate()
+      this.activeResource = resourceTypeVm
       this.descText = resource.description
-      this.notchClass = resource.position
+      this.showCallout = true
     },
-    showActive (resource) {
-      if (this.showCallout && this.notchClass === resource.position) {
-        return true
-      }
-      return false
-    },
-    hideCallout () {
+    deactivate () {
       this.showCallout = false
     },
   },
@@ -103,23 +86,5 @@ hr {
 }
 .resource-wrapper {
   height: 100%;
-}
-.resource-description {
-  position: relative;
-  background: #e6e6e6;
-}
-.notch {
-  position: relative;
-  margin-top: 1rem;
-}
-.notch:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  border: 0.8em solid transparent;
-  position: absolute;
-  left: 45%;
-  top: -20px;
-  border-bottom: 10px solid #e6e6e6;
 }
 </style>

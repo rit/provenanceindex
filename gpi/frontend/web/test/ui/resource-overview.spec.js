@@ -1,99 +1,90 @@
-import { encode } from 'iso/vspec'
+import ResourceOverview from '@ui/resource-overview'
+import { div, byData } from 'iso/vspec'
+import { vspecMount, stub, renderOnMobile } from '@testing'
+
+const components = {
+  'resource-overview': ResourceOverview,
+  'resource-type': stub('ResourceType'),
+  'getty-callout': stub('GettyCallout'),
+}
 
 describe('ResourceOverview', () => {
-  var uri
-  beforeEach(() => {
-    uri = encode({
-      component: 'ResourceOverview',
+  context('model', () => {
+    describe('resources', () => {
+      it('lists every resource', () => {
+        let data = () => ({
+          resources: [{}, {}],
+        })
+        const template = div`<resource-overview :resources="resources" />`
+        vspecMount({ template, data, components }, (vm) => {
+          cy.get(byData`resource-type`).its('length').should('be.eq', 2)
+        })
+      })
     })
   })
 
-  it('displays 4 different resource types', () => {
-    cy.visit(uri)
-    cy.get('[data-cy=resource-type]').should($lis => {
-      expect($lis).to.have.length(4)
-      expect($lis.eq(0)).to.contain('Object')
-      expect($lis.eq(1)).to.contain('Person')
-      expect($lis.eq(2)).to.contain('Event')
-      expect($lis.eq(3)).to.contain('Document')
+  context('handler', () => {
+    it('is the handler of GettyCallout', () => {
+      const template = div`<resource-overview />`
+      const data = () => ({})
+      vspecMount({ template, data, components }, (vm) => {
+        cy.get(byData`getty-callout`).then($el => {
+          expect(vm).to.be.handlerOf($el)
+        })
+      })
+    })
+
+    it('is the handler of ResourceType', () => {
+      const template = div`<resource-overview :resources="resources" />`
+      const data = () => ({
+        resources: [{}],
+      })
+      vspecMount({ template, data, components }, (vm) => {
+        cy.get(byData`resource-type`).then($el => {
+          expect(vm).to.be.handlerOf($el)
+        })
+      })
     })
   })
 
-  it('hides callout by default', () => {
-    cy.visit(uri)
-    cy.get('[data-cy=description-callout]').should('not.be.visible')
-  })
+  context('on mobile', () => {
+    beforeEach(renderOnMobile)
 
-  it('shows Object callout on click', () => {
-    cy.visit(uri)
-    cy.get('[data-cy=resource-type]').eq(0).within(() => {
-      cy.get('a').click()
-    })
-    cy.get('[data-cy=description-callout]').should('be.visible')
-    cy.get('[data-cy=description-callout]').then($el => {
-      expect($el).to.contain('An Object is: ')
-    })
-  })
+    it('always hides the off-center getty callout', () => {
+      const template = div`<resource-overview />`
+      vspecMount({ template, components })
 
-  it('shows Person/Institution callout on click', () => {
-    cy.visit(uri)
-    cy.get('[data-cy=resource-type]').eq(1).within(() => {
-      cy.get('a').click()
-    })
-    cy.get('[data-cy=description-callout]').should('be.visible')
-    cy.get('[data-cy=description-callout]').then($el => {
-      expect($el).to.contain('A Person / Institution is: ')
+      cy.get(byData`resource-overview`).then($el => {
+        let vm = $el.get(0).__vue__
+        vm.showDescription({}, {})
+        cy.get(byData`getty-callout`).should('be.hidden')
+      })
     })
   })
 
-  it('shows Event callout on click', () => {
-    cy.visit(uri)
-    cy.get('[data-cy=resource-type]').eq(3).within(() => {
-      cy.get('a').click()
+  context('activating a resource type', () => {
+    it('deactivates the previously selected resource type', () => {
+      const template = div`<resource-overview />`
+      vspecMount({ template, components }, (vm) => {
+        let resource = { description: 'Dragon' }
+        let resourceVm = cy.stub()
+        let deactivate = cy.spy(vm.activeResource, 'deactivate')
+        vm.showDescription(resource, resourceVm)
+        expect(deactivate).to.have.been.called
+        expect(vm.activeResource).to.eq(resourceVm)
+      })
     })
-    cy.get('[data-cy=description-callout]').should('be.visible')
-    cy.get('[data-cy=description-callout]').then($el => {
-      expect($el).to.contain('A Document is: ')
-    })
-  })
 
-  it('shows Document callout on click', () => {
-    cy.visit(uri)
-    cy.get('[data-cy=resource-type]').eq(2).within(() => {
-      cy.get('a').click()
+    it('handles successive activations of the same resource type', () => {
+      const template = div`<resource-overview />`
+      vspecMount({ template, components }, (vm) => {
+        let deactivate = cy.spy()
+        let resource = { description: 'Dragon' }
+        let resourceVm = { deactivate }
+        vm.showDescription(resource, resourceVm)
+        vm.showDescription(resource, resourceVm)
+        expect(deactivate).to.not.have.been.called
+      })
     })
-    cy.get('[data-cy=description-callout]').should('be.visible')
-    cy.get('[data-cy=description-callout]').then($el => {
-      expect($el).to.contain('A Provenance Event is: ')
-    })
-  })
-
-  it('closes callout on click of "x"', () => {
-    cy.visit(uri)
-    cy.get('[data-cy=resource-type]').first().within(() => {
-      cy.get('a').click()
-    })
-    cy.get('.delete.large').click()
-    cy.get('[data-cy=description-callout]').should('not.be.visible')
-  })
-
-  it('hides mobile callout on larger screens', () => {
-    cy.visit(uri)
-    cy.get('[data-cy=description-callout-mobile]').should('not.be.visible')
-  })
-
-  it('uses mobile callout on mobile', () => {
-    cy.viewport(700, 1000)
-    cy.visit(uri)
-    cy.get('[data-cy=resource-type]').eq(0).within(() => {
-      cy.get('a').click()
-    })
-    cy.get('[data-cy=description-callout-mobile]').should('be.visible')
-    cy.get('[data-cy=description-callout-mobile]').then($el => {
-      expect($el).to.contain('An Object is: ')
-    })
-    cy.get('[data-cy=description-callout]').should('not.be.visible')
-    cy.get('.delete.mobile').first().click()
-    cy.get('[data-cy=description-callout-mobile]').should('not.be.visible')
   })
 })
