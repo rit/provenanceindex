@@ -1,4 +1,5 @@
-const { encode } = require('iso/vspec')
+const { encode, div } = require('iso/vspec')
+const { oneLineTrim } = require('common-tags')
 const { URL } = require('url')
 
 function queryObject (uri) {
@@ -28,5 +29,13 @@ describe('encode', () => {
       encode({})
     }
     expect(run).to.throw('Component name is required')
+  })
+})
+
+describe('div', () => {
+  it('wraps the html within a div', () => {
+    let res = div`<p>hi</p>`
+    let expected = `<div><p>hi</p></div>`
+    expect(oneLineTrim(res)).to.equal(expected)
   })
 })

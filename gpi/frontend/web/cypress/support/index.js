@@ -13,8 +13,7 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
-import './commands'
+require('./commands')
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+// NOTE chai is already globally available
+require('./assertions')
