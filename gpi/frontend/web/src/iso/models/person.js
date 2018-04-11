@@ -11,6 +11,8 @@ class Person {
     this.role = person.role
     this.active = person.active
     this.description = person.description
+    this.events = person.events
+    this.objects = person.objects
   }
 
   imageUrl () {

@@ -5,6 +5,9 @@
       :qualifier="person.qualifier"
       :icon="person.icon"/>
     <person-metadata :person="person"/>
+    <person-tabs
+      :events="person.events"
+      :objects="person.objects"/>
   </div>
 </template>
 
