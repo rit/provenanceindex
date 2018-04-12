@@ -8,6 +8,7 @@
 
     <section class="section">
       <search-bar/>
+      <homepage-visualization/>
       <resource-overview :resources="resources" />
     </section>
 
