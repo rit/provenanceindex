@@ -17,8 +17,22 @@ function register (Vue, comps) {
   })
 }
 
+function div (html) {
+  return `
+    <div id="vspec-sut">
+      ${html}
+    </div>
+  `
+}
+
+function byData (attr) {
+  return `[data-cy=${attr}]`
+}
+
 module.exports = {
+  byData,
   decode,
+  div,
   encode,
   register,
 }
