@@ -6,6 +6,9 @@ const ResourceTypes = [
   {name: 'Document', logo: 'document_logo', count: 50077, description: 'A Document is: Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatisefficitur. Sit amet, consectetur adipiscing elit', position: 'fourth'},
 ]
 
+const Person = {id: 1, name: 'Rembrandt van Rijn', qualifier: '(Person: Artist)', icon: 'user-circle'}
+
 module.exports = {
   ResourceTypes,
+  Person,
 }

@@ -1,23 +1,30 @@
 <template>
-  <div>
-    <h1>{{ msg }}</h1>
-  </div>
+  <section class="section">
+    <search-bar/>
+    <homepage-visualization/>
+    <resource-overview :resources="resources" />
+  </section>
 </template>
 
 <script>
+import ResourceType from 'iso/models/resource-type'
+import fixtures from 'iso/fixtures'
+import { map } from 'lodash'
+
 export default {
   name: 'Welcome',
   data () {
     return {
-      msg: 'Welcome to the Getty',
+      resources: [],
     }
+  },
+  created () {
+    // TODO Replace fixtures.ResourceTypes with API response
+    this.resources = map(fixtures.ResourceTypes, resource => new ResourceType(resource))
   },
 }
 </script>
 
 <style scoped>
-h1 {
-  font-weight: normal;
-  color: green;
-}
+
 </style>

@@ -6,6 +6,7 @@ import ObjectLayout from '@ui/layout/object-layout'
 import PersonLayout from '@ui/layout/person-layout'
 
 import PersonHome from '@ui/person-home'
+import Welcome from '@ui/welcome'
 
 Vue.use(Router)
 
@@ -16,9 +17,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
       component: LayoutBase,
       children: [
+        {
+          path: '',
+          name: 'home',
+          component: Welcome,
+        },
         {
           path: 'persons',
           component: PersonLayout,
