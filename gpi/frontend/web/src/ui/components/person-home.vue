@@ -4,6 +4,7 @@
       :name="person.name"
       :qualifier="person.qualifier"
       :icon="person.icon"/>
+    <person-metadata :person="person"/>
   </div>
 </template>
 
