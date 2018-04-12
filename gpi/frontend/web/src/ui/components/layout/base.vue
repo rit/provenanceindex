@@ -6,11 +6,7 @@
       <header-nav/>
     </header>
 
-    <section class="section">
-      <search-bar/>
-      <homepage-visualization/>
-      <resource-overview :resources="resources" />
-    </section>
+    <router-view/>
 
     <getty-footer/>
   </section>
