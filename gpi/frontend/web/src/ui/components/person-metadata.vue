@@ -34,22 +34,11 @@
         :class="{ 'pi-hideContent': hideContent, 'pi-showContent': showContent }"
         class="pi-hideContent is-size-7"><b>Description:</b> {{ person.description }}
       </div>
-      <div
-        v-if="hideContent"
-        class="pi-read-more">
-        <a
-          class="is-uppercase is-size-7"
-          href="#"
-          @click.prevent="toggleContent()">Read More...</a>
-      </div>
-      <div
-        v-if="showContent"
-        class="pi-read-less">
-        <a
-          class="is-uppercase is-size-7"
-          href="#"
-          @click.prevent="toggleContent()">Show Less</a>
-      </div>
+      <getty-ellipsis
+        :show-content="showContent"
+        :hide-content="hideContent"
+        :handler="_self"
+      />
     </div>
   </div>
 </template>

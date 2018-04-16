@@ -4,6 +4,7 @@ import Vue from 'vue'
 
 // Alphabetically import components
 import GettyCallout from '@ui/getty-callout'
+import GettyEllipsis from '@ui/getty-ellipsis'
 import GettyFooter from '@ui/getty-footer.vue'
 import HeaderExplore from '@ui/header-explore.vue'
 import HeaderLogo from '@ui/header-logo'
@@ -18,6 +19,7 @@ import Welcome from '@ui/welcome'
 
 // Alphabetically register components
 Vue.component('GettyCallout', GettyCallout)
+Vue.component('GettyEllipsis', GettyEllipsis)
 Vue.component('GettyFooter', GettyFooter)
 Vue.component('HeaderExplore', HeaderExplore)
 Vue.component('HeaderLogo', HeaderLogo)
