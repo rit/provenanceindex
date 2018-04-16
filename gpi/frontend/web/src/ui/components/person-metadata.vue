@@ -11,11 +11,11 @@
       <div class="columns">
         <div class="column is-narrow">
           <p
-            v-if="person.born"
-            class="is-size-7"><b>Born:</b> {{ person.born }}</p>
+            v-if="person.birth"
+            class="is-size-7"><b>Born:</b> {{ person.birth }}</p>
           <p
-            v-if="person.died"
-            class="is-size-7"><b>Died:</b> {{ person.died }}</p>
+            v-if="person.death"
+            class="is-size-7"><b>Died:</b> {{ person.death }}</p>
           <p
             v-if="person.nationality"
             class="is-size-7"><b>Nationality:</b> {{ person.nationality }}</p>
@@ -25,8 +25,8 @@
             v-if="person.role"
             class="is-size-7"><b>Role:</b> {{ person.role }}</p>
           <p
-            v-if="person.active"
-            class="is-size-7"><b>Active:</b> {{ person.active }}</p>
+            v-if="person.active_info"
+            class="is-size-7"><b>Active:</b> {{ person.active_info }}</p>
         </div>
       </div>
       <div
