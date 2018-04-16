@@ -31,8 +31,8 @@
       </div>
       <div
         v-if="person.description"
-        :class="{ 'pi-hideContent': hideContent, 'pi-showContent': showContent }"
-        class="pi-hideContent is-size-7"><b>Description:</b> {{ person.description }}
+        :class="{ 'pi_hide_content': hideContent, 'pi_show_content': showContent }"
+        class="pi_hide_content is-size-7"><b>Description:</b> {{ person.description }}
       </div>
       <getty-ellipsis
         :show-content="showContent"
@@ -72,12 +72,12 @@ export default {
 </script>
 
 <style scoped>
-.pi-hideContent {
+.pi_hide_content {
   overflow: hidden;
   line-height: 1rem;
   height: 3rem;
 }
-.pi-showContent {
+.pi_show_content {
   line-height: 1rem;
   height: auto;
 }
