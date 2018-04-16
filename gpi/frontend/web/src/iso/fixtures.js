@@ -10,7 +10,6 @@ const Person = {
   id: 1,
   name: 'Rembrandt van Rijn',
   qualifier: '(Person: Artist)',
-  icon: 'user-circle',
   image: 'placeholder',
   birth: 'July 15, 1606 in Leiden, Netherlands',
   death: 'October 4, 1669 in Amsterdam, Netherlands',

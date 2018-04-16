@@ -3,7 +3,6 @@ class Person {
     this.id = person.id
     this.name = person.name
     this.qualifier = person.qualifier
-    this.icon = person.icon
     this.image = person.image
     this.birth = person.birth
     this.death = person.death
@@ -11,6 +10,8 @@ class Person {
     this.role = person.role
     this.active_info = person.active_info
     this.description = person.description
+
+    this.icon = 'user-circle'
   }
 
   imageUrl () {
