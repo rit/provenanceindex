@@ -29,16 +29,17 @@
             class="is-size-7"><b>Active:</b> {{ person.active_info }}</p>
         </div>
       </div>
-      <div
-        v-if="person.description"
-        :class="{ 'pi_hide_content': hideContent, 'pi_show_content': showContent }"
-        class="pi_hide_content is-size-7"><b>Description:</b> {{ person.description }}
-      </div>
       <getty-ellipsis
+        v-if="person.description"
         :show-content="showContent"
         :hide-content="hideContent"
         :handler="_self"
-      />
+      >
+        <div
+          :class="{ 'pi_hide_content': hideContent, 'pi_show_content': showContent }"
+          class="pi_hide_content is-size-7"><b>Description:</b> {{ person.description }}
+        </div>
+      </getty-ellipsis>
     </div>
   </div>
 </template>

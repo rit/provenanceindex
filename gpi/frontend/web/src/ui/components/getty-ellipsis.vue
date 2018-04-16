@@ -1,5 +1,6 @@
 <template>
   <div>
+    <slot/>
     <div
       v-if="hideContent"
       class="pi-read-more">
