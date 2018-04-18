@@ -5,19 +5,11 @@
       class="pi-slot-wrapper is-size-7">
       <slot/>
     </div>
-    <div
-      v-if="showContent">
+    <div>
       <a
         class="is-uppercase is-size-7"
         href="#"
-        @click.prevent="toggleContent()">Show Less</a>
-    </div>
-    <div
-      v-else>
-      <a
-        class="is-uppercase is-size-7"
-        href="#"
-        @click.prevent="toggleContent()">Read More...</a>
+        @click.prevent="toggleContent()">{{ moreOrLess() }}</a>
     </div>
   </div>
 </template>
@@ -33,6 +25,9 @@ export default {
   methods: {
     toggleContent () {
       this.showContent = !this.showContent
+    },
+    moreOrLess () {
+      return this.showContent ? 'Show Less' : 'Read More...'
     },
   },
 }
