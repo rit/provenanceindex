@@ -31,13 +31,9 @@
       </div>
       <getty-ellipsis
         v-if="person.description"
-        :show-content="showContent"
-        :hide-content="hideContent"
-        :handler="_self"
       >
-        <div
-          :class="{ 'pi_hide_content': hideContent, 'pi_show_content': showContent }"
-          class="pi_hide_content is-size-7"><b>Description:</b> {{ person.description }}
+        <div>
+          <b>Description:</b> {{ person.description }}
         </div>
       </getty-ellipsis>
     </div>
@@ -53,34 +49,15 @@ export default {
       required: true,
     },
   },
-  data () {
-    return {
-      hideContent: true,
-      showContent: false,
-    }
-  },
   methods: {
     getImageUrl () {
       var images = require.context('@static', false, /\.png$/)
       return images(this.person.imageUrl())
-    },
-    toggleContent () {
-      this.hideContent = !this.hideContent
-      this.showContent = !this.showContent
     },
   },
 }
 </script>
 
 <style scoped>
-.pi_hide_content {
-  overflow: hidden;
-  line-height: 1rem;
-  height: 3rem;
-}
-.pi_show_content {
-  line-height: 1rem;
-  height: auto;
-}
 
 </style>

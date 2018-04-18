@@ -1,6 +1,10 @@
 <template>
   <div>
-    <slot/>
+    <div
+      :class="{ 'pi_hide_content': hideContent, 'pi_show_content': showContent }"
+      class="slotWrapper pi_hide_content is-size-7">
+      <slot/>
+    </div>
     <div
       v-if="hideContent"
       class="pi-read-more">
@@ -23,27 +27,29 @@
 <script>
 export default {
   name: 'GettyEllipsis',
-  props: {
-    hideContent: {
-      type: Boolean,
-      required: true,
-    },
-    showContent: {
-      type: Boolean,
-      required: true,
-    },
-    handler: {
-      type: Object,
-      required: true,
-    },
+  data () {
+    return {
+      hideContent: true,
+      showContent: false,
+    }
   },
   methods: {
     toggleContent () {
-      this.handler.toggleContent(this)
+      this.hideContent = !this.hideContent
+      this.showContent = !this.showContent
     },
   },
 }
 </script>
 
 <style scoped>
+.pi_hide_content {
+  overflow: hidden;
+  line-height: 1rem;
+  height: 3rem;
+}
+.pi_show_content {
+  line-height: 1rem;
+  height: auto;
+}
 </style>
