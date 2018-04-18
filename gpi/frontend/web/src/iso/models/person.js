@@ -3,16 +3,17 @@ class Person {
     this.id = person.id
     this.name = person.name
     this.qualifier = person.qualifier
-    this.icon = person.icon
     this.image = person.image
-    this.born = person.born
-    this.died = person.died
+    this.birth = person.birth
+    this.death = person.death
     this.nationality = person.nationality
     this.role = person.role
-    this.active = person.active
+    this.active_info = person.active_info
     this.description = person.description
     this.events = person.events
     this.objects = person.objects
+
+    this.icon = 'user-circle'
   }
 
   imageUrl () {
