@@ -4,6 +4,7 @@ import Vue from 'vue'
 import Root from '@ui/root'
 import router from './router'
 import '@ui/core'
+import store from '../iso/store'
 
 Vue.config.productionTip = false
 
@@ -11,6 +12,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { Root },
   template: '<root/>',
 })

@@ -1,27 +1,30 @@
 <template>
   <div class="section">
     <person-title
-      :name="person.name"
-      :qualifier="person.qualifier"
-      :icon="person.icon"/>
-    <person-metadata :person="person"/>
+      :name="personData.name"
+      :qualifier="personData.qualifier"
+      :icon="personData.icon"/>
+    <person-metadata :person-data="personData"/>
   </div>
 </template>
 
 <script>
-import fixtures from 'iso/fixtures'
+import { mapState } from 'vuex'
 import Person from 'iso/models/person'
 
 export default {
   name: 'PersonHome',
   data () {
     return {
-      person: {},
+      personData: {},
     }
+  },
+  computed: {
+    ...mapState(['person']),
   },
   created () {
     // TODO Replace fixtures.Person with API response
-    this.person = new Person(fixtures.Person)
+    this.personData = new Person(this.person)
   },
 }
 </script>
