@@ -32,5 +32,7 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     "comma-dangle": ["error", "always-multiline"],
+    // Prevent chai's `ok` matcher warning message
+    'no-unused-expressions': 'off',
   }
 }

@@ -1,0 +1,95 @@
+{
+  "referred_to_by": [
+    {
+      "classified_as": [
+        "aat:300080102"
+      ],
+      "label": "Dutch painter, printmaker, 1606-1669",
+      "type": "LinguisticObject",
+      "id": "http://lod.example.org/museum/LinguisticObject/2655"
+    }
+  ],
+  "carried_out": [
+    {
+      "timespan": {
+        "begin_of_the_begin": "1631-01-01",
+        "type": "TimeSpan",
+        "end_of_the_end": "1669-01-01",
+        "id": "http://lod.example.org/museum/TimeSpan/5477"
+      },
+      "classified_as": [
+        "aat:300393177"
+      ],
+      "type": "Activity",
+      "id": "http://lod.example.org/museum/Activity/165"
+    }
+  ],
+  "member_of": [
+    {
+      "classified_as": [
+        "aat:300379842",
+        "aat:300111175"
+      ],
+      "label": "Dutch (culture or style)",
+      "type": "Group",
+      "id": "http://lod.example.org/museum/Group/5309"
+    },
+    {
+      "classified_as": [
+        "aat:300055147",
+        "aat:300189559"
+      ],
+      "label": "male",
+      "type": "Group",
+      "id": "http://lod.example.org/museum/Group/5310"
+    }
+  ],
+  "type": "Person",
+  "brought_into_existence_by": {
+    "timespan": {
+      "begin_of_the_begin": "1606-01-01",
+      "type": "TimeSpan",
+      "end_of_the_end": "1606-01-01",
+      "id": "http://lod.example.org/museum/TimeSpan/5475"
+    },
+    "took_place_at": [
+      {
+        "label": "Leyden",
+        "type": "Place",
+        "id": "tgn:7006809-place"
+      }
+    ],
+    "type": "BeginningOfExistence",
+    "id": "http://lod.example.org/museum/BeginningOfExistence/2655"
+  },
+  "identified_by": [
+    {
+      "classified_as": [
+        "aat:300404670"
+      ],
+      "label": "Rembrandt van Rijn",
+      "type": "Name",
+      "id": "http://lod.example.org/museum/Name/2655"
+    }
+  ],
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "label": "Rembrandt van Rijn",
+  "taken_out_of_existence_by": {
+    "timespan": {
+      "begin_of_the_begin": "1669-01-01",
+      "type": "TimeSpan",
+      "end_of_the_end": "1669-01-01",
+      "id": "http://lod.example.org/museum/TimeSpan/5476"
+    },
+    "took_place_at": [
+      {
+        "label": "Amsterdam",
+        "type": "Place",
+        "id": "tgn:7006952-place"
+      }
+    ],
+    "type": "EndOfExistence",
+    "id": "http://lod.example.org/museum/EndOfExistence/2655"
+  },
+  "id": "ulan:500011051"
+}
