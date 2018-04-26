@@ -2,8 +2,8 @@ var Vue = require('vue/dist/vue')
 
 const state = {
   persons: {
-    'id-1': {
-      id: 'id-1',
+    'abcd-1234': {
+      id: 'abcd-1234',
       name: 'Rembrandt van Rijn',
       qualifier: '(Person: Artist)',
       image: 'placeholder',

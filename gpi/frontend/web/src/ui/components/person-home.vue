@@ -17,7 +17,7 @@ export default {
   computed: {
     ...mapGetters(['personById']),
     id () {
-      return 'id-' + this.$route.params.id
+      return this.$route.params.id
     },
     person () {
       return new Person(this.personById(this.id))
