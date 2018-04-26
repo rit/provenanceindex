@@ -1,12 +1,14 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import { state } from './mutations'
+var Vuex = require('vuex/dist/vuex')
+var { state, mutations } = require('iso/store/mutations')
 
-Vue.use(Vuex)
+function initStore (vue) {
+  // So we can run vuex on Node
+  vue.use(Vuex)
 
-const debug = process.env.NODE_ENV !== 'production'
+  return new Vuex.Store({
+    state,
+    mutations,
+  })
+}
 
-export default new Vuex.Store({
-  state,
-  strict: debug,
-})
+module.exports = initStore

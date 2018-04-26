@@ -1,4 +1,4 @@
-import Vue from 'vue'
+var Vue = require('vue/dist/vue')
 
 const state = {
   person: {
