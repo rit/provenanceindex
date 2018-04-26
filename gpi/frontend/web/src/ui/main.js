@@ -4,7 +4,7 @@ import Vue from 'vue'
 import Root from '@ui/root'
 import router from './router'
 import '@ui/core'
-import initStore from '../iso/store'
+import initStore from 'iso/store'
 
 Vue.config.productionTip = false
 
