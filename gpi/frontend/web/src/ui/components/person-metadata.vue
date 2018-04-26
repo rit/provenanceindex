@@ -2,7 +2,7 @@
   <div class="metadata columns">
     <div class="column is-narrow">
       <figure
-        v-if="personData.image"
+        v-if="person.image"
         class="image is-128x128">
         <img :src="getImageUrl()">
       </figure>
@@ -11,29 +11,29 @@
       <div class="columns">
         <div class="column is-narrow">
           <p
-            v-if="personData.birth"
-            class="is-size-7"><b>Born:</b> {{ personData.birth }}</p>
+            v-if="person.birth"
+            class="is-size-7"><b>Born:</b> {{ person.birth }}</p>
           <p
-            v-if="personData.death"
-            class="is-size-7"><b>Died:</b> {{ personData.death }}</p>
+            v-if="person.death"
+            class="is-size-7"><b>Died:</b> {{ person.death }}</p>
           <p
-            v-if="personData.nationality"
-            class="is-size-7"><b>Nationality:</b> {{ personData.nationality }}</p>
+            v-if="person.nationality"
+            class="is-size-7"><b>Nationality:</b> {{ person.nationality }}</p>
         </div>
         <div class="column">
           <p
-            v-if="personData.role"
-            class="is-size-7"><b>Role:</b> {{ personData.role }}</p>
+            v-if="person.role"
+            class="is-size-7"><b>Role:</b> {{ person.role }}</p>
           <p
-            v-if="personData.active_info"
-            class="is-size-7"><b>Active:</b> {{ personData.active_info }}</p>
+            v-if="person.active_info"
+            class="is-size-7"><b>Active:</b> {{ person.active_info }}</p>
         </div>
       </div>
       <getty-ellipsis
-        v-if="personData.description"
+        v-if="person.description"
       >
         <div>
-          <b>Description:</b> {{ personData.description }}
+          <b>Description:</b> {{ person.description }}
         </div>
       </getty-ellipsis>
     </div>
@@ -44,7 +44,7 @@
 export default {
   name: 'PersonMetadata',
   props: {
-    personData: {
+    person: {
       type: Object,
       required: true,
     },
@@ -52,7 +52,7 @@ export default {
   methods: {
     getImageUrl () {
       var images = require.context('@static', false, /\.png$/)
-      return images(this.personData.imageUrl())
+      return images(this.person.imageUrl())
     },
   },
 }

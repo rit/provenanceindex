@@ -1,5 +1,6 @@
 var Vuex = require('vuex/dist/vuex')
 var { state, mutations } = require('iso/store/mutations')
+var getters = require('iso/store/getters')
 
 function initStore (vue) {
   // So we can run vuex on Node
@@ -8,6 +9,7 @@ function initStore (vue) {
   return new Vuex.Store({
     state,
     mutations,
+    getters,
   })
 }
 

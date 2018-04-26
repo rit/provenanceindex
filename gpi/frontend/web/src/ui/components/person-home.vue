@@ -1,30 +1,27 @@
 <template>
   <div class="section">
     <person-title
-      :name="personData.name"
-      :qualifier="personData.qualifier"
-      :icon="personData.icon"/>
-    <person-metadata :person-data="personData"/>
+      :name="person.name"
+      :qualifier="person.qualifier"
+      :icon="person.icon"/>
+    <person-metadata :person="person"/>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 import Person from 'iso/models/person'
 
 export default {
   name: 'PersonHome',
-  data () {
-    return {
-      personData: {},
-    }
-  },
   computed: {
-    ...mapState(['person']),
-  },
-  created () {
-    // TODO Replace fixtures.Person with API response
-    this.personData = new Person(this.person)
+    ...mapGetters(['personById']),
+    id () {
+      return this.$route.params.id
+    },
+    person () {
+      return new Person(this.personById(this.id))
+    },
   },
 }
 </script>
