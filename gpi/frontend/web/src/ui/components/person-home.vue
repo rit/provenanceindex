@@ -9,19 +9,19 @@
 </template>
 
 <script>
-import fixtures from 'iso/fixtures'
+import { mapGetters } from 'vuex'
 import Person from 'iso/models/person'
 
 export default {
   name: 'PersonHome',
-  data () {
-    return {
-      person: {},
-    }
-  },
-  created () {
-    // TODO Replace fixtures.Person with API response
-    this.person = new Person(fixtures.Person)
+  computed: {
+    ...mapGetters(['personById']),
+    id () {
+      return 'id-' + this.$route.params.id
+    },
+    person () {
+      return new Person(this.personById(this.id))
+    },
   },
 }
 </script>
