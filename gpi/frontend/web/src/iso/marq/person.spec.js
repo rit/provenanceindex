@@ -1,4 +1,4 @@
-const { parser }  = require('./index')
+const { parser } = require('./index')
 const rembrandt = require('iso/json-ld/rembrandt')
 
 describe('Person', () => {

@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import Person from 'iso/models/person'
 
 export default {
@@ -22,6 +22,12 @@ export default {
     person () {
       return new Person(this.personById(this.id))
     },
+  },
+  created () {
+    this.fetchPerson({ id: this.id })
+  },
+  methods: {
+    ...mapActions(['fetchPerson']),
   },
 }
 </script>
