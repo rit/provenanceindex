@@ -5,10 +5,10 @@ const typeDefs = `
   }
 
   type Person {
-    id: ID!
+    uid: ID!
     name: String!
 
-    activities: [Activity]
+    activeTimespan: String
     dateOfBirth: String
     dateOfDeath: String
     description: String
@@ -21,12 +21,6 @@ const typeDefs = `
   type ArtObject {
     id: ID!
     label: String!
-  }
-
-  type Activity {
-    label: String
-    beginning: String
-    ending: String
   }
 `
 

@@ -10,7 +10,7 @@ const artObject = `
 const person = `
 {
   person {
-    id
+    uid
     name
     dateOfBirth
     dateOfDeath
@@ -18,13 +18,8 @@ const person = `
     nationality
     placeOfBirth
     placeOfDeath
+    activeTimespan
     role
-
-    activities {
-      label
-      beginning
-      ending
-    }
   }
 
 }

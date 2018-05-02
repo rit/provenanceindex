@@ -1,21 +1,25 @@
 class Person {
-  constructor (person) {
-    this.id = person.id
-    this.name = person.name
-    this.qualifier = person.qualifier
-    this.image = person.image
-    this.birth = person.birth
-    this.death = person.death
-    this.nationality = person.nationality
-    this.role = person.role
-    this.active_info = person.active_info
-    this.description = person.description
+  constructor (props) {
+    // Required props
+    this.uid = props.uid
+    this.name = props.name
 
-    this.icon = 'user-circle'
-  }
+    // Optional props
+    this.activeTimespan = props.activeTimespan
+    this.dateOfBirth = props.dateOfBirth
+    this.dateOfDeath = props.dateOfDeath
+    this.description = props.description
+    this.nationality = props.nationality
 
-  imageUrl () {
-    return `./${this.image}.png`
+    // TODO: Replace hard-coded values with `props` argument
+    this.imageUrl = '/static/images/placeholder.png'
+    this.qualifier = 'Person - Artist'
+    this.role = 'Artist'
+
+    // Vue specific helper props
+    this.ui = {
+      icon: 'user-circle',
+    }
   }
 }
 

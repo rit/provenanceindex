@@ -2,20 +2,20 @@
   <div class="metadata columns">
     <div class="column is-narrow">
       <figure
-        v-if="person.image"
+        v-if="person.imageUrl"
         class="image is-128x128">
-        <img :src="getImageUrl()">
+        <img :src="person.imageUrl">
       </figure>
     </div>
     <div class="column">
       <div class="columns">
         <div class="column is-narrow">
           <p
-            v-if="person.birth"
-            class="is-size-7"><b>Born:</b> {{ person.birth }}</p>
+            v-if="person.dateOfBirth"
+            class="is-size-7"><b>Born:</b> {{ person.dateOfBirth }}</p>
           <p
-            v-if="person.death"
-            class="is-size-7"><b>Died:</b> {{ person.death }}</p>
+            v-if="person.dateOfDeath"
+            class="is-size-7"><b>Died:</b> {{ person.dateOfDeath }}</p>
           <p
             v-if="person.nationality"
             class="is-size-7"><b>Nationality:</b> {{ person.nationality }}</p>
@@ -25,8 +25,8 @@
             v-if="person.role"
             class="is-size-7"><b>Role:</b> {{ person.role }}</p>
           <p
-            v-if="person.active_info"
-            class="is-size-7"><b>Active:</b> {{ person.active_info }}</p>
+            v-if="person.activeTimespan"
+            class="is-size-7"><b>Active:</b> {{ person.activeTimespan }}</p>
         </div>
       </div>
       <getty-ellipsis
@@ -50,10 +50,6 @@ export default {
     },
   },
   methods: {
-    getImageUrl () {
-      var images = require.context('@static', false, /\.png$/)
-      return images(this.person.imageUrl())
-    },
   },
 }
 </script>
