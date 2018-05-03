@@ -1,7 +1,7 @@
 class Person {
   constructor (props) {
     // Required props
-    this.uid = props.uid
+    this.id = props.id
     this.name = props.name
 
     // Optional props
@@ -10,6 +10,8 @@ class Person {
     this.dateOfDeath = props.dateOfDeath
     this.description = props.description
     this.nationality = props.nationality
+    this.placeOfBirth = props.placeOfBirth
+    this.placeOfDeath = props.placeOfDeath
 
     // TODO: Replace hard-coded values with `props` argument
     this.imageUrl = '/static/images/placeholder.png'
@@ -20,6 +22,14 @@ class Person {
     this.ui = {
       icon: 'user-circle',
     }
+  }
+
+  born () {
+    return `${this.dateOfBirth} in ${this.placeOfBirth}`
+  }
+
+  died () {
+    return `${this.dateOfDeath} in ${this.placeOfDeath}`
   }
 }
 

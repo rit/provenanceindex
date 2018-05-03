@@ -1,7 +1,7 @@
 const { aat2Label, yearRange } = require('iso/marq/core')
 
 const personResolver = {
-  uid (doc) {
+  id (doc) {
     return doc.id
   },
   name (doc) {

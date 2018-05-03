@@ -10,7 +10,7 @@ const artObject = `
 const person = `
 {
   person {
-    uid
+    id
     name
     dateOfBirth
     dateOfDeath

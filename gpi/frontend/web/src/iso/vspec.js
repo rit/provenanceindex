@@ -29,10 +29,37 @@ function byData (attr) {
   return `[data-cy=${attr}]`
 }
 
+function stubInterface (ui, { getters, actions, route }) {
+  getters = getters || {}
+  actions = actions || {}
+  route = route || {}
+  return {
+    extends: ui,
+    methods: {
+      ...actions,
+    },
+    computed: {
+      '$route' () {
+        return {
+          ...route,
+        }
+      },
+      '$store' () {
+        return {
+          getters: {
+            ...getters,
+          },
+        }
+      },
+    },
+  }
+}
+
 module.exports = {
   byData,
   decode,
   div,
   encode,
   register,
+  stubInterface,
 }

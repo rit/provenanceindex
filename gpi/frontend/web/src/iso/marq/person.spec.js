@@ -10,7 +10,7 @@ describe('Person', () => {
   })
 
   it('flattens the props', () => {
-    expect(person.uid).to.eq('ulan:500011051')
+    expect(person.id).to.eq('ulan:500011051')
     expect(person.name).to.eq('Rembrandt van Rijn')
     expect(person.dateOfBirth).to.eq('1606-01-01')
     expect(person.dateOfDeath).to.eq('1669-01-01')

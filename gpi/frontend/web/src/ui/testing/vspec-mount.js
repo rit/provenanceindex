@@ -34,8 +34,15 @@ module.exports = function ({template, data, components}, fn) {
 
   if (fn) {
     cy.get('#vspec-sut').then($el => {
-      let vm = $el.children()[0].__vue__
-      fn(vm)
+      let elm = $el.children()[0]
+      if (elm) {
+        let vm = elm.__vue__
+        fn(vm)
+      } else {
+        // TODO: Return Proxy(null, handler)
+        // fn(nullTracer("null tracer: vm is null")
+        fn(null)
+      }
     })
   }
 }

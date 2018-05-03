@@ -11,7 +11,7 @@ describe('Person', () => {
       let person = new Person(props)
 
       let keys = [
-        'uid',
+        'id',
         'name',
         'activeTimespan',
         'dateOfBirth',
@@ -25,4 +25,25 @@ describe('Person', () => {
       })
     })
   })
+
+  context('methods#born', () => {
+    it('displays year and place', async () => {
+      let person = await makePerson()
+      expect(person.born()).to.equal('1606-01-01 in Leyden')
+    })
+  })
+
+  context('methods#born', () => {
+    it('displays year and place', async () => {
+      let person = await makePerson()
+      expect(person.died()).to.equal('1669-01-01 in Amsterdam')
+    })
+  })
 })
+
+async function makePerson () {
+  let res = await parser.walk(rembrandt)
+  let props = res.data.person
+  let person = new Person(props)
+  return person
+}

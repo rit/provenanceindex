@@ -5,7 +5,7 @@ const typeDefs = `
   }
 
   type Person {
-    uid: ID!
+    id: ID!
     name: String!
 
     activeTimespan: String
