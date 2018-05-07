@@ -22,6 +22,8 @@ const stub = (name, { props } = {}) => {
 
 module.exports = {
   stub,
+  stubContext: stub,
+  stubComponent: stub,
   renderOnDesktop,
   renderOnMobile,
   vspecMount,

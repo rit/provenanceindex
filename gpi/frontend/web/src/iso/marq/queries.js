@@ -18,13 +18,8 @@ const person = `
     nationality
     placeOfBirth
     placeOfDeath
+    activeTimespan
     role
-
-    activities {
-      label
-      beginning
-      ending
-    }
   }
 
 }

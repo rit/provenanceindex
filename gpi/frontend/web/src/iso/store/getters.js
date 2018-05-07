@@ -1,7 +1,7 @@
 module.exports = {
   personById (state, getters) {
     return id => {
-      return state.persons[id] || {}
+      return state.persons[id] || null
     }
   },
 }

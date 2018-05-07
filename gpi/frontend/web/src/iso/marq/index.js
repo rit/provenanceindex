@@ -1,51 +1,45 @@
 const { graphql } = require('graphql')
 const { makeExecutableSchema } = require('graphql-tools')
 
-const artObjectResolver = require('./resolvers/art-object')
-const personResolver = require('./resolvers/person')
 const typeDefs = require('./schema')
 const queries = require('./queries')
+const resourceResolvers = require('./resolvers')
 
-const resolve = (linkedData) => {
-  const resolvers = {
-    Query: {
-      person (obj, args, context, info) {
-        return linkedData
-      },
-      artObject (obj, args, context, info) {
-        return linkedData
-      },
-    },
-
-    Person: {
-      ...personResolver,
-    },
-
-    ArtObject: {
-      ...artObjectResolver,
-    },
-
-    Activity: {
-      label (doc) {
-        return 'Painter'
-      },
-      beginning (doc) {
-        return doc.timespan.begin_of_the_begin
-      },
-      ending (doc) {
-        return doc.timespan.end_of_the_end
-      },
-    },
-  }
-
-  const schema = makeExecutableSchema({ typeDefs, resolvers })
-  return schema
-}
-
-module.exports = {
+class Marq {
   walk (doc) {
-    let schema = resolve(doc)
+    let schema = this.resolve(doc)
     let query = queries[doc.type]
     return graphql(schema, query)
-  },
+  }
+
+  resolve (linkedData) {
+    const resolvers = {
+      ...this.resourceResolvers(),
+
+      // Query cannot be put in `resourceResolvers` because the `linkedData`
+      // closure is needed
+      Query: {
+        person (obj, args, context, info) {
+          return linkedData
+        },
+        artObject (obj, args, context, info) {
+          return linkedData
+        },
+      },
+    }
+
+    const schema = makeExecutableSchema({ typeDefs, resolvers })
+    return schema
+  }
+
+  resourceResolvers () {
+    return resourceResolvers
+  }
+}
+
+const parser = new Marq()
+
+module.exports = {
+  parser,
+  Marq,
 }

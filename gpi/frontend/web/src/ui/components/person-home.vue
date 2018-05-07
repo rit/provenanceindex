@@ -1,15 +1,18 @@
 <template>
-  <div class="section">
+  <div
+    v-if="personProps"
+    class="section" >
     <person-title
       :name="person.name"
       :qualifier="person.qualifier"
-      :icon="person.icon"/>
-    <person-metadata :person="person"/>
+      :icon="person.ui.icon"
+    />
+    <person-metadata :person="person" />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import Person from 'iso/models/person'
 
 export default {
@@ -20,8 +23,17 @@ export default {
       return this.$route.params.id
     },
     person () {
-      return new Person(this.personById(this.id))
+      return new Person(this.personProps)
     },
+    personProps () {
+      return this.personById(this.id)
+    },
+  },
+  created () {
+    this.fetchPerson({ id: this.id })
+  },
+  methods: {
+    ...mapActions(['fetchPerson']),
   },
 }
 </script>
