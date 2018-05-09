@@ -5,9 +5,17 @@
       :qualifier="person.qualifier"
       :icon="person.icon"/>
     <person-metadata :person="person"/>
-    <person-tabs
+    <getty-tabs>
+      <getty-tab-pane
+        label="Provenance Events"
+        name="first">Provenance Events</getty-tab-pane>
+      <getty-tab-pane
+        label="Objects"
+        name="second">Objects</getty-tab-pane>
+    </getty-tabs>
+    <!--<person-tabs
       :events="person.events"
-      :objects="person.objects"/>
+      :objects="person.objects"/>-->
   </div>
 </template>
 
