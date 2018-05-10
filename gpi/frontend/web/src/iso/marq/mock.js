@@ -1,7 +1,7 @@
 const { reduce } = require('lodash')
+const { Marq } = require('./core')
 
 const resolvers = require('./resolvers')
-const { Marq } = require('./index')
 
 class MockMarq extends Marq {
   resourceResolvers () {

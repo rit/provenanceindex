@@ -7,6 +7,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev-mock": "cross-env PIXEL_MOCK=yes webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "test-server": "cross-env PORT=9090 webpack-dev-server --inline --progress --config build/webpack.uitest.conf.js",
     "test-unit": "mocha src/iso/**/*",
     "nyc": "nyc mocha src/iso/**/*",
