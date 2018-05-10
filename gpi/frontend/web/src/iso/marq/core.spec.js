@@ -1,4 +1,4 @@
-const { yearRange } = require('./core')
+const { yearRange } = require('./utils')
 
 const timespans = [
   {
