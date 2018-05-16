@@ -3,7 +3,7 @@ const nocturne = require('iso/json-ld/nocturne')
 
 describe('ArtObject', () => {
   it('flattens the data', async () => {
-    let res = await parser.walk(nocturne)
+    let res = await parser.walk({ doc: nocturne })
     expect(res.data).to.be.ok
     let obj = res.data.artObject
     expect(obj.id).to.eq('http://lod.example.org/museum/ManMadeObject/k-object-702')

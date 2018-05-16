@@ -4,7 +4,7 @@ const rembrandt = require('iso/json-ld/rembrandt')
 describe('Person', () => {
   let person
   beforeEach(async () => {
-    let res = await parser.walk(rembrandt)
+    let res = await parser.walk({ doc: rembrandt })
     expect(res.data).to.be.ok
     person = res.data.person
   })

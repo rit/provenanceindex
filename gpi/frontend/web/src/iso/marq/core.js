@@ -5,11 +5,15 @@ const typeDefs = require('./schema')
 const queries = require('./queries')
 const resourceResolvers = require('./resolvers')
 
+// http://graphql.org/graphql-js/graphql/#entry-point
+// We don't have a need for rootValue yet
+const ROOT_VALUE = null
+
 class Marq {
-  walk (doc) {
+  walk ({ doc, context }) {
     let schema = this.resolve(doc)
     let query = queries[doc.type]
-    return graphql(schema, query)
+    return graphql(schema, query, ROOT_VALUE, context)
   }
 
   resolve (linkedData) {

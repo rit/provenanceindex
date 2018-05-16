@@ -6,7 +6,7 @@ const { each } = require('lodash')
 describe('Person', () => {
   context('properties', () => {
     it('has been defined', async () => {
-      let res = await parser.walk(rembrandt)
+      let res = await parser.walk({ doc: rembrandt })
       let props = res.data.person
       let person = new Person(props)
 
@@ -42,7 +42,7 @@ describe('Person', () => {
 })
 
 async function makePerson () {
-  let res = await parser.walk(rembrandt)
+  let res = await parser.walk({ doc: rembrandt })
   let props = res.data.person
   let person = new Person(props)
   return person

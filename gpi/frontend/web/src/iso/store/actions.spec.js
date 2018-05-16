@@ -13,7 +13,7 @@ describe('fetchPerson', function () {
     expect(type).to.equal('person')
     expect(payload.id).to.equal(id)
 
-    let res = await parser.walk(rembrandt)
+    let res = await parser.walk({ doc: rembrandt })
     expect(payload.person).to.deep.eq(res.data.person)
   })
 })
