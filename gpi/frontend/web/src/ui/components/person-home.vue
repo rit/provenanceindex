@@ -8,6 +8,11 @@
       :icon="person.ui.icon"
     />
     <person-metadata :person="person" />
+
+    <!-- Trigger History Mode  -->
+    <router-link
+      data-cy="person-history-mode"
+      to="/persons/hist-123">Related Artist</router-link>
   </div>
 </template>
 
@@ -29,8 +34,13 @@ export default {
       return this.personById(this.id)
     },
   },
-  created () {
-    this.fetchPerson({ id: this.id })
+  watch: {
+    id: {
+      handler (val, oldVal) {
+        this.fetchPerson({ id: val })
+      },
+      immediate: true,
+    },
   },
   methods: {
     ...mapActions(['fetchPerson']),
