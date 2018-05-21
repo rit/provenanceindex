@@ -12,6 +12,8 @@
     "test-unit": "mocha src/iso/**/*",
     "test-ui": "cypress open -c integrationFolder=test/ui",
     "test-e2e": "cypress open -c integrationFolder=test/e2e",
+    "test-e2e-headless": "cypress run -c integrationFolder=test/e2e",
+    "ci": "start-server-and-test dev-mock http-get://localhost:8080 test-e2e-headless",
     "nyc": "nyc mocha src/iso/**/*",
     "lint": "eslint --fix --ext .js,.vue src test",
     "build": "node build/build.js"
@@ -91,7 +93,7 @@
     "shelljs": "^0.7.6",
     "sinon": "^4.0.0",
     "sinon-chai": "^2.8.0",
-    "start-server-and-test": "^1.1.0",
+    "start-server-and-test": "^1.4.1",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-loader": "^14.2.2",
