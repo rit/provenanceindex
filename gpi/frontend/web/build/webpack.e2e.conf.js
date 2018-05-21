@@ -1,5 +1,4 @@
 'use strict'
-// Copied from webpack.dev.conf
 const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('../config')
@@ -12,13 +11,9 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
 const HOST = process.env.HOST
-// const PORT = process.env.PORT && Number(process.env.PORT)
-const PORT = 9090
+const PORT = process.env.PORT && Number(process.env.PORT)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
-  entry: {
-    app: './test/main.js'
-  },
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
   },
@@ -27,10 +22,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // these devServer options should be customized in /config/index.js
   devServer: {
-    clientLogLevel: 'error',
+    clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
-        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'vspec.html') },
+        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
       ],
     },
     hot: true,
@@ -58,8 +53,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: 'vspec.html',
-      template: 'vspec.html',
+      filename: 'index.html',
+      template: 'index.html',
       inject: true
     }),
     // copy custom static assets
