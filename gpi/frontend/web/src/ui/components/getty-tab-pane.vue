@@ -1,8 +1,10 @@
 <template>
-  <li>
-    <a>
-      <slot/>
+  <li
+    :class="{ 'is-active': active }"
+    @click.prevent="updateActive">
+    <a>{{ label }}
     </a>
+    <slot v-if="active"/>
   </li>
 </template>
 
@@ -10,26 +12,22 @@
 export default {
   name: 'GettyTabPane',
   props: {
-    label: String,
-    labelContent: Function,
-    name: String,
-  },
-  data () {
-    return {
-      index: null,
-    }
+    label: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    /* handler: {
+      type: Object,
+      required: true,
+    }, */
   },
   computed: {
     active () {
-      console.log (this.$parent.currentName)
-      console.log (this.name)
-      console.log(this.index)
-      return this.$parent.currentName === (this.name || this.index)
-    },
-  },
-  watch: {
-    label () {
-      this.$parent.$forceUpdate()
+      return this.$parent.currentName === this.name
     },
   },
   mounted () {
@@ -39,6 +37,11 @@ export default {
     if (this.$el && this.$el.parentNode) {
       this.$el.parentNode.removeChild(this.$el)
     }
+  },
+  methods: {
+    updateActive () {
+      this.$parent.handleTabClick(this, this.name)
+    },
   },
 }
 </script>

@@ -8,14 +8,15 @@
     <getty-tabs>
       <getty-tab-pane
         label="Provenance Events"
-        name="first">Provenance Events</getty-tab-pane>
+        name="0">
+        <div>Provenance events here</div>
+      </getty-tab-pane>
       <getty-tab-pane
         label="Objects"
-        name="second">Objects</getty-tab-pane>
+        name="1">
+        <div>Objects here</div>
+      </getty-tab-pane>
     </getty-tabs>
-    <!--<person-tabs
-      :events="person.events"
-      :objects="person.objects"/>-->
   </div>
 </template>
 

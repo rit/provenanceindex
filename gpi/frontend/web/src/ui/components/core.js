@@ -6,8 +6,6 @@ import Vue from 'vue'
 import GettyCallout from '@ui/getty-callout'
 import GettyEllipsis from '@ui/getty-ellipsis'
 import GettyFooter from '@ui/getty-footer'
-import GettyTabBar from '@ui/getty-tab-bar'
-import GettyTabNav from '@ui/getty-tab-nav'
 import GettyTabPane from '@ui/getty-tab-pane'
 import GettyTabs from '@ui/getty-tabs.vue'
 import HeaderExplore from '@ui/header-explore'
@@ -26,8 +24,6 @@ import Welcome from '@ui/welcome'
 Vue.component('GettyCallout', GettyCallout)
 Vue.component('GettyEllipsis', GettyEllipsis)
 Vue.component('GettyFooter', GettyFooter)
-Vue.component('GettyTabBar', GettyTabBar)
-Vue.component('GettyTabNav', GettyTabNav)
 Vue.component('GettyTabPane', GettyTabPane)
 Vue.component('GettyTabs', GettyTabs)
 Vue.component('HeaderExplore', HeaderExplore)

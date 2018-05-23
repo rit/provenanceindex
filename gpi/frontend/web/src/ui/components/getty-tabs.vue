@@ -26,39 +26,22 @@
     <div class="level-item"/>
   </div>
 </template>-->
+<!--<template>
+  <div>
+    <getty-tab-pane v-for="(pane, index) in panes" :label="pane.props.label" :name="index">
+      <div>Provenance events here</div>
+    </getty-tab-pane>
+  </div>
+</template>-->
 
 <script>
 export default {
   name: 'GettyTabs',
-  props: {
-    activeName: String,
-    value: {},
-  },
   data () {
     return {
       currentName: this.value || this.activeName,
       panes: [],
     }
-  },
-  provide () {
-    return {
-      rootTabs: this,
-    }
-  },
-  watch: {
-    activeName (value) {
-      this.setCurrentName(value)
-    },
-    value (value) {
-      this.setCurrentName(value)
-    },
-    /*currentName(value) {
-        if (this.$refs.nav) {
-          this.$nextTick(_ => {
-            this.$refs.nav.scrollToActiveTab();
-          });
-        }
-      }*/
   },
   created () {
     if (!this.currentName) {
@@ -68,87 +51,43 @@ export default {
   methods: {
     handleTabClick (tab, tabName, event) {
       this.setCurrentName(tabName)
-      this.$emit('tab-click', tab, event)
     },
     setCurrentName (value) {
       this.currentName = value
-      this.$emit('input', value)
     },
-    addPanes(item) {
-        const index = this.$slots.default.filter(item => {
-          return item.elm.nodeType === 1 && /\bel-tab-pane\b/.test(item.elm.className);
-        }).indexOf(item.$vnode);
-        this.panes.splice(index, 0, item);
-      },
+    addPanes (item) {
+      console.log(this.$slots.default)
+      const index = this.$slots.default.filter(item => {
+        return item.elm.nodeType === 1 && /\bpi-tab-pane\b/.test(item.elm.className)
+      }).indexOf(item.$vnode)
+      this.panes.splice(index, 0, item)
+    },
   },
   render (h) {
-    let {
-      handleTabClick, currentName, panes,
-    } = this
-    const navData = {
-      props: {
-        currentName,
-        onTabClick: handleTabClick,
-        panes,
-      },
-      ref: 'nav',
-    }
-    const header = (
-      <div>
-        <getty-tab-nav { ...navData }></getty-tab-nav>
-      </div>
-    )
     const panels = (
       this.$slots.default
     )
     return (
-      <div class=
-        'tabs is-boxed is-centered'
-      ><ul>
-          { [header, panels] }
-        </ul>
+      <div class="level pi-related">
+        <div class="level-item is-narrow">
+          RELATED RESOURCES:
+        </div>
+        <div class="level-item">
+          <div class="tabs is-boxed is-centered">
+            <ul>
+              { panels }
+            </ul>
+          </div>
+        </div>
+        <div class="level-item"/>
       </div>
     )
   },
 }
-/* export default {
-  name: 'PersonTabs',
-  props: {
-    events: {
-      type: Number,
-      required: true,
-    },
-    objects: {
-      type: Number,
-      required: true,
-    },
-  },
-  data () {
-    return {
-      activeTab: 0,
-      relatedResources: [
-        {label: 'Provenance Events', icon: 'calendar'},
-        {label: 'Objects', icon: 'paint-brush'},
-      ],
-    }
-  },
-  methods: {
-    updateActive (index) {
-      this.activeTab = index
-    },
-    getNum (resource) {
-      if (resource.label === 'Provenance Events') {
-        return this.events
-      } else if (resource.label === 'Objects') {
-        return this.objects
-      }
-    },
-  },
-} */
 </script>
 
 <style scoped>
-/*.pi-related {
+.pi-related {
   background: #D3D3D3;
   padding-left: 2rem;
 }
@@ -157,5 +96,5 @@ export default {
 }
 .pi-tabLabel {
   color: black;
-}*/
+}
 </style>
