@@ -20,6 +20,8 @@ const components = {
   'person-home': stubInterface(PersonHome, { getters, route, actions }),
   'person-title': stubComponent('PersonTitle'),
   'person-metadata': stubComponent('PersonMetadata'),
+  'router-link': stubComponent('RouterLink'),
+  'async-flipper': stubComponent('async-flipper'),
 }
 const template = div`<person-home />`
 

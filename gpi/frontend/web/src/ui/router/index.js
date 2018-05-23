@@ -7,6 +7,7 @@ import PersonLayout from '@ui/layout/person-layout'
 
 import PersonHome from '@ui/person-home'
 import Welcome from '@ui/welcome'
+import Spike from '@ui/spike'
 
 Vue.use(Router)
 
@@ -44,6 +45,10 @@ export default new Router({
           ],
         },
       ],
+    },
+    {
+      path: '/spike',
+      component: Spike,
     },
   ],
 })

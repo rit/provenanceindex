@@ -1,19 +1,21 @@
 <template>
-  <div
-    v-if="personProps"
-    class="section" >
-    <person-title
-      :name="person.name"
-      :qualifier="person.qualifier"
-      :icon="person.ui.icon"
-    />
-    <person-metadata :person="person" />
+  <section>
+    <async-flipper :resolved-with="personProps">
+      <person-title
+        :name="person.name"
+        :qualifier="person.qualifier"
+        :icon="person.ui.icon"
+      />
+      <person-metadata :person="person" />
 
-    <!-- Trigger History Mode  -->
-    <router-link
-      data-cy="person-history-mode"
-      to="/persons/hist-123">Related Artist</router-link>
-  </div>
+      <!-- Trigger History Mode  -->
+      <router-link
+        data-cy="person-history-mode"
+        to="/persons/hist-123">
+        Related Artist
+      </router-link>
+    </async-flipper>
+  </section>
 </template>
 
 <script>
@@ -28,7 +30,8 @@ export default {
       return this.$route.params.id
     },
     person () {
-      return new Person(this.personProps)
+      // TODO: Investigate crockjs Maybe object
+      return new Person(this.personProps || {})
     },
     personProps () {
       return this.personById(this.id)
@@ -49,7 +52,7 @@ export default {
 </script>
 
 <style scoped>
-.section {
+section {
   padding: 3rem 0rem;
 }
 </style>
