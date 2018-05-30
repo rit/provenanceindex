@@ -6,15 +6,36 @@
       :icon="person.icon"/>
     <person-metadata :person="person"/>
     <getty-tabs>
-      <getty-tab-pane
+      <!--<getty-tab-pane
         label="Provenance Events"
-        name="0">
-        <div>Provenance events here</div>
+        :name="0">
+        <span slot="icon" class="icon">
+          <font-awesome-icon
+            icon="calendar" />
+            Provenance Events
+        </span>
       </getty-tab-pane>
       <getty-tab-pane
         label="Objects"
-        name="1">
-        <div>Objects here</div>
+        :name="1">
+        <span slot="icon" class="icon">
+          <font-awesome-icon
+            icon="paint-brush" />
+          Objects
+        </span>
+        List of Objects
+      </getty-tab-pane>-->
+      <getty-tab-pane
+        :name="0"
+        label="Provenance Events"
+        icon="calendar">
+        Provenance Event List
+      </getty-tab-pane>
+      <getty-tab-pane
+        :name="1"
+        label="Objects"
+        icon="paint-brush">
+        Objects List
       </getty-tab-pane>
     </getty-tabs>
   </div>

@@ -1,11 +1,9 @@
 <template>
-  <li
-    :class="{ 'is-active': active }"
-    @click.prevent="updateActive">
-    <a>{{ label }}
-    </a>
-    <slot v-if="active"/>
-  </li>
+  <div
+    v-show="active"
+    class="pi-tab-pane">
+    <slot/>
+  </div>
 </template>
 
 <script>
@@ -17,13 +15,13 @@ export default {
       required: true,
     },
     name: {
-      type: String,
+      type: Number,
       required: true,
     },
-    /* handler: {
-      type: Object,
-      required: true,
-    }, */
+    icon: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     active () {
@@ -38,10 +36,8 @@ export default {
       this.$el.parentNode.removeChild(this.$el)
     }
   },
-  methods: {
-    updateActive () {
-      this.$parent.handleTabClick(this, this.name)
-    },
-  },
 }
 </script>
+
+<style scoped>
+</style>

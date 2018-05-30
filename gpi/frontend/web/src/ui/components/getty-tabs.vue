@@ -1,85 +1,65 @@
-<!--<template>
-  <div class="level pi-related">
-    <div class="level-item is-narrow">
-      RELATED RESOURCES:
-    </div>
-    <div class="level-item">
-      <div class="tabs is-boxed is-centered pi-tabs">
-        <ul>
-          <li
-            v-for="(resource, index) in relatedResources"
-            :key="resource.label"
-            :class="[index===activeTab ? 'is-active' : '']"
-            @click="updateActive(index)">
-            <a>
-              <span class="icon">
-                <font-awesome-icon
-                  :icon="resource.icon" />
-              </span>
-              <span class="pi-tabLabel">{{ resource.label }} {{ '('+getNum(resource)+')' }}</span>
-              <span/>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="level-item"/>
-  </div>
-</template>-->
-<!--<template>
-  <div>
-    <getty-tab-pane v-for="(pane, index) in panes" :label="pane.props.label" :name="index">
-      <div>Provenance events here</div>
-    </getty-tab-pane>
-  </div>
-</template>-->
-
 <script>
 export default {
   name: 'GettyTabs',
   data () {
     return {
-      currentName: this.value || this.activeName,
+      currentName: 0,
       panes: [],
     }
   },
-  created () {
-    if (!this.currentName) {
-      this.setCurrentName('0')
-    }
-  },
   methods: {
-    handleTabClick (tab, tabName, event) {
-      this.setCurrentName(tabName)
-    },
-    setCurrentName (value) {
-      this.currentName = value
+    handleTabClick (tabName, e) {
+      e.preventDefault()
+      this.currentName = tabName
     },
     addPanes (item) {
-      console.log(this.$slots.default)
       const index = this.$slots.default.filter(item => {
-        return item.elm.nodeType === 1 && /\bpi-tab-pane\b/.test(item.elm.className)
+        return typeof item.elm !== 'undefined' && /\bpi-tab-pane\b/.test(item.elm.className)
       }).indexOf(item.$vnode)
       this.panes.splice(index, 0, item)
     },
   },
   render (h) {
+    let {
+      currentName,
+      panes,
+    } = this
+
     const panels = (
       this.$slots.default
     )
+
     return (
-      <div class="level pi-related">
-        <div class="level-item is-narrow">
-          RELATED RESOURCES:
-        </div>
-        <div class="level-item">
-          <div class="tabs is-boxed is-centered">
-            <ul>
-              { panels }
-            </ul>
+      <div>
+        <div class="level pi-related">
+          <div class="level-item is-narrow">
+            RELATED RESOURCES:
           </div>
+          <div class="level-item">
+            <div class="tabs is-boxed is-centered">
+              <ul>
+                { panes.map(pane => {
+                  return (
+                    <li
+                      class={{ 'is-active': currentName === pane.name }}
+                      onClick={ (e) => { this.handleTabClick(pane.name, e) }}>
+                      <a class="pi-tab-label">
+                        <span class="icon">
+                          <font-awesome-icon
+                            icon={ pane.icon } />
+                        </span>
+                        { pane.label }
+                      </a>
+                    </li>
+                  )
+                })
+                }
+              </ul>
+            </div>
+          </div>
+          <div class="level-item"/>
         </div>
-        <div class="level-item"/>
+        { panels }
       </div>
     )
   },
@@ -94,7 +74,7 @@ export default {
 .icon {
   color: black;
 }
-.pi-tabLabel {
+li.is-active a {
   color: black;
 }
 </style>
