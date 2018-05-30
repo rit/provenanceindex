@@ -1,66 +1,72 @@
 <template>
-  <div class="section">
-    <person-title
-      :name="person.name"
-      :qualifier="person.qualifier"
-      :icon="person.icon"/>
-    <person-metadata :person="person"/>
-    <getty-tabs>
-      <!--<getty-tab-pane
-        label="Provenance Events"
-        :name="0">
-        <span slot="icon" class="icon">
-          <font-awesome-icon
-            icon="calendar" />
-            Provenance Events
-        </span>
-      </getty-tab-pane>
-      <getty-tab-pane
-        label="Objects"
-        :name="1">
-        <span slot="icon" class="icon">
-          <font-awesome-icon
-            icon="paint-brush" />
-          Objects
-        </span>
-        List of Objects
-      </getty-tab-pane>-->
-      <getty-tab-pane
-        :name="0"
-        label="Provenance Events"
-        icon="calendar">
-        Provenance Event List
-      </getty-tab-pane>
-      <getty-tab-pane
-        :name="1"
-        label="Objects"
-        icon="paint-brush">
-        Objects List
-      </getty-tab-pane>
-    </getty-tabs>
-  </div>
+  <section>
+    <async-flipper :resolved-with="personProps">
+      <person-title
+        :name="person.name"
+        :qualifier="person.qualifier"
+        :icon="person.ui.icon"
+      />
+      <person-metadata :person="person" />
+      <getty-tabs>
+        <getty-tab-pane
+          :name="0"
+          label="Provenance Events"
+          icon="calendar">
+          Provenance Event List
+        </getty-tab-pane>
+        <getty-tab-pane
+          :name="1"
+          label="Objects"
+          icon="paint-brush">
+          Objects List
+        </getty-tab-pane>
+      </getty-tabs>
+
+      <!-- Trigger History Mode  -->
+      <router-link
+        data-cy="person-history-mode"
+        to="/persons/hist-123">
+        Related Artist
+      </router-link>
+    </async-flipper>
+  </section>
 </template>
 
 <script>
-import fixtures from 'iso/fixtures'
+import { mapGetters, mapActions } from 'vuex'
 import Person from 'iso/models/person'
 
 export default {
   name: 'PersonHome',
-  data () {
-    return {
-      person: {},
-    }
+  computed: {
+    ...mapGetters(['personById']),
+    id () {
+      return this.$route.params.id
+    },
+    person () {
+      // TODO: Investigate crockjs Maybe object
+      return new Person(this.personProps || {})
+    },
+    personProps () {
+      return this.personById(this.id)
+    },
   },
-  created () {
-    // TODO Replace fixtures.Person with API response
-    this.person = new Person(fixtures.Person)
+  watch: {
+    id: {
+      handler (val, oldVal) {
+        this.fetchPerson({ id: val })
+      },
+      immediate: true,
+    },
+  },
+  methods: {
+    ...mapActions(['fetchPerson']),
   },
 }
 </script>
 
 <style scoped>
-.section {
+section {
   padding: 3rem 0rem;
 }
 </style>

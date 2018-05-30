@@ -9,7 +9,9 @@
               size="3x" />
           </span>
         </div>
-        <div class="level-item">
+        <div
+          class="level-item"
+          data-cy="person-name">
           <p class="is-size-6 has-text-weight-bold">{{ name }}</p>
         </div>
         <div class="level-item">

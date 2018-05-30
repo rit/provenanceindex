@@ -7,5 +7,5 @@ docker_context = "."
 %>
 
 
-./bin/kapply.py ${basename}.mako > tmp/${basename}
-docker build -f tmp/${basename} --rm -t ${baseimage_name}:${PIXEL_RUNTIME_VERSION} ${docker_context}
+./bin/kapply.py ${basename}.mako > k8s/build/${basename}
+docker build -f k8s/build/${basename} --rm -t ${baseimage_name}:${PIXEL_RUNTIME_VERSION} ${docker_context}

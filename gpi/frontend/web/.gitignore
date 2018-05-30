@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+k8s/build/*.dockerfile
 /dist/
 npm-debug.log*
 yarn-debug.log*
@@ -15,3 +16,4 @@ yarn-error.log*
 *.sln
 .nyc_output
 cypress/videos/**/*
+cypress/screenshots
