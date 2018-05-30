@@ -10,7 +10,7 @@ const ResourceTypes = [
 ]
 
 async function makeRembrandt () {
-  let res = await parser.walk(rembrandt)
+  let res = await parser.walk({ doc: rembrandt })
   let props = res.data.person
   return props
 }
