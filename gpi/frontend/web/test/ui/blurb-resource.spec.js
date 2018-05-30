@@ -5,16 +5,16 @@ import Person from 'iso/models/person'
 
 import BlurbResource from '@ui/blurb-resource'
 
-describe('BlurbResource', function() {
+describe('BlurbResource', function () {
   let template, components
 
-  beforeEach(function() {
+  beforeEach(function () {
     template = div`<blurb-resource :resource=person />`
     components = {
-      BlurbResource
+      BlurbResource,
     }
-  });
-  
+  })
+
   it('shows each blurb field', () => {
     makeRembrandt().then(props => {
       let person = new Person(props)
@@ -29,5 +29,5 @@ describe('BlurbResource', function() {
         expect($lis.eq(2).text()).to.match(/Nationality\n(.+) Dutch/)
       })
     })
-  });
-});
+  })
+})

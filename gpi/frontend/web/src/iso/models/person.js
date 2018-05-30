@@ -43,6 +43,10 @@ class Person extends Resource {
       ['Nationality', this.nationality],
     ]
   }
+
+  heading () {
+    return this.name
+  }
 }
 
 module.exports = Person

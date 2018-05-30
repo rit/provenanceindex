@@ -1,6 +1,10 @@
 <template>
   <section>
-    <h1>{{ resource.name }} | resource type </h1>
+    <h1>
+      <span>
+        {{ resource.heading() }}
+      </span>
+      | {{ resource.qualifier }} </h1>
     <ul>
       <li
         v-for="[label, value] in resource.blurbFields()"
