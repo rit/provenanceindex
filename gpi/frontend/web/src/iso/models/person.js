@@ -1,5 +1,9 @@
-class Person {
+const Resource = require('./resource')
+
+class Person extends Resource {
   constructor (props) {
+    super(props)
+
     // Required props
     this.id = props.id
     this.name = props.name
@@ -30,6 +34,14 @@ class Person {
 
   died () {
     return `${this.dateOfDeath} in ${this.placeOfDeath}`
+  }
+
+  blurbFields () {
+    return [
+      ['Born', this.born()],
+      ['Died', this.died()],
+      ['Nationality', this.nationality],
+    ]
   }
 }
 
