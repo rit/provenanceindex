@@ -16,3 +16,4 @@ yarn-error.log*
 *.sln
 .nyc_output
 cypress/videos/**/*
+cypress/screenshots

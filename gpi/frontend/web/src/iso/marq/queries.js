@@ -3,6 +3,18 @@ const artObject = `
   artObject {
     id
     label
+    artist
+    dateOfCreation
+    placeOfCreation
+    attributions
+    stockbookLabel
+    medium
+    material
+    dimensions
+    technique
+    subject
+    style
+    description
   }
 }
 `

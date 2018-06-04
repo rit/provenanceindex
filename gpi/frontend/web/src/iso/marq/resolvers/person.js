@@ -1,4 +1,4 @@
-const { aat2Label, yearRange } = require('iso/marq/core')
+const { aat2Label, yearRange } = require('iso/marq/utils')
 
 const personResolver = {
   id (doc) {

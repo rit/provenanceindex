@@ -2,11 +2,11 @@ import ResourceType from '@ui/resource-type'
 import ResourceTypeModel from 'iso/models/resource-type'
 import fixtures from 'iso/fixtures'
 import { div, byData } from 'iso/vspec'
-import { vspecMount, stub, renderOnMobile, renderOnDesktop } from '@testing'
+import { vspecMount, stubComponent, renderOnMobile, renderOnDesktop } from '@testing'
 
 const template = div`<resource-type :resource="resource" :handler="handler" />`
 const components = {
-  'getty-callout': stub('GettyCallout'),
+  'getty-callout': stubComponent('GettyCallout'),
   'resource-type': ResourceType,
 }
 
