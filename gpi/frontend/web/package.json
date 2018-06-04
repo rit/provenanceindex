@@ -20,13 +20,16 @@
     "@fortawesome/vue-fontawesome": "0.0.22",
     "bulma": "^0.6.2",
     "common-tags": "^1.7.2",
+    "easygettext": "^2.4.0",
     "graphql": "^0.13.2",
     "graphql-tools": "^2.23.1",
     "iso": "file:src/iso",
     "lodash": "^4.17.5",
     "vue": "^2.5.2",
+    "vue-gettext": "^2.0.31",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "xgettext": "0.0.0"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^2.0.1",

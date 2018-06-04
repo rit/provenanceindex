@@ -17,7 +17,8 @@
         <img
           width="60px"
           src="@static/logo.png">
-        <h1 class="has-text-centered">The Provenance Index</h1>
+        <h1
+          class="has-text-centered"><translate>The Provenance Index</translate></h1>
       </router-link>
     </div>
   </div>

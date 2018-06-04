@@ -5,6 +5,18 @@ import Root from '@ui/root'
 import router from './router'
 import '@ui/core'
 import initStore from 'iso/store'
+import GetTextPlugin from 'vue-gettext'
+import translations from 'iso/translations/translations.json'
+
+Vue.use(GetTextPlugin, {
+  availableLanguages: {
+    en: 'English',
+    sp: 'Spanish',
+  },
+  defaultLanguage: 'en',
+  translations: translations,
+  silent: true,
+})
 
 Vue.config.productionTip = false
 

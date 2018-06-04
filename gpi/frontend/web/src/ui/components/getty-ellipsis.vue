@@ -6,6 +6,7 @@
       <slot/>
     </div>
     <div>
+      <!-- To do: figure out how to translate dynamic text -->
       <a
         class="is-uppercase is-size-7"
         href="#"

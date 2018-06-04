@@ -21,16 +21,19 @@
     >
       <div class="navbar-start">
         <router-link
+          v-translate
           :to="{name: 'home'}"
           class="navbar-item">
           Home
         </router-link>
         <a
+          v-translate
           href="#"
           class="navbar-item">
           Search
         </a>
         <a
+          v-translate
           href="#"
           class="navbar-item">
           Saved Searches
@@ -38,20 +41,30 @@
         <div
           class="navbar-item has-dropdown is-hoverable"
           data-cy="navbar-about" >
-          <a class="navbar-link">
+          <a
+            v-translate
+            class="navbar-link">
             About
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               History
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Scope
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Documentation
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Contributors/Partners
             </a>
           </div>
@@ -59,18 +72,43 @@
         <div
           data-cy="navbar-help"
           class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
+          <a
+            v-translate
+            class="navbar-link">
             Help
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Search Help
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               FAQs
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Contact
+            </a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a
+            v-translate
+            class="navbar-link">
+            Language: %{ currentDisplay }
+          </a>
+          <div
+            class="navbar-dropdown">
+            <a
+              v-translate="{language: language}"
+              v-for="(language, key) in inactiveLanguages"
+              :key="key"
+              class="navbar-item"
+              @click="changeLang(key)">Language: %{ language }
             </a>
           </div>
         </div>
@@ -80,6 +118,8 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
   name: 'HeaderNav',
   data () {
@@ -87,9 +127,21 @@ export default {
       showNav: false,
     }
   },
+  computed: {
+    currentDisplay () {
+      return this.$language.available[this.$language.current]
+    },
+    inactiveLanguages () {
+      let inactive = _.omit(this.$language.available, this.$language.current)
+      return inactive
+    },
+  },
   methods: {
     toggleBurger () {
       this.showNav = !this.showNav
+    },
+    changeLang (newLang) {
+      this.$language.current = newLang
     },
   },
 }

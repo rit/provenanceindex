@@ -3,14 +3,17 @@
     <div class="hero-body viz">
       <div class="columns section-title">
         <div class="column is-half is-offset-one-quarter">
-          <h1 class="is-size-5 has-text-weight-bold has-text-centered">
-            What's in the Provenance Index?
+          <h1
+            class="is-size-5 has-text-weight-bold has-text-centered">
+            <translate>What's in the Provenance Index?</translate>
             <hr>
           </h1>
         </div>
       </div>
       <div>
-        <p class="is-size-6">The Provenance Index contains information sourced from our databases consisting of Archival Inventories, Sales Catalogs, Dealer Stock Books, and Payments to Artists, spanning over four centuries. Click here for more information about these databases.
+        <p
+          v-translate
+          class="is-size-6">The Provenance Index contains information sourced from our databases consisting of Archival Inventories, Sales Catalogs, Dealer Stock Books, and Payments to Artists, spanning over four centuries. Click here for more information about these databases.
         </p>
       </div>
       <div class="hero">

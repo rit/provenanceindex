@@ -5,7 +5,7 @@
     <div class="columns">
       <div class="column is-half is-offset-one-quarter">
         <h1 class="is-size-5 has-text-weight-bold has-text-centered">
-          Resource Types in the Provenance Index
+          <translate>Resource Types in the Provenance Index</translate>
           <hr>
         </h1>
       </div>

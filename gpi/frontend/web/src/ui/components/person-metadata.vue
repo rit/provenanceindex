@@ -12,28 +12,28 @@
         <div class="column is-narrow">
           <p
             v-if="person.dateOfBirth"
-            class="is-size-7"><b>Born:</b> {{ person.born() }}</p>
+            class="is-size-7"><b><translate>Born:</translate></b> {{ person.born() }}</p>
           <p
             v-if="person.dateOfDeath"
-            class="is-size-7"><b>Died:</b> {{ person.died() }}</p>
+            class="is-size-7"><b><translate>Died:</translate></b> {{ person.died() }}</p>
           <p
             v-if="person.nationality"
-            class="is-size-7"><b>Nationality:</b> {{ person.nationality }}</p>
+            class="is-size-7"><b><translate>Nationality:</translate></b> {{ person.nationality }}</p>
         </div>
         <div class="column">
           <p
             v-if="person.role"
-            class="is-size-7"><b>Role:</b> {{ person.role }}</p>
+            class="is-size-7"><b><translate>Role:</translate></b> {{ person.role }}</p>
           <p
             v-if="person.activeTimespan"
-            class="is-size-7"><b>Active:</b> {{ person.activeTimespan }}</p>
+            class="is-size-7"><b><translate>Active:</translate></b> {{ person.activeTimespan }}</p>
         </div>
       </div>
       <getty-ellipsis
         v-if="person.description"
       >
         <div>
-          <b>Description:</b> {{ person.description }}
+          <b><translate>Description:</translate></b> {{ person.description }}
         </div>
       </getty-ellipsis>
     </div>

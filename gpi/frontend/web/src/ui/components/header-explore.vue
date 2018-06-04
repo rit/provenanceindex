@@ -10,7 +10,7 @@
           class="button"
           aria-haspopup="true"
           aria-controls="dropdown-menu">
-          <span>Explore The Getty</span>
+          <span v-translate>Explore The Getty</span>
           <span class="icon is-small">
             <font-awesome-icon icon="caret-down" />
           </span>
@@ -26,6 +26,7 @@
           <div
             v-for="(url, text) in dropdownLinks"
             :key="url">
+            <!-- To do: figure out how to get keys into po file -->
             <a
               :href="url"
               class="dropdown-item">
