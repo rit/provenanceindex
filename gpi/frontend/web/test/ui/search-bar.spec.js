@@ -1,15 +1,15 @@
-import { encode } from 'iso/vspec'
+import { div } from 'iso/vspec'
+import { vspecMount } from '@testing'
+import SearchBar from '@ui/search-bar'
 
 describe('SearchBar', () => {
-  var uri
+  var template = div`<search-bar />`
+  var components = { SearchBar }
   beforeEach(() => {
-    uri = encode({
-      component: 'SearchBar',
-    })
+    vspecMount({ template, components })
   })
 
   it('has placeholder input', () => {
-    cy.visit(uri)
     cy.get('input')
       .should('have.attr', 'placeholder')
       .then(placeholder => {
@@ -19,7 +19,6 @@ describe('SearchBar', () => {
 
   it('accepts input', () => {
     const typedText = 'Rembrandt'
-    cy.visit(uri)
     cy.get('input')
       .type(typedText)
       .should('have.value', typedText)

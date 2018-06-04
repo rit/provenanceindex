@@ -3,6 +3,7 @@ import 'bulma/css/bulma.css'
 import Vue from 'vue'
 
 // Alphabetically import components
+import AsyncFlipper from '@ui/async-flipper'
 import GettyCallout from '@ui/getty-callout'
 import GettyEllipsis from '@ui/getty-ellipsis'
 import GettyFooter from '@ui/getty-footer.vue'
@@ -18,6 +19,7 @@ import SearchBar from '@ui/search-bar'
 import Welcome from '@ui/welcome'
 
 // Alphabetically register components
+Vue.component('AsyncFlipper', AsyncFlipper)
 Vue.component('GettyCallout', GettyCallout)
 Vue.component('GettyEllipsis', GettyEllipsis)
 Vue.component('GettyFooter', GettyFooter)

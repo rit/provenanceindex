@@ -21,6 +21,18 @@ const typeDefs = `
   type ArtObject {
     id: ID!
     label: String!
+    artist: String
+    dateOfCreation: String
+    placeOfCreation: String
+    attributions: String
+    stockbookLabel: String
+    medium: String
+    material: String
+    dimensions: String
+    technique: String
+    subject: String
+    style: String
+    description: String
   }
 `
 

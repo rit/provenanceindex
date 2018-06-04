@@ -1,7 +1,7 @@
 const { reduce } = require('lodash')
+const { Marq } = require('./core')
 
 const resolvers = require('./resolvers')
-const { Marq } = require('./index')
 
 class MockMarq extends Marq {
   resourceResolvers () {
@@ -14,8 +14,8 @@ class MockMarq extends Marq {
 
 const mock = (resolver) => reduce(resolver, (result, resolver, name) => {
   // TODO parse the source file using acornjs to extract the @casual annotation
-  result[name] = () => {
-    return `stubbed ${name}`
+  result[name] = (doc, args, ctx, info) => {
+    return `stubbed ${name} ${ctx.id}`
   }
   return result
 }, {})

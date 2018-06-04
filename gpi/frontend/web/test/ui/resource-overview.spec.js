@@ -1,11 +1,11 @@
 import ResourceOverview from '@ui/resource-overview'
 import { div, byData } from 'iso/vspec'
-import { vspecMount, stub, renderOnMobile } from '@testing'
+import { vspecMount, stubComponent, renderOnMobile } from '@testing'
 
 const components = {
   'resource-overview': ResourceOverview,
-  'resource-type': stub('ResourceType'),
-  'getty-callout': stub('GettyCallout'),
+  'resource-type': stubComponent('ResourceType'),
+  'getty-callout': stubComponent('GettyCallout'),
 }
 
 describe('ResourceOverview', () => {

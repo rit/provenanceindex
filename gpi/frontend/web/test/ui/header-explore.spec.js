@@ -1,30 +1,27 @@
-import { encode } from 'iso/vspec'
+import { div, byData } from 'iso/vspec'
+import { vspecMount, stubComponent } from '@testing'
+import HeaderExplore from '@ui/header-explore'
 
 describe('Explore the Getty', () => {
-  var uri
+  var components = {
+    HeaderExplore,
+    'FontAwesomeIcon': stubComponent('icon'),
+  }
+  var template = div`<header-explore/>`
+
   beforeEach(() => {
-    uri = encode({
-      component: 'HeaderExplore',
-    })
+    vspecMount({ template, components })
   })
 
   it('hides the links by default', () => {
-    cy.visit(uri)
-    cy.get('[data-cy=explore-the-getty]').then(($el) => {
-      expect($el).not.to.be.visible
-    })
+    cy.get(byData`explore-the-getty`).should('not.be.visible')
   })
 
   it('toggles the links after clicking', () => {
-    cy.visit(uri)
     cy.contains('Explore The Getty').click()
-    cy.get('[data-cy=explore-the-getty]').then(($el) => {
-      expect($el).to.be.visible
-    })
+    cy.get(byData`explore-the-getty`).should('be.visible')
 
     cy.contains('Explore The Getty').click()
-    cy.get('[data-cy=explore-the-getty]').then(($el) => {
-      expect($el).not.to.be.visible
-    })
+    cy.get(byData`explore-the-getty`).should('not.be.visible')
   })
 })
