@@ -32,9 +32,7 @@ export default {
     return (
       <div>
         <div class="level pi-related">
-          <div class="level-item is-narrow">
-            RELATED RESOURCES:
-          </div>
+          { this.$slots.tabsLabel }
           <div class="level-item">
             <div class="tabs is-boxed is-centered">
               <ul>

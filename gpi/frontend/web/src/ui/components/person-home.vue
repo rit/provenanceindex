@@ -8,6 +8,9 @@
       />
       <person-metadata :person="person" />
       <getty-tabs>
+        <div slot="tabsLabel" class="level-item is-narrow">
+          RELATED RESOURCES:
+        </div>
         <getty-tab-pane
           label="Provenance Events"
           icon="calendar">
