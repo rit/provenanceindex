@@ -25,7 +25,11 @@ export default {
     },
   },
   mounted () {
-    this.$parent.addPanes(this)
+    if ( typeof this.$parent.addPanes === 'function' ) {
+      this.$parent.addPanes(this)
+    } else {
+      throw new Error('GettyTabs must be parent');
+    }
   },
   destroyed () {
     if (this.$el && this.$el.parentNode) {
