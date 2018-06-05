@@ -14,10 +14,6 @@ export default {
       type: String,
       required: true,
     },
-    name: {
-      type: Number,
-      required: true,
-    },
     icon: {
       type: String,
       default: '',
@@ -25,7 +21,7 @@ export default {
   },
   computed: {
     active () {
-      return this.$parent.currentName === this.name
+      return this.$parent.currentPane === this
     },
   },
   mounted () {

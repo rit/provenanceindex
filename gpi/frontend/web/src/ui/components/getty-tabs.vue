@@ -3,25 +3,25 @@ export default {
   name: 'GettyTabs',
   data () {
     return {
-      currentName: 0,
+      currentPane: null,
       panes: [],
     }
   },
+  mounted () {
+    this.currentPane = this.panes[0]
+  },
   methods: {
-    handleTabClick (tabName, e) {
+    handleTabClick (tab, e) {
       e.preventDefault()
-      this.currentName = tabName
+      this.currentPane = tab
     },
-    addPanes (item) {
-      const index = this.$slots.default.filter(item => {
-        return typeof item.elm !== 'undefined' && /\bpi-tab-pane\b/.test(item.elm.className)
-      }).indexOf(item.$vnode)
-      this.panes.splice(index, 0, item)
+    addPanes (pane) {
+      this.panes.push(pane)
     },
   },
   render (h) {
     let {
-      currentName,
+      currentPane,
       panes,
     } = this
 
@@ -41,8 +41,8 @@ export default {
                 { panes.map(pane => {
                   return (
                     <li
-                      class={{ 'is-active': currentName === pane.name }}
-                      onClick={ (e) => { this.handleTabClick(pane.name, e) }}>
+                      class={{ 'is-active': currentPane === pane }}
+                      onClick={ (e) => { this.handleTabClick(pane, e) }}>
                       <a class="pi-tab-label">
                         <span class="icon">
                           <font-awesome-icon

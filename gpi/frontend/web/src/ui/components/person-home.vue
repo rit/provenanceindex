@@ -9,13 +9,11 @@
       <person-metadata :person="person" />
       <getty-tabs>
         <getty-tab-pane
-          :name="0"
           label="Provenance Events"
           icon="calendar">
           Provenance Event List
         </getty-tab-pane>
         <getty-tab-pane
-          :name="1"
           label="Objects"
           icon="paint-brush">
           Objects List
