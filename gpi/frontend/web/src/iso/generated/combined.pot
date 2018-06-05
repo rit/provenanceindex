@@ -1,21 +1,28 @@
-# English translations for pixel package.
-# Copyright (C) 2018 THE pixel'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the pixel package.
-# Automatically generated, 2018.
+# #-#-#-#-#  js.part.pot (UNKNOWN 0.0.0)  #-#-#-#-#
+# Translations template for UNKNOWN.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the UNKNOWN project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pixel 1.0.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-04 11:04-0700\n"
-"PO-Revision-Date: 2018-06-01 12:44-0700\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: en\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"#-#-#-#-#  html.part.pot  #-#-#-#-#\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: easygettext\n"
+"Project-Id-Version: \n"
+"#-#-#-#-#  js.part.pot (UNKNOWN 0.0.0)  #-#-#-#-#\n"
+"Project-Id-Version: UNKNOWN 0.0.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-06-07 14:17-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: src/ui/components/getty-footer.vue:16
 msgid "&copy; The J. Paul Getty Trust"
@@ -29,12 +36,19 @@ msgstr[1] ""
 
 #: src/ui/components/header-nav.vue:43
 msgid "About"
-msgstr "About"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:28
+msgid "Active:"
+msgstr ""
 
 #: src/ui/components/search-bar.vue:26
-#, fuzzy
 msgid "Advanced Search"
-msgstr "Saved Searches"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:14
+msgid "Born:"
+msgstr ""
 
 #: src/ui/components/header-nav.vue:90
 msgid "Contact"
@@ -46,6 +60,14 @@ msgstr ""
 
 #: src/ui/components/header-nav.vue:64
 msgid "Contributors/Partners"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:35
+msgid "Description:"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:17
+msgid "Died:"
 msgstr ""
 
 #: src/ui/components/header-nav.vue:59
@@ -62,7 +84,7 @@ msgstr ""
 
 #: src/ui/components/header-nav.vue:74
 msgid "Help"
-msgstr "Help"
+msgstr ""
 
 #: src/ui/components/header-nav.vue:49
 msgid "History"
@@ -70,7 +92,7 @@ msgstr ""
 
 #: src/ui/components/header-nav.vue:22
 msgid "Home"
-msgstr "Home"
+msgstr ""
 
 #: src/ui/components/header-nav.vue:98
 msgid "Language: %{ currentDisplay }"
@@ -78,6 +100,10 @@ msgstr ""
 
 #: src/ui/components/header-nav.vue:105
 msgid "Language: %{ language }"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:20
+msgid "Nationality:"
 msgstr ""
 
 #: src/ui/components/getty-footer.vue:17
@@ -88,9 +114,13 @@ msgstr ""
 msgid "Resource Types in the Provenance Index"
 msgstr ""
 
+#: src/ui/components/person-metadata.vue:25
+msgid "Role:"
+msgstr ""
+
 #: src/ui/components/header-nav.vue:34
 msgid "Saved Searches"
-msgstr "Saved Searches"
+msgstr ""
 
 #: src/ui/components/header-nav.vue:54
 msgid "Scope"
@@ -98,11 +128,11 @@ msgstr ""
 
 #: src/ui/components/header-nav.vue:28
 msgid "Search"
-msgstr "Search"
+msgstr ""
 
 #: src/ui/components/header-nav.vue:80
 msgid "Search Help"
-msgstr "Search Help"
+msgstr ""
 
 #: src/ui/components/search-bar.vue:7
 msgid "Search our Database"
@@ -121,9 +151,21 @@ msgid "The Provenance Index"
 msgstr ""
 
 #: src/ui/components/homepage-visualization.vue:13
-msgid "The Provenance Index contains information sourced from our databases consisting of Archival Inventories, Sales Catalogs, Dealer Stock Books, and Payments to Artists, spanning over four centuries. Click here for more information about these databases."
+msgid ""
+"The Provenance Index contains information sourced from our databases "
+"consisting of Archival Inventories, Sales Catalogs, Dealer Stock Books, and "
+"Payments to Artists, spanning over four centuries. Click here for more "
+"information about these databases."
 msgstr ""
 
 #: src/ui/components/homepage-visualization.vue:7
 msgid "What's in the Provenance Index?"
+msgstr ""
+
+#: src/ui/components/getty-ellipsis.vue:31
+msgid "Show Less"
+msgstr ""
+
+#: src/ui/components/getty-ellipsis.vue:31
+msgid "Read More..."
 msgstr ""

@@ -1,0 +1,27 @@
+# Translations template for UNKNOWN.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the UNKNOWN project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: UNKNOWN 0.0.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-06-07 14:17-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: src/ui/components/getty-ellipsis.vue:31
+msgid "Show Less"
+msgstr ""
+
+#: src/ui/components/getty-ellipsis.vue:31
+msgid "Read More..."
+msgstr ""
+
