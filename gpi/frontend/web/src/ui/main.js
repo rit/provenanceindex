@@ -11,7 +11,7 @@ import translations from 'iso/translations/translations.json'
 Vue.use(GetTextPlugin, {
   availableLanguages: {
     en: 'English',
-    sp: 'Spanish',
+    es: 'Spanish',
   },
   defaultLanguage: 'en',
   translations: translations,

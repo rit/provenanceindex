@@ -28,7 +28,7 @@ export default {
       this.showContent = !this.showContent
     },
     moreOrLess () {
-      return this.showContent ? 'Show Less' : 'Read More...'
+      return this.showContent ? this.$gettext('Show Less') : this.$gettext('Read More...')
     },
   },
 }
