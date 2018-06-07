@@ -6,11 +6,14 @@
       <slot/>
     </div>
     <div>
-      <!-- To do: figure out how to translate dynamic text -->
       <a
         class="is-uppercase is-size-7"
         href="#"
-        @click.prevent="toggleContent()">{{ moreOrLess() }}</a>
+        @click.prevent="toggleContent()">
+        <translate>
+          %{ moreOrLess }
+        </translate>
+      </a>
     </div>
   </div>
 </template>
@@ -23,12 +26,14 @@ export default {
       showContent: false,
     }
   },
+  computed: {
+    moreOrLess () {
+      return this.showContent ? this.$gettext('Show Less') : this.$gettext('Read More...')
+    },
+  },
   methods: {
     toggleContent () {
       this.showContent = !this.showContent
-    },
-    moreOrLess () {
-      return this.showContent ? this.$gettext('Show Less') : this.$gettext('Read More...')
     },
   },
 }
