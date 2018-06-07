@@ -1,7 +1,8 @@
 <template>
   <div
     v-show="active"
-    class="pi-tab-pane">
+    class="pi-tab-pane"
+    data-cy="tab-pane">
     <slot/>
   </div>
 </template>
@@ -25,10 +26,10 @@ export default {
     },
   },
   mounted () {
-    if ( typeof this.$parent.addPanes === 'function' ) {
+    if (typeof this.$parent.addPanes === 'function') {
       this.$parent.addPanes(this)
     } else {
-      throw new Error('GettyTabs must be parent');
+      throw new Error('GettyTabs must be parent')
     }
   },
   destroyed () {

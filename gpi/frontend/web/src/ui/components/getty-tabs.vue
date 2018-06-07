@@ -30,7 +30,7 @@ export default {
     )
 
     return (
-      <div>
+      <div class="getty-tabs">
         <div class="level pi-related">
           { this.$slots.tabsLabel }
           <div class="level-item">
