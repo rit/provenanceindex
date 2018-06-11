@@ -34,5 +34,6 @@ module.exports = {
     "comma-dangle": ["error", "always-multiline"],
     // Prevent chai's `ok` matcher warning message
     'no-unused-expressions': 'off',
+    'vue/require-prop-types': 'off',
   }
 }
