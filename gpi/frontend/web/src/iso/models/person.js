@@ -47,6 +47,15 @@ class Person extends Resource {
   heading () {
     return this.name
   }
+
+  relatedCountBadges () {
+    // TODO: Determine how to get these data
+    return [
+      { type: 'document', count: 20 },
+      { type: 'event', count: 30 },
+      { type: 'object', count: 40 },
+    ]
+  }
 }
 
 module.exports = Person
