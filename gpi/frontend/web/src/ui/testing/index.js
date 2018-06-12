@@ -11,12 +11,13 @@ const renderOnDesktop = () => {
   cy.viewport(1300, 800)
 }
 
-const stub = (name, { props } = {}) => {
+const stub = (name, { props, template } = {}) => {
   props = props || ['handler']
+  template = template || `<div>${name}</div>`
   return Vue.component(name, {
     name: kebabCase(name),
     props,
-    template: `<div>${name}</div>`,
+    template: template,
   })
 }
 
