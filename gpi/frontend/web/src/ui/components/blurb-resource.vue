@@ -13,6 +13,20 @@
         {{ value }}
       </li>
     </ul>
+
+    <div>
+      <h2>Related Resources</h2>
+      <section>
+        <div
+          v-for="badge in resource.relatedCountBadges()"
+          :key="badge.type">
+          <count-badge
+            :count="badge.count"
+            :resource="badge.type"
+          />
+        </div>
+      </section>
+    </div>
   </section>
 </template>
 
