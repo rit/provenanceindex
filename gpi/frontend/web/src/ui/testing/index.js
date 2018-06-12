@@ -21,7 +21,16 @@ const stub = (name, { props, template } = {}) => {
   })
 }
 
+const asyncWith = (fn) => {
+  cy.wrap(null).then(() => {
+    return new Cypress.Promise((resolve, reject) => {
+      fn(resolve, reject)
+    })
+  })
+}
+
 module.exports = {
+  asyncWith,
   stub,
   stubContext: stub,
   stubComponent: stub,
