@@ -48,6 +48,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import 'node_modules/bulma/sass/utilities/mixins.sass'
+
 h2
   font-weight: bold
   margin-bottom: 0.5em
@@ -63,14 +65,17 @@ li
 
 .getty-related
   > section
-    display: flex
-    flex-wrap: wrap
-    justify-content: flex-end
     > div
-      padding-left: 0.5em
       padding-bottom: 0.5em
+    +desktop
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-end
+      > div
+        padding-left: 0.5em
   h2
-    text-align: right
+    +desktop
+      text-align: right
     &:after
       content: ":"
 </style>
