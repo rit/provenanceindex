@@ -1,21 +1,31 @@
 <template>
   <div class="columns">
     <div class="column">
-      <h2>
-        {{ resource.heading() }}
-        |
-        <span>
-          {{ resource.qualifier }}
-        </span>
-      </h2>
-      <ul>
-        <li
-          v-for="[label, value] in resource.blurbFields()"
-          :key="label" >
-          <span>{{ label }}</span>
-          {{ value }}
-        </li>
-      </ul>
+      <div class="media">
+        <div class="media-left">
+          <font-awesome-icon
+            :icon="resource.ui.icon"
+            size="3x"
+          />
+        </div>
+        <div class="media-content">
+          <h2>
+            {{ resource.heading() }}
+            |
+            <span>
+              {{ resource.qualifier }}
+            </span>
+          </h2>
+          <ul>
+            <li
+              v-for="[label, value] in resource.blurbFields()"
+              :key="label" >
+              <span>{{ label }}</span>
+              {{ value }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div class="column getty-related is-3">
