@@ -1,5 +1,5 @@
 <template>
-  <div class="columns">
+  <div class="box columns getty-blurb-resource">
     <div class="column">
       <div class="media">
         <div class="media-left">
@@ -59,6 +59,9 @@ export default {
 
 <style lang="sass" scoped>
 @import 'node_modules/bulma/sass/utilities/mixins.sass'
+
+.getty-blurb-resource
+  margin-bottom: 1.5em
 
 h2
   font-weight: bold
