@@ -1,4 +1,4 @@
-import { div, byData } from 'iso/vspec'
+import { div, wrap } from 'iso/vspec'
 import { makeRembrandt } from 'iso/fixtures'
 import { vspecMount, stubComponent } from '@testing'
 import Person from 'iso/models/person'
@@ -12,10 +12,14 @@ describe('BlurbResource', function () {
     template = div`<blurb-resource :resource="person" />`
     components = {
       BlurbResource,
+      FontAwesomeIcon: stubComponent('FontAwesomeIcon', {
+        props: ['icon', 'size'],
+        template: wrap`{{ icon }}__{{ size }}`
+      }),
       CountBadge: stubComponent('CountBadge', {
         props: ['resource', 'count'],
-        template: div`{{ resource }}-{{ count }}`
-      })
+        template: wrap`{{ resource }}-{{ count }}`,
+      }),
     }
   })
 
@@ -25,7 +29,7 @@ describe('BlurbResource', function () {
       let data = () => ({ person })
       vspecMount({ template, components, data })
 
-      cy.contains('h1', 'Rembrandt').should('be.visible')
+      cy.contains('h2', 'Rembrandt').should('be.visible')
       cy.get('li').should('have.length', 3)
       cy.get('li').should($lis => {
         expect($lis.eq(0).text()).to.match(/Born\n(.+) in Leyden/)
@@ -33,6 +37,7 @@ describe('BlurbResource', function () {
         expect($lis.eq(2).text()).to.match(/Nationality\n(.+) Dutch/)
       })
     })
+    cy.contains('user-circle__3x')
   })
 
   it('shows related resource count badges', function () {
