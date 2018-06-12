@@ -21,7 +21,7 @@ const stub = (name, { props, template } = {}) => {
   })
 }
 
-const asyncWith = (fn) => {
+const withAsync = (fn) => {
   cy.wrap(null).then(() => {
     return new Cypress.Promise((resolve, reject) => {
       fn(resolve, reject)
@@ -30,11 +30,11 @@ const asyncWith = (fn) => {
 }
 
 module.exports = {
-  asyncWith,
-  stub,
-  stubContext: stub,
-  stubComponent: stub,
   renderOnDesktop,
   renderOnMobile,
+  stub,
+  stubComponent: stub,
+  stubContext: stub,
   vspecMount,
+  withAsync,
 }
