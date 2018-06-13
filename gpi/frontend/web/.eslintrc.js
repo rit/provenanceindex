@@ -13,6 +13,7 @@ module.exports = {
   globals: {
     expect: true,
     cy: true,
+    Cypress: true,
   },
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
@@ -34,5 +35,6 @@ module.exports = {
     "comma-dangle": ["error", "always-multiline"],
     // Prevent chai's `ok` matcher warning message
     'no-unused-expressions': 'off',
+    'vue/require-prop-types': 'off',
   }
 }

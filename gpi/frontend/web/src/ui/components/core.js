@@ -4,6 +4,8 @@ import Vue from 'vue'
 
 // Alphabetically import components
 import AsyncFlipper from '@ui/async-flipper'
+import BlurbResource from '@ui/blurb-resource'
+import CountBadge from '@ui/count-badge'
 import GettyCallout from '@ui/getty-callout'
 import GettyEllipsis from '@ui/getty-ellipsis'
 import GettyFooter from '@ui/getty-footer.vue'
@@ -20,6 +22,8 @@ import Welcome from '@ui/welcome'
 
 // Alphabetically register components
 Vue.component('AsyncFlipper', AsyncFlipper)
+Vue.component('BlurbResource', BlurbResource)
+Vue.component('CountBadge', CountBadge)
 Vue.component('GettyCallout', GettyCallout)
 Vue.component('GettyEllipsis', GettyEllipsis)
 Vue.component('GettyFooter', GettyFooter)

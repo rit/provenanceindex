@@ -39,6 +39,16 @@ describe('Person', () => {
       expect(person.died()).to.equal('1669-01-01 in Amsterdam')
     })
   })
+
+  context('methods#blurbFields', () => {
+    it('orders the fields', async () => {
+      let person = await makePerson()
+      let [born, died, nationality] = person.blurbFields()
+      expect(born).to.eql(['Born', '1606-01-01 in Leyden'])
+      expect(died).to.eql(['Died', '1669-01-01 in Amsterdam'])
+      expect(nationality).to.eql(['Nationality', 'Dutch (culture or style)'])
+    })
+  })
 })
 
 async function makePerson () {
