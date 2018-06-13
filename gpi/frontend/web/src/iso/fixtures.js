@@ -10,7 +10,12 @@ const ResourceTypes = [
 ]
 
 async function makeRembrandt () {
-  let res = await parser.walk({ doc: rembrandt })
+  let context = { id: 'pixel-123' }
+  let doc = rembrandt
+  let res = await parser.walk({ doc, context })
+  if (res.errors) {
+    throw res.errors
+  }
   let props = res.data.person
   return props
 }
