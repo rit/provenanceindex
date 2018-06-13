@@ -1,43 +1,73 @@
+import GettyTabs from '@ui/getty-tabs'
 import GettyTabPane from '@ui/getty-tab-pane'
 import { div, byData } from 'iso/vspec'
 import { vspecMount } from '@testing'
+import Vue from 'vue'
+
+const SampleParent = 
+  {
+    name: 'SampleParent',
+    data () {
+      return {
+        currentPane: null,
+        panes: [],
+      }
+    },
+    methods: {
+      addPanes (pane) {}
+    },
+    render(h) {
+      return (
+        <div class="getty-tabs">
+          { this.$slots.default }
+        </div>)
+    }
+  }
 
 const components = {
-  // 'getty-tabs': GettyTabs,
+  'sample-parent': SampleParent,
   'getty-tab-pane': GettyTabPane,
 }
 
-const template1 = div`
-  <getty-tab-pane
-    label="Tab 1"
-    data-cy="tab-pane">
-    Tab one content
-  </getty-tab-pane>`
-
-const template2 = div`
-  <getty-tabs>
-    TABS LABEL:
+const template = div`
+  <sample-parent>
     <getty-tab-pane
       label="Tab 1"
       data-cy="tab-pane">
       Tab one content
     </getty-tab-pane>
-    <getty-tab-pane
-      label="Tab 2"
-      data-cy="tab-pane">
-      Tab two content
-    </getty-tab-pane>
-  </getty-tabs>`
+  </sample-parent>`
 
 describe('GettyTabPane', () => {
-  context('model', () => {
-    /* it('throws an error if GettyTabs is not parent', () => {
-      vspecMount({ template1, components })
-      cy.get(byData`tab-pane`).parent().should('not.be.eq', cy.get('.getty-tabs'))
-    }), */
-    /*it('functions as expected if GettyTabs is parent', () => {
-      vspecMount({ template2, components })
-      cy.get(byData`tab-pane`).parent().should('be.eq', cy.get('.getty-tabs'))
-    })*/
+  context('handler', () => {
+    it('throws an error if GettyTabs is not parent', () => {
+      let constructor = Vue.extend(GettyTabPane)
+      let vm = new constructor()
+      vm.$parent = {}
+      expect(() => {vm.$mount()}).to.throw(TypeError)
+    }), 
+    it('adds itself to the handler', () => {
+      let constructor = Vue.extend(GettyTabPane)
+      let vm = new constructor()
+      let addPanes = cy.spy()
+      vm.$parent = {addPanes}
+      vm.$mount()
+      expect(addPanes).to.have.been.calledWith(vm)
+    })
+  }),
+  context('visibility', () => {
+    it('does not display content if not active', () => {
+      vspecMount({ template, components })
+      cy.get(byData`tab-pane`).should('not.be.visible')
+    })
+    it('displays content if active', () => {
+      vspecMount({ template, components }, (vm) => {
+        cy.get(byData`tab-pane`).then($el => {
+          let pane = $el[0].__vue__
+          vm.currentPane = pane
+        })
+        cy.get(byData`tab-pane`).should('be.visible')
+      })
+    })
   })
 })
