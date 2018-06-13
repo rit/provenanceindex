@@ -13,6 +13,7 @@ module.exports = {
   globals: {
     expect: true,
     cy: true,
+    Cypress: true,
   },
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention

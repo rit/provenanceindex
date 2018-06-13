@@ -14,7 +14,7 @@ describe('BlurbResource', function () {
       BlurbResource,
       FontAwesomeIcon: stubComponent('FontAwesomeIcon', {
         props: ['icon', 'size'],
-        template: wrap`{{ icon }}__{{ size }}`
+        template: wrap`{{ icon }}__{{ size }}`,
       }),
       CountBadge: stubComponent('CountBadge', {
         props: ['resource', 'count'],
