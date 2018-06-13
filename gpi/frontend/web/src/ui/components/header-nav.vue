@@ -23,23 +23,23 @@
         <router-link
           v-translate
           :to="{name: 'home'}"
-          class="navbar-item">
+          class="navbar-item pir-main-nav">
           Home
         </router-link>
         <a
           v-translate
           href="#"
-          class="navbar-item">
+          class="navbar-item pir-main-nav">
           Search
         </a>
         <a
           v-translate
           href="#"
-          class="navbar-item">
+          class="navbar-item pir-main-nav">
           Saved Searches
         </a>
         <div
-          class="navbar-item has-dropdown is-hoverable"
+          class="navbar-item pir-main-nav has-dropdown is-hoverable"
           data-cy="navbar-about" >
           <a
             v-translate
@@ -71,7 +71,7 @@
         </div>
         <div
           data-cy="navbar-help"
-          class="navbar-item has-dropdown is-hoverable">
+          class="navbar-item pir-main-nav has-dropdown is-hoverable">
           <a
             v-translate
             class="navbar-link">
@@ -95,23 +95,7 @@
             </a>
           </div>
         </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a
-            v-translate
-            class="navbar-link">
-            Language: %{ currentDisplay }
-          </a>
-          <div
-            class="navbar-dropdown">
-            <a
-              v-translate="{language: language}"
-              v-for="(language, key) in inactiveLanguages"
-              :key="key"
-              class="navbar-item"
-              @click="changeLang(key)">Language: %{ language }
-            </a>
-          </div>
-        </div>
+        <language-selector/>
       </div>
     </div>
   </nav>
@@ -127,21 +111,9 @@ export default {
       showNav: false,
     }
   },
-  computed: {
-    currentDisplay () {
-      return this.$language.available[this.$language.current]
-    },
-    inactiveLanguages () {
-      let inactive = _.omit(this.$language.available, this.$language.current)
-      return inactive
-    },
-  },
   methods: {
     toggleBurger () {
       this.showNav = !this.showNav
-    },
-    changeLang (newLang) {
-      this.$language.current = newLang
     },
   },
 }
@@ -157,7 +129,7 @@ export default {
 .navbar-start {
   margin-right: inherit;
 }
-.navbar-item:not(:last-child) {
+.pir-main-nav:not(:last-child) {
   border-right: 1px solid #555555;
 }
 .navbar-link::after {

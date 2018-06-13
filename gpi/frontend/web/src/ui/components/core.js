@@ -11,6 +11,7 @@ import HeaderExplore from '@ui/header-explore.vue'
 import HeaderLogo from '@ui/header-logo'
 import HeaderNav from '@ui/header-nav'
 import HomepageVisualization from '@ui/homepage-visualization'
+import LanguageSelector from '@ui/language-selector'
 import PersonMetadata from '@ui/person-metadata'
 import PersonTitle from '@ui/person-title'
 import ResourceOverview from '@ui/resource-overview'
@@ -27,6 +28,7 @@ Vue.component('HeaderExplore', HeaderExplore)
 Vue.component('HeaderLogo', HeaderLogo)
 Vue.component('HeaderNav', HeaderNav)
 Vue.component('HomepageVisualization', HomepageVisualization)
+Vue.component('LanguageSelector', LanguageSelector)
 Vue.component('PersonMetadata', PersonMetadata)
 Vue.component('PersonTitle', PersonTitle)
 Vue.component('ResourceOverview', ResourceOverview)
