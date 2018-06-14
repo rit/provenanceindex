@@ -12,6 +12,7 @@
         v-for="(language, key) in inactiveLanguages"
         :key="key"
         class="navbar-item"
+        data-cy="inactive-languages"
         @click="changeLang(key)">Language: %{ language }
       </a>
     </div>
@@ -19,8 +20,10 @@
 </template>
 
 <script>
+import _ from 'lodash'
+
 export default {
-	name: 'LanguageSelector',
+  name: 'LanguageSelector',
   computed: {
     currentDisplay () {
       return this.$language.available[this.$language.current]
