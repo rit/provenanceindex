@@ -6,11 +6,10 @@ import {
   faCalendar,
   faCaretDown,
   faImage,
+  faPaintBrush,
   faSearch,
   faUser,
   faUserCircle,
-  faCalendar,
-  faPaintBrush,
 } from '@fortawesome/fontawesome-free-solid'
 
 fontawesome.library.add(
@@ -18,10 +17,9 @@ fontawesome.library.add(
   faCalendar,
   faCaretDown,
   faImage,
+  faPaintBrush,
   faSearch,
   faUser,
   faUserCircle,
-  faCalendar,
-  faPaintBrush,
 )
 Vue.component('FontAwesomeIcon', FontAwesomeIcon)
