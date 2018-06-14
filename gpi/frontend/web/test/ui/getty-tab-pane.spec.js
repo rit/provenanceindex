@@ -4,7 +4,7 @@ import { div, byData } from 'iso/vspec'
 import { vspecMount } from '@testing'
 import Vue from 'vue'
 
-const SampleParent = 
+const SampleParent =
   {
     name: 'SampleParent',
     data () {
@@ -14,14 +14,14 @@ const SampleParent =
       }
     },
     methods: {
-      addPanes (pane) {}
+      addPanes (pane) {},
     },
-    render(h) {
+    render (h) {
       return (
         <div class="getty-tabs">
           { this.$slots.default }
         </div>)
-    }
+    },
   }
 
 const components = {
@@ -44,8 +44,8 @@ describe('GettyTabPane', () => {
       let constructor = Vue.extend(GettyTabPane)
       let vm = new constructor()
       vm.$parent = {}
-      expect(() => {vm.$mount()}).to.throw(TypeError)
-    }), 
+      expect(() => { vm.$mount() }).to.throw(TypeError)
+    }),
     it('adds itself to the handler', () => {
       let constructor = Vue.extend(GettyTabPane)
       let vm = new constructor()
