@@ -54,22 +54,25 @@ describe('GettyTabPane', () => {
   })
 })
 
-describe('GettyTabPane handler', () => {
+describe('GettyTabPane: lifecycle', () => {
   let Klass
+  let propsData = {
+    label: 'Tab 1',
+  }
 
   beforeEach(function() {
     Klass = Vue.extend(GettyTabPane)
   })
   
   context('handler', () => {
-    it('throws an error if parent cannot add itself', () => {
-      let vm = new Klass()
+    it('requires the handler to implement #addPanes()', () => {
+      let vm = new Klass({ propsData })
       vm.$parent = {}
       expect(() => { vm.$mount() }).to.throw(TypeError)
     })
 
     it('adds itself to the handler', () => {
-      let vm = new Klass()
+      let vm = new Klass({ propsData })
       let addPanes = cy.spy()
       vm.$parent = { addPanes }
       vm.$mount()
