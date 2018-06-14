@@ -3,11 +3,10 @@ import { div, byData, wrap } from 'iso/vspec'
 import { vspecMount } from '@testing'
 import Vue from 'vue'
 
-
 describe('GettyTabPane', () => {
   let SampleParent, components, addedPane, template
 
-  beforeEach(function() {
+  beforeEach(function () {
     SampleParent = {
       name: 'SampleParent',
       data () {
@@ -20,7 +19,7 @@ describe('GettyTabPane', () => {
           addedPane = pane
         },
       },
-      template: wrap`<slot/>`
+      template: wrap`<slot/>`,
     }
 
     components = {
@@ -38,7 +37,7 @@ describe('GettyTabPane', () => {
       </sample-parent>
     `
   })
-  
+
   context('visibility', () => {
     it('does not display content if not active', () => {
       vspecMount({ template, components })
@@ -60,10 +59,10 @@ describe('GettyTabPane: lifecycle', () => {
     label: 'Tab 1',
   }
 
-  beforeEach(function() {
+  beforeEach(function () {
     Klass = Vue.extend(GettyTabPane)
   })
-  
+
   context('handler', () => {
     it('requires the handler to implement #addPanes()', () => {
       let vm = new Klass({ propsData })
