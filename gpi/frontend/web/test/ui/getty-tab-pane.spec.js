@@ -3,59 +3,47 @@ import { div, byData } from 'iso/vspec'
 import { vspecMount } from '@testing'
 import Vue from 'vue'
 
-const SampleParent =
-  {
-    name: 'SampleParent',
-    data () {
-      return {
-        currentPane: null,
-        panes: [],
-      }
-    },
-    methods: {
-      addPanes (pane) {},
-    },
-    render (h) {
-      return (
-        <div class="getty-tabs">
-          { this.$slots.default }
-        </div>)
-    },
-  }
-
-const components = {
-  'sample-parent': SampleParent,
-  'getty-tab-pane': GettyTabPane,
-}
-
-const template = div`
-  <sample-parent>
-    <getty-tab-pane
-      label="Tab 1"
-      data-cy="tab-pane">
-      Tab one content
-    </getty-tab-pane>
-  </sample-parent>`
 
 describe('GettyTabPane', () => {
-  context('handler', () => {
-    it('throws an error if GettyTabs is not parent', () => {
-      let constructor = Vue.extend(GettyTabPane)
-      let vm = new constructor()
-      vm.$parent = {}
-      expect(() => { vm.$mount() }).to.throw(TypeError)
-    })
+  let SampleParent, components, addedPane, template
 
-    it('adds itself to the handler', () => {
-      let constructor = Vue.extend(GettyTabPane)
-      let vm = new constructor()
-      let addPanes = cy.spy()
-      vm.$parent = {addPanes}
-      vm.$mount()
-      expect(addPanes).to.have.been.calledWith(vm)
-    })
+  beforeEach(function() {
+    SampleParent = {
+      name: 'SampleParent',
+      data () {
+        return {
+          currentPane: null,
+        }
+      },
+      methods: {
+        addPanes (pane) {
+          addedPane = pane
+        },
+      },
+      render (h) {
+        return (
+          <div>
+            { this.$slots.default }
+          </div>)
+      },
+    }
+
+    components = {
+      'sample-parent': SampleParent,
+      'getty-tab-pane': GettyTabPane,
+    }
+
+    template = div`
+      <sample-parent>
+        <getty-tab-pane
+          label="Tab 1"
+          data-cy="tab-pane">
+          Tab one content
+        </getty-tab-pane>
+      </sample-parent>
+    `
   })
-
+  
   context('visibility', () => {
     it('does not display content if not active', () => {
       vspecMount({ template, components })
@@ -70,6 +58,30 @@ describe('GettyTabPane', () => {
         })
         cy.get(byData`tab-pane`).should('be.visible')
       })
+    })
+  })
+})
+
+describe('GettyTabPane handler', () => {
+  let Klass
+
+  beforeEach(function() {
+    Klass = Vue.extend(GettyTabPane)
+  })
+  
+  context('handler', () => {
+    it('throws an error if parent cannot add itself', () => {
+      let vm = new Klass()
+      vm.$parent = {}
+      expect(() => { vm.$mount() }).to.throw(TypeError)
+    })
+
+    it('adds itself to the handler', () => {
+      let vm = new Klass()
+      let addPanes = cy.spy()
+      vm.$parent = { addPanes }
+      vm.$mount()
+      expect(addPanes).to.have.been.calledWith(vm)
     })
   })
 })
