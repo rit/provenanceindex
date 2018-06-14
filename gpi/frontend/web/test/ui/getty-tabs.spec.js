@@ -1,11 +1,12 @@
 import GettyTabs from '@ui/getty-tabs'
 import GettyTabPane from '@ui/getty-tab-pane'
 import { div, byData } from 'iso/vspec'
-import { vspecMount } from '@testing'
+import { vspecMount, stubComponent } from '@testing'
 
 const components = {
   'getty-tabs': GettyTabs,
   'getty-tab-pane': GettyTabPane,
+  'font-awesome-icon': stubComponent('icon'),
 }
 
 const template = div`
@@ -21,7 +22,9 @@ const template = div`
       data-cy="tab-pane">
       Tab two content
     </getty-tab-pane>
-  </getty-tabs>`
+  </getty-tabs>
+`
+
 beforeEach(() => {
   vspecMount({ template, components })
 })
@@ -32,6 +35,7 @@ describe('GettyTabs', () => {
       it('displays tab-panes', () => {
         cy.get(byData`tab-pane`).its('length').should('be.eq', 2)
       })
+
       it('displays slotLabel', () => {
         cy.contains('TABS LABEL')
       })
@@ -40,11 +44,12 @@ describe('GettyTabs', () => {
 
   context('selecting tabs', () => {
     it('selects the first tab as default', () => {
-      cy.get('.is-active a').contains('Tab 1')
+      cy.contains('Tab 1').should('be.visible')
     })
     it('selects another tab on click', () => {
-      cy.contains('Tab 2').click()
-      cy.get('.is-active a').contains('Tab 2')
+      cy.contains('Tab 2')
+        .click()
+        .should('be.visible')
     })
   })
 })
