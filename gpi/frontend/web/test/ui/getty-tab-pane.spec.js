@@ -1,4 +1,3 @@
-import GettyTabs from '@ui/getty-tabs'
 import GettyTabPane from '@ui/getty-tab-pane'
 import { div, byData } from 'iso/vspec'
 import { vspecMount } from '@testing'
@@ -45,7 +44,8 @@ describe('GettyTabPane', () => {
       let vm = new constructor()
       vm.$parent = {}
       expect(() => { vm.$mount() }).to.throw(TypeError)
-    }),
+    })
+
     it('adds itself to the handler', () => {
       let constructor = Vue.extend(GettyTabPane)
       let vm = new constructor()
@@ -54,12 +54,14 @@ describe('GettyTabPane', () => {
       vm.$mount()
       expect(addPanes).to.have.been.calledWith(vm)
     })
-  }),
+  })
+
   context('visibility', () => {
     it('does not display content if not active', () => {
       vspecMount({ template, components })
       cy.get(byData`tab-pane`).should('not.be.visible')
     })
+
     it('displays content if active', () => {
       vspecMount({ template, components }, (vm) => {
         cy.get(byData`tab-pane`).then($el => {
