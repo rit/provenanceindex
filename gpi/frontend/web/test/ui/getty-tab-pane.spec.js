@@ -1,5 +1,5 @@
 import GettyTabPane from '@ui/getty-tab-pane'
-import { div, byData } from 'iso/vspec'
+import { div, byData, wrap } from 'iso/vspec'
 import { vspecMount } from '@testing'
 import Vue from 'vue'
 
@@ -20,12 +20,7 @@ describe('GettyTabPane', () => {
           addedPane = pane
         },
       },
-      render (h) {
-        return (
-          <div>
-            { this.$slots.default }
-          </div>)
-      },
+      template: wrap`<slot/>`
     }
 
     components = {
@@ -52,12 +47,9 @@ describe('GettyTabPane', () => {
 
     it('displays content if active', () => {
       vspecMount({ template, components }, (vm) => {
-        cy.get(byData`tab-pane`).then($el => {
-          let pane = $el[0].__vue__
-          vm.currentPane = pane
-        })
-        cy.get(byData`tab-pane`).should('be.visible')
+        vm.currentPane = addedPane
       })
+      cy.get(byData`tab-pane`).should('be.visible')
     })
   })
 })
