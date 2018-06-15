@@ -44,12 +44,14 @@ describe('GettyTabs', () => {
 
   context('selecting tabs', () => {
     it('selects the first tab as default', () => {
-      cy.contains('Tab 1').should('be.visible')
+      cy.contains('Tab one content').should('be.visible')
+      cy.contains('Tab two content').should('not.be.visible')
     })
+
     it('selects another tab on click', () => {
-      cy.contains('Tab 2')
-        .click()
-        .should('be.visible')
+      cy.contains('Tab 2').click()
+      cy.contains('Tab two content').should('be.visible')
+      cy.contains('Tab one content').should('not.be.visible')
     })
   })
 })
