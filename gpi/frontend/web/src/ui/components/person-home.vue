@@ -7,6 +7,23 @@
         :icon="person.ui.icon"
       />
       <person-metadata :person="person" />
+      <getty-tabs>
+        <div
+          slot="tabsLabel"
+          class="level-item is-narrow">
+          RELATED RESOURCES:
+        </div>
+        <getty-tab-pane
+          label="Provenance Events"
+          icon="calendar">
+          Provenance Event List
+        </getty-tab-pane>
+        <getty-tab-pane
+          label="Objects"
+          icon="paint-brush">
+          Objects List
+        </getty-tab-pane>
+      </getty-tabs>
 
       <!-- Trigger History Mode  -->
       <router-link
