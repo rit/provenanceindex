@@ -37,7 +37,25 @@ const person = `
 }
 `
 
+const acquisition = `
+{
+  acquisition {
+    id
+    label
+    dateOfTransaction
+    buyer
+    seller
+    payments
+    artObjects {
+      id
+      label
+    }
+  }
+}
+`
+
 module.exports = {
   'ManMadeObject': artObject,
   'Person': person,
+  'Acquisition': acquisition,
 }
