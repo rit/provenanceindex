@@ -23,23 +23,23 @@
         <router-link
           v-translate
           :to="{name: 'home'}"
-          class="navbar-item pir-main-nav">
+          class="navbar-item pi-main-nav">
           Home
         </router-link>
         <a
           v-translate
           href="#"
-          class="navbar-item pir-main-nav">
+          class="navbar-item pi-main-nav">
           Search
         </a>
         <a
           v-translate
           href="#"
-          class="navbar-item pir-main-nav">
+          class="navbar-item pi-main-nav">
           Saved Searches
         </a>
         <div
-          class="navbar-item pir-main-nav has-dropdown is-hoverable"
+          class="navbar-item pi-main-nav has-dropdown is-hoverable"
           data-cy="navbar-about" >
           <a
             v-translate
@@ -71,7 +71,7 @@
         </div>
         <div
           data-cy="navbar-help"
-          class="navbar-item pir-main-nav has-dropdown is-hoverable">
+          class="navbar-item pi-main-nav has-dropdown is-hoverable">
           <a
             v-translate
             class="navbar-link">
@@ -127,7 +127,7 @@ export default {
 .navbar-start {
   margin-right: inherit;
 }
-.pir-main-nav:not(:last-child) {
+.pi-main-nav:not(:last-child) {
   border-right: 1px solid #555555;
 }
 .navbar-link::after {
