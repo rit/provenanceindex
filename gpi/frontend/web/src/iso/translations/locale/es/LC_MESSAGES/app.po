@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pixel 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-07 14:17-0700\n"
+"POT-Creation-Date: 2018-06-18 15:50-0700\n"
 "PO-Revision-Date: 2018-06-01 12:44-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -26,12 +26,16 @@ msgid_plural "%{ count } Records"
 msgstr[0] "%{ count } Registro"
 msgstr[1] "%{ count } Registros"
 
+#: src/ui/components/getty-ellipsis.vue:12
+msgid "%{ moreOrLess }"
+msgstr ""
+
 #: src/ui/components/header-nav.vue:43
 msgid "About"
 msgstr "Acerca de"
 
 #: src/ui/components/person-metadata.vue:28
-msgid "Active:"
+msgid "Active"
 msgstr "Activo"
 
 #: src/ui/components/search-bar.vue:26
@@ -39,7 +43,7 @@ msgid "Advanced Search"
 msgstr "Búsqueda Avanzada"
 
 #: src/ui/components/person-metadata.vue:14
-msgid "Born:"
+msgid "Born"
 msgstr "Nacido"
 
 #: src/ui/components/header-nav.vue:90
@@ -55,11 +59,11 @@ msgid "Contributors/Partners"
 msgstr "Contribuidores/Socios"
 
 #: src/ui/components/person-metadata.vue:35
-msgid "Description:"
+msgid "Description"
 msgstr "Descripción"
 
 #: src/ui/components/person-metadata.vue:17
-msgid "Died:"
+msgid "Died"
 msgstr "Murió"
 
 #: src/ui/components/header-nav.vue:59
@@ -86,16 +90,16 @@ msgstr "Historia"
 msgid "Home"
 msgstr "Inicio"
 
-#: src/ui/components/header-nav.vue:98
+#: src/ui/components/language-selector.vue:2
 msgid "Language: %{ currentDisplay }"
 msgstr "Idioma: %{ currentDisplay }"
 
-#: src/ui/components/header-nav.vue:105
+#: src/ui/components/language-selector.vue:9
 msgid "Language: %{ language }"
 msgstr "Idioma: %{ language }"
 
 #: src/ui/components/person-metadata.vue:20
-msgid "Nationality:"
+msgid "Nationality"
 msgstr "Nacionalidad"
 
 #: src/ui/components/getty-footer.vue:17
@@ -107,7 +111,7 @@ msgid "Resource Types in the Provenance Index"
 msgstr "Tipos de recursos en el Índice de Procedencias"
 
 #: src/ui/components/person-metadata.vue:25
-msgid "Role:"
+msgid "Role"
 msgstr "Oficio"
 
 #: src/ui/components/header-nav.vue:34

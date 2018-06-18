@@ -12,28 +12,28 @@
         <div class="column is-narrow">
           <p
             v-if="person.dateOfBirth"
-            class="is-size-7"><b><translate>Born:</translate></b> {{ person.born() }}</p>
+            class="is-size-7"><b class="pi-label"><translate>Born</translate></b>{{ person.born() }}</p>
           <p
             v-if="person.dateOfDeath"
-            class="is-size-7"><b><translate>Died:</translate></b> {{ person.died() }}</p>
+            class="is-size-7"><b class="pi-label"><translate>Died</translate></b>{{ person.died() }}</p>
           <p
             v-if="person.nationality"
-            class="is-size-7"><b><translate>Nationality:</translate></b> {{ person.nationality }}</p>
+            class="is-size-7"><b class="pi-label"><translate>Nationality</translate></b>{{ person.nationality }}</p>
         </div>
         <div class="column">
           <p
             v-if="person.role"
-            class="is-size-7"><b><translate>Role:</translate></b> {{ person.role }}</p>
+            class="is-size-7"><b class="pi-label"><translate>Role</translate></b>{{ person.role }}</p>
           <p
             v-if="person.activeTimespan"
-            class="is-size-7"><b><translate>Active:</translate></b> {{ person.activeTimespan }}</p>
+            class="is-size-7"><b class="pi-label"><translate>Active</translate></b>{{ person.activeTimespan }}</p>
         </div>
       </div>
       <getty-ellipsis
         v-if="person.description"
       >
         <div>
-          <b><translate>Description:</translate></b> {{ person.description }}
+          <b class="pi-label"><translate>Description</translate></b>{{ person.description }}
         </div>
       </getty-ellipsis>
     </div>
@@ -55,5 +55,7 @@ export default {
 </script>
 
 <style scoped>
-
+.pi-label:after {
+  content: ": "
+}
 </style>
