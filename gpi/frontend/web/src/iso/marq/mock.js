@@ -15,6 +15,9 @@ class MockMarq extends Marq {
 const mock = (resolver) => reduce(resolver, (result, resolver, name) => {
   // TODO parse the source file using acornjs to extract the @casual annotation
   result[name] = (doc, args, ctx, info) => {
+    if (!ctx) {
+      throw Error('Try passing a context object to the parser like: parse.walk({doc, context})')
+    }
     return `stubbed ${name} ${ctx.id}`
   }
   return result
