@@ -25,6 +25,14 @@ function div (html) {
   `
 }
 
+function wrap (html) {
+  return `
+    <div>
+      ${html}
+    </div>
+  `
+}
+
 function byData (attr) {
   return `[data-cy=${attr}]`
 }
@@ -62,4 +70,5 @@ module.exports = {
   encode,
   register,
   stubInterface,
+  wrap,
 }
