@@ -21,59 +21,81 @@
     >
       <div class="navbar-start">
         <router-link
+          v-translate
           :to="{name: 'home'}"
-          class="navbar-item">
+          class="navbar-item pi-main-nav">
           Home
         </router-link>
         <a
+          v-translate
           href="#"
-          class="navbar-item">
+          class="navbar-item pi-main-nav">
           Search
         </a>
         <a
+          v-translate
           href="#"
-          class="navbar-item">
+          class="navbar-item pi-main-nav">
           Saved Searches
         </a>
         <div
-          class="navbar-item has-dropdown is-hoverable"
+          class="navbar-item pi-main-nav has-dropdown is-hoverable"
           data-cy="navbar-about" >
-          <a class="navbar-link">
+          <a
+            v-translate
+            class="navbar-link">
             About
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               History
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Scope
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Documentation
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Contributors/Partners
             </a>
           </div>
         </div>
         <div
           data-cy="navbar-help"
-          class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
+          class="navbar-item pi-main-nav has-dropdown is-hoverable">
+          <a
+            v-translate
+            class="navbar-link">
             Help
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Search Help
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               FAQs
             </a>
-            <a class="navbar-item">
+            <a
+              v-translate
+              class="navbar-item">
               Contact
             </a>
           </div>
         </div>
+        <language-selector/>
       </div>
     </div>
   </nav>
@@ -105,7 +127,7 @@ export default {
 .navbar-start {
   margin-right: inherit;
 }
-.navbar-item:not(:last-child) {
+.pi-main-nav:not(:last-child) {
   border-right: 1px solid #555555;
 }
 .navbar-link::after {

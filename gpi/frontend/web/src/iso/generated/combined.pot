@@ -1,0 +1,175 @@
+# #-#-#-#-#  js.part.pot (UNKNOWN 0.0.0)  #-#-#-#-#
+# Translations template for UNKNOWN.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the UNKNOWN project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"#-#-#-#-#  html.part.pot  #-#-#-#-#\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: easygettext\n"
+"Project-Id-Version: \n"
+"#-#-#-#-#  js.part.pot (UNKNOWN 0.0.0)  #-#-#-#-#\n"
+"Project-Id-Version: UNKNOWN 0.0.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-06-18 15:51-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: src/ui/components/getty-footer.vue:16
+msgid "&copy; The J. Paul Getty Trust"
+msgstr ""
+
+#: src/ui/components/resource-type.vue:13
+msgid "%{ count } Record"
+msgid_plural "%{ count } Records"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/ui/components/getty-ellipsis.vue:12
+msgid "%{ moreOrLess }"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:43
+msgid "About"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:28
+msgid "Active"
+msgstr ""
+
+#: src/ui/components/search-bar.vue:26
+msgid "Advanced Search"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:14
+msgid "Born"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:90
+msgid "Contact"
+msgstr ""
+
+#: src/ui/components/getty-footer.vue:23
+msgid "Contact Us"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:64
+msgid "Contributors/Partners"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:35
+msgid "Description"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:17
+msgid "Died"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:59
+msgid "Documentation"
+msgstr ""
+
+#: src/ui/components/header-explore.vue:12
+msgid "Explore The Getty"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:85
+msgid "FAQs"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:74
+msgid "Help"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:49
+msgid "History"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:22
+msgid "Home"
+msgstr ""
+
+#: src/ui/components/language-selector.vue:2
+msgid "Language: %{ currentDisplay }"
+msgstr ""
+
+#: src/ui/components/language-selector.vue:9
+msgid "Language: %{ language }"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:20
+msgid "Nationality"
+msgstr ""
+
+#: src/ui/components/getty-footer.vue:17
+msgid "Privacy Policy"
+msgstr ""
+
+#: src/ui/components/resource-overview.vue:7
+msgid "Resource Types in the Provenance Index"
+msgstr ""
+
+#: src/ui/components/person-metadata.vue:25
+msgid "Role"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:34
+msgid "Saved Searches"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:54
+msgid "Scope"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:28
+msgid "Search"
+msgstr ""
+
+#: src/ui/components/header-nav.vue:80
+msgid "Search Help"
+msgstr ""
+
+#: src/ui/components/search-bar.vue:7
+msgid "Search our Database"
+msgstr ""
+
+#: src/ui/components/getty-footer.vue:20
+msgid "Terms of Use"
+msgstr ""
+
+#: src/ui/components/getty-footer.vue:11
+msgid "The J. Paul Getty Trust"
+msgstr ""
+
+#: src/ui/components/header-logo.vue:20
+msgid "The Provenance Index"
+msgstr ""
+
+#: src/ui/components/homepage-visualization.vue:13
+msgid ""
+"The Provenance Index contains information sourced from our databases "
+"consisting of Archival Inventories, Sales Catalogs, Dealer Stock Books, and "
+"Payments to Artists, spanning over four centuries. Click here for more "
+"information about these databases."
+msgstr ""
+
+#: src/ui/components/homepage-visualization.vue:7
+msgid "What's in the Provenance Index?"
+msgstr ""
+
+#: src/ui/components/getty-ellipsis.vue:31
+msgid "Show Less"
+msgstr ""
+
+#: src/ui/components/getty-ellipsis.vue:31
+msgid "Read More..."
+msgstr ""

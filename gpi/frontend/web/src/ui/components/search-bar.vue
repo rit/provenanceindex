@@ -5,7 +5,7 @@
         <div class="columns">
           <div class="column is-one-third is-offset-one-third">
             <h1 class="is-size-5 has-text-weight-bold has-text-centered">
-              Search our Database
+              <translate>Search our Database</translate>
               <hr>
             </h1>
           </div>
@@ -13,6 +13,7 @@
         <div class="columns">
           <div class="column is-half is-offset-one-quarter">
             <div class="control has-icons-right">
+              <!-- To do: figure out how to translate placeholder text -->
               <input
                 class="input is-medium"
                 type="text"
@@ -23,7 +24,9 @@
                   style="color: white;" />
               </span>
             </div>
-            <p class="has-text-right is-italic is-size-7"><a href="#">Advanced Search</a></p>
+            <p class="has-text-right is-italic is-size-7"><a
+              v-translate
+              href="#">Advanced Search</a></p>
           </div>
         </div>
 
