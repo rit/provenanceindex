@@ -12,7 +12,6 @@
         v-for="(language, key) in inactiveLanguages"
         :key="key"
         class="navbar-item"
-        data-cy="inactive-languages"
         @click="changeLang(key)">Language: %{ language }
       </a>
     </div>
