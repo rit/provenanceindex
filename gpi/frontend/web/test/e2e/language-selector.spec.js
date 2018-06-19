@@ -6,7 +6,7 @@ describe('LanguageSelector', () => {
     cy.contains('Born').should('be.visible')
   })
   it('displays Spanish when selected', () => {
-    cy.get(byData`inactive-languages`).click({ force: true })
+    cy.contains('Language: Spanish').click({ force: true })
     cy.contains('Nacido').should('be.visible')
   })
 })
