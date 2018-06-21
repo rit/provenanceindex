@@ -1,5 +1,7 @@
 <template>
-  <router-link :to="{ name: 'person-home', params: { id: id, tab: resource}}" class="button">
+  <router-link
+    :to="{ name: 'person-home', params: { id: id, tab: resource }}"
+    class="button">
     <span class="icon">
       <font-awesome-icon :icon="icon" />
     </span>
@@ -11,7 +13,7 @@
 const icons = {
   'document': 'book',
   'event': 'calendar',
-  'object': 'image',
+  'object': 'paint-brush',
   'person': 'person',
 }
 
@@ -32,8 +34,8 @@ export default {
     },
     id: {
       required: true,
-      type: String
-    }
+      type: String,
+    },
   },
   computed: {
     icon () {

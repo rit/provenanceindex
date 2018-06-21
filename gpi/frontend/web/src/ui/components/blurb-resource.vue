@@ -59,8 +59,8 @@ export default {
   computed: {
     id () {
       return this.resource.id.replace('stubbed id ', '')
-    }
-  }
+    },
+  },
 }
 </script>
 

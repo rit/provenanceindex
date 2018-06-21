@@ -28,6 +28,11 @@
           icon="paint-brush">
           Objects List
         </getty-tab-pane>
+        <getty-tab-pane
+          label="Documents"
+          icon="book">
+          Documents List
+        </getty-tab-pane>
       </getty-tabs>
 
       <!-- Trigger History Mode  -->
@@ -49,7 +54,7 @@ export default {
   name: 'PersonHome',
   data () {
     return {
-      related: null
+      related: null,
     }
   },
   computed: {
@@ -73,17 +78,15 @@ export default {
       immediate: true,
     },
   },
+  mounted () {
+    makeRembrandt().then(props => {
+      let artist = new Person(props)
+      this.related = artist
+    })
+  },
   methods: {
     ...mapActions(['fetchPerson']),
   },
-  mounted () {
-    makeRembrandt().then(props => {
-        console.log(props)
-        let artist = new Person(props)
-        console.log(artist)
-        this.related = artist
-      })
-  }
 }
 </script>
 

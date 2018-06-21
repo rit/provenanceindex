@@ -10,30 +10,39 @@ export default {
   computed: {
     activeTab () {
       return this.$route.params.tab || null
-    }
-  },
-  mounted () {
-    if (this.activeTab) {
-      const active = this.panes.find (pane => {
-        let label = pane.label.toLowerCase()
-        return label.includes(this.activeTab)
-      })
-      this.currentPane = active
-    } else {
-      this.currentPane = this.panes[0]
-    }
+    },
   },
   watch: {
     '$route' (to, from) {
       if (to.params.tab) {
-        const active = this.panes.find (pane => {
+        const active = this.panes.find(pane => {
           let label = pane.label.toLowerCase()
           return label.includes(to.params.tab)
         })
+        if (typeof active !== 'undefined') {
+          this.currentPane = active
+        } else {
+          this.currentPane = this.panes[0]
+        }
         this.currentPane = active
       } else {
         this.currentPane = this.panes[0]
       }
+    },
+  },
+  mounted () {
+    if (this.activeTab) {
+      const active = this.panes.find(pane => {
+        let label = pane.label.toLowerCase()
+        return label.includes(this.activeTab)
+      })
+      if (typeof active !== 'undefined') {
+        this.currentPane = active
+      } else {
+        this.currentPane = this.panes[0]
+      }
+    } else {
+      this.currentPane = this.panes[0]
     }
   },
   methods: {
