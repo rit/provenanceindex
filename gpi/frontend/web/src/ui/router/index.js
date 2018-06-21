@@ -30,7 +30,7 @@ export default new Router({
           component: PersonLayout,
         },
         {
-          path: 'persons/:id',
+          path: 'persons/:id/:tab?',
           component: PersonLayout,
           children: [
             {

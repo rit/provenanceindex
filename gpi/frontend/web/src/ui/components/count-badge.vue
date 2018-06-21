@@ -1,10 +1,10 @@
 <template>
-  <a class="button">
+  <router-link :to="{ name: 'person-home', params: { id: id, tab: resource}}" class="button">
     <span class="icon">
       <font-awesome-icon :icon="icon" />
     </span>
     <span>{{ count }}</span>
-  </a>
+  </router-link>
 </template>
 
 <script>
@@ -30,6 +30,10 @@ export default {
       required: true,
       type: Number,
     },
+    id: {
+      required: true,
+      type: String
+    }
   },
   computed: {
     icon () {

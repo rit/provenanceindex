@@ -7,8 +7,34 @@ export default {
       panes: [],
     }
   },
+  computed: {
+    activeTab () {
+      return this.$route.params.tab || null
+    }
+  },
   mounted () {
-    this.currentPane = this.panes[0]
+    if (this.activeTab) {
+      const active = this.panes.find (pane => {
+        let label = pane.label.toLowerCase()
+        return label.includes(this.activeTab)
+      })
+      this.currentPane = active
+    } else {
+      this.currentPane = this.panes[0]
+    }
+  },
+  watch: {
+    '$route' (to, from) {
+      if (to.params.tab) {
+        const active = this.panes.find (pane => {
+          let label = pane.label.toLowerCase()
+          return label.includes(to.params.tab)
+        })
+        this.currentPane = active
+      } else {
+        this.currentPane = this.panes[0]
+      }
+    }
   },
   methods: {
     handleTabClick (tab, e) {

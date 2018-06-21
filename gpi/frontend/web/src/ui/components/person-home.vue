@@ -14,6 +14,11 @@
           RELATED RESOURCES:
         </div>
         <getty-tab-pane
+          label="Persons"
+          icon="user-circle">
+          <blurb-resource :resource="related"/>
+        </getty-tab-pane>
+        <getty-tab-pane
           label="Provenance Events"
           icon="calendar">
           Provenance Event List
@@ -38,9 +43,15 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Person from 'iso/models/person'
+import { makeRembrandt } from 'iso/fixtures'
 
 export default {
   name: 'PersonHome',
+  data () {
+    return {
+      related: null
+    }
+  },
   computed: {
     ...mapGetters(['personById']),
     id () {
@@ -65,6 +76,14 @@ export default {
   methods: {
     ...mapActions(['fetchPerson']),
   },
+  mounted () {
+    makeRembrandt().then(props => {
+        console.log(props)
+        let artist = new Person(props)
+        console.log(artist)
+        this.related = artist
+      })
+  }
 }
 </script>
 

@@ -38,6 +38,7 @@
           <count-badge
             :count="badge.count"
             :resource="badge.type"
+            :id="id"
           />
         </div>
       </section>
@@ -54,6 +55,12 @@ export default {
       type: Object,
     },
   },
+  // Remove after real API is implemented
+  computed: {
+    id () {
+      return this.resource.id.replace('stubbed id ', '')
+    }
+  }
 }
 </script>
 
