@@ -1,4 +1,4 @@
-const acquisitionResolver = {
+const purchaseResolver = {
   id (doc) {
     return doc.id
   },
@@ -34,4 +34,4 @@ const acquisitionResolver = {
   },
 }
 
-module.exports = acquisitionResolver
+module.exports = purchaseResolver

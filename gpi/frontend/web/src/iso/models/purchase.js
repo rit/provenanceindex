@@ -1,9 +1,9 @@
 const Resource = require('./resource')
 
-class TransactionEvent extends Resource {
+class Purchase extends Resource {
   blurbFields () {
     return [
-      ['From auction', 'Auction Description'],
+      ['Purchased from', 'Some seller'],
       ['Date', 'February 22, 1888'],
       ['Objects', 'object 1, object 2'],
     ]
@@ -14,4 +14,4 @@ class TransactionEvent extends Resource {
   }
 }
 
-module.exports = TransactionEvent
+module.exports = Purchase

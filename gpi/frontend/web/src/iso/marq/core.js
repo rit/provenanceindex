@@ -29,7 +29,7 @@ class Marq {
         artObject (obj, args, context, info) {
           return linkedData
         },
-        acquisition (obj, args, context, info) {
+        purchase (obj, args, context, info) {
           return linkedData
         },
       },

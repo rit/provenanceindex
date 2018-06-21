@@ -1,9 +1,9 @@
 const artObjectResolver = require('./art-object')
 const personResolver = require('./person')
-const acquisitionResolver = require('./acquisition')
+const purchaseResolver = require('./purchase')
 
 module.exports = {
   Person: { ...personResolver },
   ArtObject: { ...artObjectResolver },
-  Acquisition: { ...acquisitionResolver },
+  Purchase: { ...purchaseResolver },
 }

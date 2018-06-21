@@ -2,7 +2,7 @@ const typeDefs = `
   type Query {
     person(id: ID): Person
     artObject(id: ID): ArtObject
-    acquisition(id: ID): Acquisition
+    purchase(id: ID): Purchase
   }
 
   type Person {
@@ -36,7 +36,7 @@ const typeDefs = `
     description: String
   }
 
-  type Acquisition {
+  type Purchase {
     id: ID!
     label: String!
     dateOfTransaction: String
