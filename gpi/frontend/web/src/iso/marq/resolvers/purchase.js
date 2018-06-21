@@ -11,14 +11,14 @@ const purchaseResolver = {
     return doc.timespan.begin_of_the_begin
   },
 
-  buyer (doc) {
+  buyers (doc) {
     // TODO: Dereference the actors in doc.transferred_title_to[]
-    return 'Some buyer'
+    return ['Some buyer']
   },
 
-  seller (doc) {
+  sellers (doc) {
     // TODO: Dereference the sellers in doc.transferred_title_from[]
-    return 'Some seller'
+    return ['Some seller']
   },
 
   artObjects (doc) {

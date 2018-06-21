@@ -43,8 +43,8 @@ const purchase = `
     id
     label
     dateOfTransaction
-    buyer
-    seller
+    buyers
+    sellers
     payments
     artObjects {
       id

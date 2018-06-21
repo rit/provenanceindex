@@ -40,8 +40,8 @@ const typeDefs = `
     id: ID!
     label: String!
     dateOfTransaction: String
-    buyer: String
-    seller: String
+    buyers: [String]
+    sellers: [String]
     artObjects: [ArtObject]
     payments: [String]
   }
