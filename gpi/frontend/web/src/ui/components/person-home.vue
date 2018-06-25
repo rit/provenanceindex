@@ -11,25 +11,25 @@
         <div
           slot="tabsLabel"
           class="level-item is-narrow">
-          RELATED RESOURCES:
+          <translate>RELATED RESOURCES:</translate>
         </div>
         <getty-tab-pane
-          label="Persons"
+          :label="localLabel('Persons')"
           icon="user-circle">
           <blurb-resource :resource="related"/>
         </getty-tab-pane>
         <getty-tab-pane
-          label="Provenance Events"
+          :label="localLabel('Provenance Events')"
           icon="calendar">
           Provenance Event List
         </getty-tab-pane>
         <getty-tab-pane
-          label="Objects"
+          :label="localLabel('Objects')"
           icon="paint-brush">
           Objects List
         </getty-tab-pane>
         <getty-tab-pane
-          label="Documents"
+          :label="localLabel('Documents')"
           icon="book">
           Documents List
         </getty-tab-pane>
@@ -86,6 +86,19 @@ export default {
   },
   methods: {
     ...mapActions(['fetchPerson']),
+    localLabel (label) {
+      if (label === 'Persons') {
+        return this.$gettext('Persons')
+      } else if (label === 'Provenance Events') {
+        return this.$gettext('Provenance Events')
+      } else if (label === 'Objects') {
+        return this.$gettext('Objects')
+      } else if (label === 'Documents') {
+        return this.$gettext('Documents')
+      } else {
+        return label
+      }
+    },
   },
 }
 </script>

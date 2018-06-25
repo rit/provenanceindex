@@ -9,7 +9,7 @@ describe('Person Details', function () {
     cy.contains('hist-123').should('be.visible')
   })
   it('navigates correctly after clicking on related related counts', () => {
-  	cy.visit('/persons/abc-123')
+    cy.visit('/persons/abc-123')
     cy.contains('abc-123').should('be.visible')
 
     cy.contains('30').click()

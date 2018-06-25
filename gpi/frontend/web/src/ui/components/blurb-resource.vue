@@ -20,7 +20,7 @@
             <li
               v-for="[label, value] in resource.blurbFields()"
               :key="label" >
-              <span>{{ label }}</span>
+              <span>{{ localLabel(label) }}</span>
               {{ value }}
             </li>
           </ul>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="column getty-related is-3">
-      <h2>Related Resources</h2>
+      <h2 v-translate>Related Resources</h2>
       <section>
         <div
           v-for="badge in resource.relatedCountBadges()"
@@ -59,6 +59,19 @@ export default {
   computed: {
     id () {
       return this.resource.id.replace('stubbed id ', '')
+    },
+  },
+  methods: {
+    localLabel (label) {
+      if (label === 'Born') {
+        return this.$gettext('Born')
+      } else if (label === 'Died') {
+        return this.$gettext('Died')
+      } else if (label === 'Nationality') {
+        return this.$gettext('Nationality')
+      } else {
+        return label
+      }
     },
   },
 }

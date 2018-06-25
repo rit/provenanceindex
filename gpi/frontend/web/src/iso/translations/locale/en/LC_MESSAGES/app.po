@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pixel 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-18 15:50-0700\n"
+"POT-Creation-Date: 2018-06-25 14:40-0700\n"
 "PO-Revision-Date: 2018-06-01 12:44-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -45,6 +45,7 @@ msgid "Advanced Search"
 msgstr "Saved Searches"
 
 #: src/ui/components/person-metadata.vue:14
+#: src/ui/components/blurb-resource.vue:67
 msgid "Born"
 msgstr ""
 
@@ -65,6 +66,7 @@ msgid "Description"
 msgstr ""
 
 #: src/ui/components/person-metadata.vue:17
+#: src/ui/components/blurb-resource.vue:69
 msgid "Died"
 msgstr ""
 
@@ -101,11 +103,20 @@ msgid "Language: %{ language }"
 msgstr ""
 
 #: src/ui/components/person-metadata.vue:20
+#: src/ui/components/blurb-resource.vue:71
 msgid "Nationality"
 msgstr ""
 
 #: src/ui/components/getty-footer.vue:17
 msgid "Privacy Policy"
+msgstr ""
+
+#: src/ui/components/blurb-resource.vue:31
+msgid "Related Resources"
+msgstr ""
+
+#: src/ui/components/person-home.vue:13
+msgid "RELATED RESOURCES:"
 msgstr ""
 
 #: src/ui/components/resource-overview.vue:7
@@ -166,4 +177,20 @@ msgstr ""
 
 #: src/ui/components/getty-ellipsis.vue:31
 msgid "Read More..."
+msgstr ""
+
+#: src/ui/components/person-home.vue:91
+msgid "Persons"
+msgstr ""
+
+#: src/ui/components/person-home.vue:93
+msgid "Provenance Events"
+msgstr ""
+
+#: src/ui/components/person-home.vue:95
+msgid "Objects"
+msgstr ""
+
+#: src/ui/components/person-home.vue:97
+msgid "Documents"
 msgstr ""

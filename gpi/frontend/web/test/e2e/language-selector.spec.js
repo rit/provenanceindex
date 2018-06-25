@@ -1,5 +1,3 @@
-import { byData } from 'iso/vspec'
-
 describe('LanguageSelector', () => {
   it('displays English as the default language', () => {
     cy.visit('/persons/abc-123')

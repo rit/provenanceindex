@@ -95,6 +95,14 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
+#: src/ui/components/blurb-resource.vue:31
+msgid "Related Resources"
+msgstr ""
+
+#: src/ui/components/person-home.vue:13
+msgid "RELATED RESOURCES:"
+msgstr ""
+
 #: src/ui/components/resource-overview.vue:7
 msgid "Resource Types in the Provenance Index"
 msgstr ""

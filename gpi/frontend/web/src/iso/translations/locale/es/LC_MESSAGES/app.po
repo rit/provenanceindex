@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pixel 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-18 15:50-0700\n"
+"POT-Creation-Date: 2018-06-25 14:40-0700\n"
 "PO-Revision-Date: 2018-06-01 12:44-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -43,6 +43,7 @@ msgid "Advanced Search"
 msgstr "Búsqueda Avanzada"
 
 #: src/ui/components/person-metadata.vue:14
+#: src/ui/components/blurb-resource.vue:67
 msgid "Born"
 msgstr "Nacido"
 
@@ -63,6 +64,7 @@ msgid "Description"
 msgstr "Descripción"
 
 #: src/ui/components/person-metadata.vue:17
+#: src/ui/components/blurb-resource.vue:69
 msgid "Died"
 msgstr "Murió"
 
@@ -99,12 +101,21 @@ msgid "Language: %{ language }"
 msgstr "Idioma: %{ language }"
 
 #: src/ui/components/person-metadata.vue:20
+#: src/ui/components/blurb-resource.vue:71
 msgid "Nationality"
 msgstr "Nacionalidad"
 
 #: src/ui/components/getty-footer.vue:17
 msgid "Privacy Policy"
 msgstr "Política de privacidad"
+
+#: src/ui/components/blurb-resource.vue:31
+msgid "Related Resources"
+msgstr "Recursos Relacionados"
+
+#: src/ui/components/person-home.vue:13
+msgid "RELATED RESOURCES:"
+msgstr "RECURSOS RELACIONADOS:"
 
 #: src/ui/components/resource-overview.vue:7
 msgid "Resource Types in the Provenance Index"
@@ -170,3 +181,19 @@ msgstr "Muestra menos"
 #: src/ui/components/getty-ellipsis.vue:31
 msgid "Read More..."
 msgstr "Lee mas..."
+
+#: src/ui/components/person-home.vue:91
+msgid "Persons"
+msgstr "Personas"
+
+#: src/ui/components/person-home.vue:93
+msgid "Provenance Events"
+msgstr "Eventos de Procedencia"
+
+#: src/ui/components/person-home.vue:95
+msgid "Objects"
+msgstr "Objetos"
+
+#: src/ui/components/person-home.vue:97
+msgid "Documents"
+msgstr "Documentos"
