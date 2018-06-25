@@ -8,4 +8,12 @@ describe('Person Details', function () {
     cy.get(byData`person-history-mode`).click()
     cy.contains('hist-123').should('be.visible')
   })
+  it('navigates correctly after clicking on related related counts', () => {
+  	cy.visit('/persons/abc-123')
+    cy.contains('abc-123').should('be.visible')
+
+    cy.contains('30').click()
+    cy.contains('pixel-123').should('be.visible')
+    cy.contains('Provenance Event List').should('be.visible')
+  })
 })
