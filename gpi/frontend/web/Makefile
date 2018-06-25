@@ -9,3 +9,5 @@ webpack_build:
 
 deploy: webpack_build pixel_image pixel_push_images_to_gcr
 	./apply.sh k8s/pixel-assets.yaml.mako
+
+include localize.mk

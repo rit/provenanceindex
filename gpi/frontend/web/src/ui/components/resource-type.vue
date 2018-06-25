@@ -7,10 +7,15 @@
         </figure>
       </div>
       <div class="card-content has-text-centered">
+        <!-- To do: figure out how to translate fixtures -->
         <p
           data-cy="card-title"
           class="has-text-weight-bold is-size-6">{{ resource.name }}</p>
-        <p class="is-size-6">{{ resource.localeCount() }} Records</p>
+        <p
+          v-translate="{count: resource.localeCount()}"
+          :translate-n="resource.localeCount()"
+          translate-plural="%{ count } Records"
+          class="is-size-6">%{ count } Record</p>
         <a
           href="#"
           class="is-size-7"
