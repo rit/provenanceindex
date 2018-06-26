@@ -14,6 +14,7 @@ export default {
     handleTabClick (tab, e) {
       e.preventDefault()
       this.currentPane = tab
+      this.$emit('GettyTabsPaneSelected', this.currentPane)
     },
     addPanes (pane) {
       this.panes.push(pane)
