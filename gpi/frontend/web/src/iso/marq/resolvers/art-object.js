@@ -4,6 +4,7 @@ const artObjectResolver = {
   },
 
   label (doc) {
+    if (!doc.identified_by) return 'Label is missing'
     return doc.identified_by[0].label
   },
 

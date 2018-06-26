@@ -1,0 +1,156 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "purchase-123",
+  "type": "Acquisition",
+  "transferred_title_to": [
+    {
+      "id": "http://lod.example.org/museum/Actor/known-person-49366",
+      "type": "Actor",
+      "label": "Buyer"
+    },
+    {
+      "id": "http://lod.example.org/museum/Actor/ulan-person-18123",
+      "type": "Actor",
+      "label": "Buyer"
+    },
+    {
+      "id": "http://lod.example.org/museum/Actor/known-person-49365",
+      "type": "Actor",
+      "label": "Buyer"
+    },
+    {
+      "id": "http://lod.example.org/museum/Actor/known-person-49367",
+      "type": "Actor",
+      "label": "Buyer"
+    },
+    {
+      "id": "http://lod.example.org/museum/Actor/known-person-49368",
+      "type": "Actor",
+      "label": "Buyer"
+    }
+  ],
+  "timespan": {
+    "id": "http://lod.example.org/museum/TimeSpan/15443",
+    "type": "TimeSpan",
+    "label": "When",
+    "end_of_the_end": "1939-04-10",
+    "begin_of_the_begin": "1939-04-10"
+  },
+  "transferred_title_from": [
+    {
+      "id": "http://lod.example.org/museum/Actor/ulan-person-26224",
+      "type": "Actor",
+      "label": "Seller"
+    }
+  ],
+  "classified_as": [
+    {
+      "id": "aat:300077989",
+      "type": "Type",
+      "label": "purchasing"
+    }
+  ],
+  "consists_of": [
+    {
+      "id": "http://lod.example.org/museum/Payment/16524",
+      "type": "Payment",
+      "paid_from": [
+        "http://lod.example.org/museum/Actor/known-person-49366"
+      ],
+      "paid_amount": {
+        "id": "http://lod.example.org/museum/MonetaryAmount/16524",
+        "type": "MonetaryAmount",
+        "value": 1312.5,
+        "currency": "http://lod.example.org/museum/Currency/300411994"
+      },
+      "paid_to": [
+        "http://lod.example.org/museum/Actor/ulan-person-26224"
+      ]
+    },
+    {
+      "id": "http://lod.example.org/museum/Payment/16525",
+      "type": "Payment",
+      "paid_from": [
+        "http://lod.example.org/museum/Actor/ulan-person-18123"
+      ],
+      "paid_amount": {
+        "id": "http://lod.example.org/museum/MonetaryAmount/16525",
+        "type": "MonetaryAmount",
+        "value": -2625.0,
+        "currency": "http://lod.example.org/museum/Currency/300411994"
+      },
+      "paid_to": [
+        "http://lod.example.org/museum/Actor/ulan-person-26224"
+      ]
+    },
+    {
+      "id": "http://lod.example.org/museum/Payment/16526",
+      "type": "Payment",
+      "paid_from": [
+        "http://lod.example.org/museum/Actor/known-person-49365"
+      ],
+      "paid_amount": {
+        "id": "http://lod.example.org/museum/MonetaryAmount/16526",
+        "type": "MonetaryAmount",
+        "value": 1312.5,
+        "currency": "http://lod.example.org/museum/Currency/300411994"
+      },
+      "paid_to": [
+        "http://lod.example.org/museum/Actor/ulan-person-26224"
+      ]
+    },
+    {
+      "id": "http://lod.example.org/museum/Payment/16527",
+      "type": "Payment",
+      "paid_from": [
+        "http://lod.example.org/museum/Actor/known-person-49367"
+      ],
+      "paid_amount": {
+        "id": "http://lod.example.org/museum/MonetaryAmount/16527",
+        "type": "MonetaryAmount",
+        "value": 1312.5,
+        "currency": "http://lod.example.org/museum/Currency/300411994"
+      },
+      "paid_to": [
+        "http://lod.example.org/museum/Actor/ulan-person-26224"
+      ]
+    },
+    {
+      "id": "http://lod.example.org/museum/Payment/16528",
+      "type": "Payment",
+      "paid_from": [
+        "http://lod.example.org/museum/Actor/known-person-49368"
+      ],
+      "paid_amount": {
+        "id": "http://lod.example.org/museum/MonetaryAmount/16528",
+        "type": "MonetaryAmount",
+        "value": 1312.5,
+        "currency": "http://lod.example.org/museum/Currency/300411994"
+      },
+      "paid_to": [
+        "http://lod.example.org/museum/Actor/ulan-person-26224"
+      ]
+    }
+  ],
+  "transferred_title_of": [
+    "http://lod.example.org/museum/ManMadeObject/k-object-23611",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23612",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23613",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23615",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23616",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23617",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23618",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23619",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23620",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23621",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23622",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23623",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23624",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23625",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23626",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23627",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23628",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23629",
+    "http://lod.example.org/museum/ManMadeObject/k-object-23630"
+  ]
+}

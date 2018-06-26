@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "dev-mock": "cross-env PIXEL_MOCK=yes webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "test-mock": "cross-env PIXEL_MOCK=yes webpack-dev-server --inline --progress --config build/webpack.e2e.conf.js",
-    "test-unit": "mocha src/iso/**/*",
+    "test-unit": "mocha src/iso/**/*spec.js",
     "test-ui": "cypress open -c integrationFolder=test/ui,viewportWidth=660,viewportHeight=440",
     "test-e2e": "cypress open -c integrationFolder=test/e2e",
     "test-e2e-headless": "cypress run -c integrationFolder=test/e2e",
