@@ -2,10 +2,11 @@ import Router from 'vue-router'
 import Vue from 'vue'
 
 import LayoutBase from '@ui/layout/base'
-import ObjectLayout from '@ui/layout/object-layout'
 import PersonLayout from '@ui/layout/person-layout'
 
 import PersonHome from '@ui/person-home'
+import RelatedObjectHome from '@ui/related-object-home'
+import RelatedEventHome from '@ui/related-event-home'
 import Welcome from '@ui/welcome'
 import Spike from '@ui/spike'
 
@@ -37,10 +38,18 @@ export default new Router({
               path: '',
               name: 'person-home',
               component: PersonHome,
-            },
-            {
-              path: 'objects',
-              component: ObjectLayout,
+              children: [
+                {
+                  path: 'objects',
+                  name: 'person-related-objects',
+                  components: { 'related-objects': RelatedObjectHome },
+                },
+                {
+                  path: 'events',
+                  name: 'person-related-events',
+                  components: { 'related-events': RelatedEventHome },
+                },
+              ],
             },
           ],
         },

@@ -16,12 +16,12 @@
         <getty-tab-pane
           label="Provenance Events"
           icon="calendar">
-          Provenance Event List
+          <router-view name="related-events" />
         </getty-tab-pane>
         <getty-tab-pane
           label="Objects"
           icon="paint-brush">
-          Objects List
+          <router-view name="related-objects" />
         </getty-tab-pane>
       </getty-tabs>
 
