@@ -14,7 +14,7 @@
     "test-e2e": "cypress open -c integrationFolder=test/e2e",
     "test-e2e-headless": "cypress run -c integrationFolder=test/e2e",
     "ci": "start-server-and-test test-mock http-get://localhost:8080 test-e2e-headless",
-    "nyc": "nyc mocha src/iso/**/*",
+    "nyc": "nyc mocha src/iso/**/*spec.js",
     "lint": "eslint --fix --ext .js,.vue src test",
     "build": "node build/build.js"
   },
@@ -25,7 +25,7 @@
     "bulma": "^0.6.2",
     "common-tags": "^1.7.2",
     "easygettext": "^2.4.0",
-    "graphql": "^0.13.2",
+    "graphql": "0.13.0",
     "graphql-tools": "^2.23.1",
     "iso": "file:src/iso",
     "lodash": "^4.17.5",

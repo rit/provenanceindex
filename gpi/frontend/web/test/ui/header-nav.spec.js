@@ -6,6 +6,7 @@ describe('HeaderNav', () => {
   var components = {
     HeaderNav,
     'RouterLink': stubComponent('link'),
+    'LanguageSelector': stubComponent('LanguageSelector'),
   }
   var template = div`<header-nav />`
   beforeEach(() => {

@@ -25,8 +25,8 @@ describe('ResourceType', () => {
       cy.contains("What's an Object")
     })
 
-    it('shows the object count', () => {
-      cy.contains('80,012')
+    it('shows the object count with correct pluralization', () => {
+      cy.contains('80,012 Records')
     })
   })
 

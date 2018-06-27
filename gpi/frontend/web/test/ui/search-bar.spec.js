@@ -1,10 +1,13 @@
 import { div } from 'iso/vspec'
-import { vspecMount } from '@testing'
+import { vspecMount, stubComponent } from '@testing'
 import SearchBar from '@ui/search-bar'
 
 describe('SearchBar', () => {
   var template = div`<search-bar />`
-  var components = { SearchBar }
+  var components = {
+    SearchBar,
+    'font-awesome-icon': stubComponent('icon'),
+  }
   beforeEach(() => {
     vspecMount({ template, components })
   })
