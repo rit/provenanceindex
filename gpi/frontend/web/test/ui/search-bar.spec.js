@@ -6,7 +6,7 @@ describe('SearchBar', () => {
   var template = div`<search-bar />`
   var components = {
     SearchBar,
-    'font-awesome-icon': stubComponent('icon')
+    'font-awesome-icon': stubComponent('icon'),
   }
   beforeEach(() => {
     vspecMount({ template, components })
