@@ -1,4 +1,17 @@
 const mountVue = require('cypress-vue-unit-test')
+const VueGettext = require('vue-gettext')
+
+const localizer = (Vue) => {
+  Vue.use(VueGettext, {
+    availableLanguages: {
+      en: 'English',
+      es: 'Spanish',
+    },
+    defaultLanguage: 'en',
+    translations: { en: {}, es: {} },
+    silent: true,
+  })
+}
 
 const html = `
 <html>
@@ -26,6 +39,7 @@ module.exports = function ({template, data, components}, fn) {
     html: html,
     extensions: {
       components,
+      use: [localizer],
     },
   }
 
