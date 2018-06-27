@@ -11,9 +11,11 @@
     "test-mock": "cross-env PIXEL_MOCK=yes webpack-dev-server --inline --progress --config build/webpack.e2e.conf.js",
     "test-unit": "mocha src/iso/**/*spec.js",
     "test-ui": "cypress open -c integrationFolder=test/ui,viewportWidth=660,viewportHeight=440",
+    "test-ui-headless": "cypress run -c integrationFolder=test/ui,viewportWidth=660,viewportHeight=440",
     "test-e2e": "cypress open -c integrationFolder=test/e2e",
     "test-e2e-headless": "cypress run -c integrationFolder=test/e2e",
-    "ci": "start-server-and-test test-mock http-get://localhost:8080 test-e2e-headless",
+    "ci-ui": "start-server-and-test test-mock http-get://localhost:8080 test-ui-headless",
+    "ci-e2e": "start-server-and-test test-mock http-get://localhost:8080 test-e2e-headless",
     "nyc": "nyc mocha src/iso/**/*spec.js",
     "lint": "eslint --fix --ext .js,.vue src test",
     "build": "node build/build.js"
