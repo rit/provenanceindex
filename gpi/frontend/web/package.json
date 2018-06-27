@@ -14,7 +14,7 @@
     "test-e2e": "cypress open -c integrationFolder=test/e2e",
     "test-e2e-headless": "cypress run -c integrationFolder=test/e2e",
     "ci": "start-server-and-test test-mock http-get://localhost:8080 test-e2e-headless",
-    "nyc": "nyc mocha src/iso/**/*",
+    "nyc": "nyc mocha src/iso/**/*spec.js",
     "lint": "eslint --fix --ext .js,.vue src test",
     "build": "node build/build.js"
   },
