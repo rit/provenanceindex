@@ -32,6 +32,9 @@ class Marq {
         purchase (obj, args, context, info) {
           return linkedData
         },
+        document (obj, args, context, info) {
+          return linkedData
+        },
       },
     }
 

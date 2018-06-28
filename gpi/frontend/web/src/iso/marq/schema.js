@@ -3,6 +3,7 @@ const typeDefs = `
     person(id: ID): Person
     artObject(id: ID): ArtObject
     purchase(id: ID): Purchase
+    document(id: ID): Document
   }
 
   type Person {
@@ -44,6 +45,10 @@ const typeDefs = `
     sellers: [String]
     artObjects: [ArtObject]
     payments: [String]
+  }
+
+  type Document {
+    id: ID!
   }
 `
 
