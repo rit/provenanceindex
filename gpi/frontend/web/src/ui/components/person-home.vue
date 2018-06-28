@@ -7,7 +7,7 @@
         :icon="person.ui.icon"
       />
       <person-metadata :person="person" />
-      <getty-tabs>
+      <getty-tabs @GettyTabPaneSelected="showRelatedResource">
         <div
           slot="tabsLabel"
           class="level-item is-narrow">
@@ -49,6 +49,13 @@
 import { mapGetters, mapActions } from 'vuex'
 import Person from 'iso/models/person'
 import { makeRembrandt } from 'iso/fixtures'
+
+const labelToNamedRoute = {
+  'Persons': 'person-related-persons',
+  'Provenance Events': 'person-related-events',
+  'Objects': 'person-related-objects',
+  'Documents': 'person-related-documents',
+}
 
 export default {
   name: 'PersonHome',
@@ -98,6 +105,10 @@ export default {
       } else {
         return label
       }
+    },
+    showRelatedResource (tabPane) {
+      let name = labelToNamedRoute[tabPane.label]
+      this.$router.push({ name })
     },
   },
 }

@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="{ name: 'person-home', params: { id: id, tab: resource }}"
+    :to="{ name: namedRoute, params: { id: id }}"
     class="button">
     <span class="icon">
       <font-awesome-icon :icon="icon" />
@@ -17,6 +17,12 @@ const icons = {
   'person': 'person',
 }
 
+const typeToNamedRoute = {
+  'person': 'person-related-persons',
+  'event': 'person-related-events',
+  'object': 'person-related-objects',
+  'document': 'person-related-documents',
+}
 export default {
   name: 'CountBadge',
   props: {
@@ -40,6 +46,9 @@ export default {
   computed: {
     icon () {
       return icons[this.resource]
+    },
+    namedRoute () {
+      return typeToNamedRoute[this.resource]
     },
   },
 }

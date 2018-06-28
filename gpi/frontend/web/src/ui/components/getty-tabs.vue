@@ -7,40 +7,26 @@ export default {
       panes: [],
     }
   },
-  computed: {
-    activeTab () {
-      return this.$route.params.tab || null
-    },
-  },
   watch: {
     '$route' (to, from) {
-      if (to.params.tab) {
-        const active = this.panes.find(pane => {
-          let label = pane.label.toLowerCase()
-          return label.includes(to.params.tab)
-        })
-        if (typeof active !== 'undefined') {
-          this.currentPane = active
-        } else {
-          this.currentPane = this.panes[0]
-        }
-        this.currentPane = active
-      } else {
-        this.currentPane = this.panes[0]
-      }
+      let namePieces = this.$route.name.split('-')
+      let routeEnd = namePieces.pop()
+      const active = this.panes.find(pane => {
+        let label = pane.label.toLowerCase()
+        return label.includes(routeEnd)
+      })
+      this.currentPane = active
     },
   },
   mounted () {
-    if (this.activeTab) {
-      const active = this.panes.find(pane => {
-        let label = pane.label.toLowerCase()
-        return label.includes(this.activeTab)
-      })
-      if (typeof active !== 'undefined') {
-        this.currentPane = active
-      } else {
-        this.currentPane = this.panes[0]
-      }
+    let namePieces = this.$route.name.split('-')
+    let routeEnd = namePieces.pop()
+    const active = this.panes.find(pane => {
+      let label = pane.label.toLowerCase()
+      return label.includes(routeEnd)
+    })
+    if (typeof active !== 'undefined') {
+      this.currentPane = active
     } else {
       this.currentPane = this.panes[0]
     }
@@ -49,6 +35,7 @@ export default {
     handleTabClick (tab, e) {
       e.preventDefault()
       this.currentPane = tab
+      this.$emit('GettyTabPaneSelected', this.currentPane)
     },
     addPanes (pane) {
       this.panes.push(pane)

@@ -30,13 +30,35 @@ export default new Router({
           component: PersonLayout,
         },
         {
-          path: 'persons/:id/:tab?',
+          path: 'persons/:id',
           component: PersonLayout,
           children: [
             {
               path: '',
               name: 'person-home',
               component: PersonHome,
+              children: [
+                {
+                  path: 'persons',
+                  name: 'person-related-persons',
+                  component: PersonHome,
+                },
+                {
+                  path: 'events',
+                  name: 'person-related-events',
+                  component: PersonHome,
+                },
+                {
+                  path: 'objects',
+                  name: 'person-related-objects',
+                  component: PersonHome,
+                },
+                {
+                  path: 'documents',
+                  name: 'person-related-documents',
+                  component: PersonHome,
+                },
+              ],
             },
             {
               path: 'objects',
