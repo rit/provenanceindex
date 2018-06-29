@@ -16,22 +16,22 @@
         <getty-tab-pane
           :label="localLabel('Persons')"
           icon="user-circle">
-          <blurb-resource :resource="related"/>
+          <router-view name="related-persons"/>
         </getty-tab-pane>
         <getty-tab-pane
           :label="localLabel('Provenance Events')"
           icon="calendar">
-          Provenance Event List
+          <router-view name="related-events"/>
         </getty-tab-pane>
         <getty-tab-pane
           :label="localLabel('Objects')"
           icon="paint-brush">
-          Objects List
+          <router-view name="related-objects"/>
         </getty-tab-pane>
         <getty-tab-pane
           :label="localLabel('Documents')"
           icon="book">
-          Documents List
+          <router-view name="related-documents"/>
         </getty-tab-pane>
       </getty-tabs>
 
@@ -48,7 +48,6 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Person from 'iso/models/person'
-import { makeRembrandt } from 'iso/fixtures'
 
 const labelToNamedRoute = {
   'Persons': 'person-related-persons',
@@ -59,11 +58,6 @@ const labelToNamedRoute = {
 
 export default {
   name: 'PersonHome',
-  data () {
-    return {
-      related: null,
-    }
-  },
   computed: {
     ...mapGetters(['personById']),
     id () {
@@ -85,12 +79,6 @@ export default {
       immediate: true,
     },
   },
-  mounted () {
-    makeRembrandt().then(props => {
-      let artist = new Person(props)
-      this.related = artist
-    })
-  },
   methods: {
     ...mapActions(['fetchPerson']),
     localLabel (label) {
@@ -108,6 +96,7 @@ export default {
     },
     showRelatedResource (tabPane) {
       let name = labelToNamedRoute[tabPane.label]
+      console.log(name)
       this.$router.push({ name })
     },
   },

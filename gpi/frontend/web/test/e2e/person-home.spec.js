@@ -14,6 +14,6 @@ describe('Person Details', function () {
 
     cy.contains('30').click()
     cy.contains('pixel-123').should('be.visible')
-    cy.contains('Provenance Event List').should('be.visible')
+    cy.contains('List of Related Events').should('be.visible')
   })
 })
