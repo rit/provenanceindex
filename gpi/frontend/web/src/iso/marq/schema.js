@@ -2,6 +2,7 @@ const typeDefs = `
   type Query {
     person(id: ID): Person
     artObject(id: ID): ArtObject
+    purchase(id: ID): Purchase
   }
 
   type Person {
@@ -33,6 +34,16 @@ const typeDefs = `
     subject: String
     style: String
     description: String
+  }
+
+  type Purchase {
+    id: ID!
+    label: String!
+    dateOfTransaction: String
+    buyers: [String]
+    sellers: [String]
+    artObjects: [ArtObject]
+    payments: [String]
   }
 `
 
