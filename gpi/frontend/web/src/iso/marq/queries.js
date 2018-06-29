@@ -37,7 +37,27 @@ const person = `
 }
 `
 
+const purchase = `
+{
+  purchase {
+    id
+    label
+    dateOfTransaction
+    buyers
+    sellers
+    payments
+    artObjects {
+      id
+      label
+    }
+  }
+}
+`
+
+// Map json-ld "type" to query
 module.exports = {
   'ManMadeObject': artObject,
   'Person': person,
+  // TODO: Assume all acquisitions are of type purchase
+  'Acquisition': purchase,
 }
