@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pixel 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-25 14:40-0700\n"
+"POT-Creation-Date: 2018-06-29 10:29-0700\n"
 "PO-Revision-Date: 2018-06-01 12:44-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/ui/components/blurb-resource.vue:25
+msgid "{{ label }}"
+msgstr ""
 
 #: src/ui/components/getty-footer.vue:16
 msgid "&copy; The J. Paul Getty Trust"
@@ -45,7 +49,6 @@ msgid "Advanced Search"
 msgstr "Saved Searches"
 
 #: src/ui/components/person-metadata.vue:14
-#: src/ui/components/blurb-resource.vue:67
 msgid "Born"
 msgstr ""
 
@@ -66,7 +69,6 @@ msgid "Description"
 msgstr ""
 
 #: src/ui/components/person-metadata.vue:17
-#: src/ui/components/blurb-resource.vue:69
 msgid "Died"
 msgstr ""
 
@@ -103,7 +105,6 @@ msgid "Language: %{ language }"
 msgstr ""
 
 #: src/ui/components/person-metadata.vue:20
-#: src/ui/components/blurb-resource.vue:71
 msgid "Nationality"
 msgstr ""
 
@@ -111,7 +112,7 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
-#: src/ui/components/blurb-resource.vue:31
+#: src/ui/components/blurb-resource.vue:34
 msgid "Related Resources"
 msgstr ""
 
@@ -177,20 +178,4 @@ msgstr ""
 
 #: src/ui/components/getty-ellipsis.vue:31
 msgid "Read More..."
-msgstr ""
-
-#: src/ui/components/person-home.vue:91
-msgid "Persons"
-msgstr ""
-
-#: src/ui/components/person-home.vue:93
-msgid "Provenance Events"
-msgstr ""
-
-#: src/ui/components/person-home.vue:95
-msgid "Objects"
-msgstr ""
-
-#: src/ui/components/person-home.vue:97
-msgid "Documents"
 msgstr ""

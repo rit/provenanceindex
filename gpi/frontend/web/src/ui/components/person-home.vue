@@ -14,22 +14,22 @@
           <translate>RELATED RESOURCES:</translate>
         </div>
         <getty-tab-pane
-          :label="localLabel('Persons')"
+          label="Persons"
           icon="user-circle">
           <router-view name="related-persons"/>
         </getty-tab-pane>
         <getty-tab-pane
-          :label="localLabel('Provenance Events')"
+          label="Provenance Events"
           icon="calendar">
           <router-view name="related-events"/>
         </getty-tab-pane>
         <getty-tab-pane
-          :label="localLabel('Objects')"
+          label="Objects"
           icon="paint-brush">
           <router-view name="related-objects"/>
         </getty-tab-pane>
         <getty-tab-pane
-          :label="localLabel('Documents')"
+          label="Documents"
           icon="book">
           <router-view name="related-documents"/>
         </getty-tab-pane>
@@ -81,19 +81,6 @@ export default {
   },
   methods: {
     ...mapActions(['fetchPerson']),
-    localLabel (label) {
-      if (label === 'Persons') {
-        return this.$gettext('Persons')
-      } else if (label === 'Provenance Events') {
-        return this.$gettext('Provenance Events')
-      } else if (label === 'Objects') {
-        return this.$gettext('Objects')
-      } else if (label === 'Documents') {
-        return this.$gettext('Documents')
-      } else {
-        return label
-      }
-    },
     showRelatedResource (tabPane) {
       let name = labelToNamedRoute[tabPane.label]
       console.log(name)

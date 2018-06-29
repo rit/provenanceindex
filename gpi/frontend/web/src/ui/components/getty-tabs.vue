@@ -68,7 +68,7 @@ export default {
                           <font-awesome-icon
                             icon={ pane.icon } />
                         </span>
-                        { pane.label }
+                        <translate>{ pane.label }</translate>
                       </a>
                     </li>
                   )

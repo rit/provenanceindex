@@ -23,7 +23,7 @@
             <li
               v-for="[label, value] in resource.blurbFields()"
               :key="label" >
-              <span>{{ localLabel(label) }}</span>
+              <span><translate>{{ label }}</translate></span>
               {{ value }}
             </li>
           </ul>
@@ -62,19 +62,6 @@ export default {
   computed: {
     id () {
       return this.resource.id.replace('stubbed id ', '')
-    },
-  },
-  methods: {
-    localLabel (label) {
-      if (label === 'Born') {
-        return this.$gettext('Born')
-      } else if (label === 'Died') {
-        return this.$gettext('Died')
-      } else if (label === 'Nationality') {
-        return this.$gettext('Nationality')
-      } else {
-        return label
-      }
     },
   },
 }

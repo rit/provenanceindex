@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: UNKNOWN 0.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-25 14:42-0700\n"
+"POT-Creation-Date: 2018-06-29 10:31-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: src/ui/components/blurb-resource.vue:67
-msgid "Born"
-msgstr ""
-
-#: src/ui/components/blurb-resource.vue:69
-msgid "Died"
-msgstr ""
-
-#: src/ui/components/blurb-resource.vue:71
-msgid "Nationality"
-msgstr ""
-
 #: src/ui/components/getty-ellipsis.vue:31
 msgid "Show Less"
 msgstr ""
 
 #: src/ui/components/getty-ellipsis.vue:31
 msgid "Read More..."
-msgstr ""
-
-#: src/ui/components/person-home.vue:91
-msgid "Persons"
-msgstr ""
-
-#: src/ui/components/person-home.vue:93
-msgid "Provenance Events"
-msgstr ""
-
-#: src/ui/components/person-home.vue:95
-msgid "Objects"
-msgstr ""
-
-#: src/ui/components/person-home.vue:97
-msgid "Documents"
 msgstr ""
 
