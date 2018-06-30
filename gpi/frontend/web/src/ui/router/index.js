@@ -2,7 +2,6 @@ import Router from 'vue-router'
 import Vue from 'vue'
 
 import LayoutBase from '@ui/layout/base'
-import ObjectLayout from '@ui/layout/object-layout'
 import PersonLayout from '@ui/layout/person-layout'
 
 import PersonHome from '@ui/person-home'
@@ -44,8 +43,8 @@ export default new Router({
               children: [
                 {
                   path: 'persons',
-                  name: 'person-related-persons',
                   alias: '',
+                  name: 'person-related-persons',
                   components: { 'related-persons': RelatedPersonHome },
                 },
                 {
@@ -64,10 +63,6 @@ export default new Router({
                   components: { 'related-documents': RelatedDocumentHome },
                 },
               ],
-            },
-            {
-              path: 'objects',
-              component: ObjectLayout,
             },
           ],
         },
