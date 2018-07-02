@@ -7,31 +7,45 @@
         :icon="person.ui.icon"
       />
       <person-metadata :person="person" />
-      <getty-tabs @GettyTabPaneSelected="showRelatedResource">
+      <getty-tabs
+        ref="tabs"
+        @GettyTabPaneSelected="showRelatedResource">
         <div
           slot="tabsLabel"
           class="level-item is-narrow">
           <translate>RELATED RESOURCES:</translate>
         </div>
         <getty-tab-pane
+          ref="persons-pane"
           label="Persons"
           icon="user-circle">
-          <router-view name="related-persons"/>
+          <router-view
+            name="related-persons"
+            @RelatedPersonHome="selectPersonTabPane"/>
         </getty-tab-pane>
         <getty-tab-pane
+          ref="events-pane"
           label="Provenance Events"
           icon="calendar">
-          <router-view name="related-events"/>
+          <router-view
+            name="related-events"
+            @RelatedEventHome="selectEventTabPane"/>
         </getty-tab-pane>
         <getty-tab-pane
+          ref="objects-pane"
           label="Objects"
           icon="paint-brush">
-          <router-view name="related-objects"/>
+          <router-view
+            name="related-objects"
+            @RelatedObjectHome="selectObjectTabPane"/>
         </getty-tab-pane>
         <getty-tab-pane
+          ref="documents-pane"
           label="Documents"
           icon="book">
-          <router-view name="related-documents"/>
+          <router-view
+            name="related-documents"
+            @RelatedDocumentHome="selectDocumentTabPane"/>
         </getty-tab-pane>
       </getty-tabs>
 
@@ -83,8 +97,19 @@ export default {
     ...mapActions(['fetchPerson']),
     showRelatedResource (tabPane) {
       let name = labelToNamedRoute[tabPane.label]
-      console.log(name)
       this.$router.push({ name })
+    },
+    selectPersonTabPane () {
+      this.$refs.tabs.activatePane(this.$refs['persons-pane'])
+    },
+    selectEventTabPane () {
+      this.$refs.tabs.activatePane(this.$refs['events-pane'])
+    },
+    selectObjectTabPane () {
+      this.$refs.tabs.activatePane(this.$refs['objects-pane'])
+    },
+    selectDocumentTabPane () {
+      this.$refs.tabs.activatePane(this.$refs['documents-pane'])
     },
   },
 }

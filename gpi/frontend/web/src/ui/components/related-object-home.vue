@@ -7,6 +7,9 @@
 <script>
 export default {
   name: 'RelatedObjectHome',
+  mounted () {
+    this.$emit('RelatedObjectHome', this)
+  },
 }
 </script>
 

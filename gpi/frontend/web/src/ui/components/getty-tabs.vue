@@ -7,30 +7,6 @@ export default {
       panes: [],
     }
   },
-  watch: {
-    '$route' (to, from) {
-      let namePieces = this.$route.name.split('-')
-      let routeEnd = namePieces.pop()
-      const active = this.panes.find(pane => {
-        let label = pane.label.toLowerCase()
-        return label.includes(routeEnd)
-      })
-      this.currentPane = active
-    },
-  },
-  mounted () {
-    let namePieces = this.$route.name.split('-')
-    let routeEnd = namePieces.pop()
-    const active = this.panes.find(pane => {
-      let label = pane.label.toLowerCase()
-      return label.includes(routeEnd)
-    })
-    if (typeof active !== 'undefined') {
-      this.currentPane = active
-    } else {
-      this.currentPane = this.panes[0]
-    }
-  },
   methods: {
     handleTabClick (tab, e) {
       e.preventDefault()
@@ -39,6 +15,9 @@ export default {
     },
     addPanes (pane) {
       this.panes.push(pane)
+    },
+    activatePane (pane) {
+      this.currentPane = pane
     },
   },
   render (h) {

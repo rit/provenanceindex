@@ -20,6 +20,7 @@ export default {
       let artist = new Person(props)
       this.related = artist
     })
+    this.$emit('RelatedPersonHome', this)
   },
 }
 </script>

@@ -7,6 +7,9 @@
 <script>
 export default {
   name: 'RelatedEventHome',
+  mounted () {
+    this.$emit('RelatedEventHome', this)
+  },
 }
 </script>
 
