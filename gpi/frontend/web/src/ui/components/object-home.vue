@@ -1,12 +1,12 @@
 <template>
   <section>
-    <async-flipper :resolved-with="personProps">
+    <async-flipper :resolved-with="objectProps">
       <resource-title
-        :name="person.name"
-        :qualifier="person.qualifier"
-        :icon="person.ui.icon"
+        :name="object.label"
+        :qualifier="object.qualifier"
+        :icon="object.ui.icon"
       />
-      <person-metadata :person="person" />
+    <!---<person-metadata :person="person" />
       <getty-tabs>
         <div
           slot="tabsLabel"
@@ -23,47 +23,47 @@
           icon="paint-brush">
           Objects List
         </getty-tab-pane>
-      </getty-tabs>
+      </getty-tabs>-->
 
-      <!-- Trigger History Mode  -->
-      <router-link
+    <!-- Trigger History Mode  -->
+    <!--<router-link
         data-cy="person-history-mode"
         to="/persons/hist-123">
         Related Artist
-      </router-link>
+      </router-link>-->
     </async-flipper>
   </section>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import Person from 'iso/models/person'
+import ArtObject from 'iso/models/art-object'
 
 export default {
-  name: 'PersonHome',
+  name: 'ObjectHome',
   computed: {
-    ...mapGetters(['personById']),
+    ...mapGetters(['objectById']),
     id () {
       return this.$route.params.id
     },
-    person () {
+    object () {
       // TODO: Investigate crockjs Maybe object
-      return new Person(this.personProps || {})
+      return new ArtObject(this.objectProps || {})
     },
-    personProps () {
-      return this.personById(this.id)
+    objectProps () {
+      return this.objectById(this.id)
     },
   },
   watch: {
     id: {
       handler (val, oldVal) {
-        this.fetchPerson({ id: val })
+        this.fetchObject({ id: val })
       },
       immediate: true,
     },
   },
   methods: {
-    ...mapActions(['fetchPerson']),
+    ...mapActions(['fetchObject']),
   },
 }
 </script>

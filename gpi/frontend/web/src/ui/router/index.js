@@ -6,6 +6,7 @@ import ObjectLayout from '@ui/layout/object-layout'
 import PersonLayout from '@ui/layout/person-layout'
 
 import PersonHome from '@ui/person-home'
+import ObjectHome from '@ui/object-home'
 import Welcome from '@ui/welcome'
 import Spike from '@ui/spike'
 
@@ -38,9 +39,20 @@ export default new Router({
               name: 'person-home',
               component: PersonHome,
             },
+          ],
+        },
+        {
+          path: 'objects',
+          component: ObjectLayout,
+        },
+        {
+          path: 'objects/:id',
+          component: ObjectLayout,
+          children: [
             {
-              path: 'objects',
-              component: ObjectLayout,
+              path: '',
+              name: 'object-home',
+              component: ObjectHome,
             },
           ],
         },

@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'PersonTitle',
+  name: 'ResourceTitle',
   props: {
     name: {
       type: String,

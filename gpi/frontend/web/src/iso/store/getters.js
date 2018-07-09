@@ -4,4 +4,9 @@ module.exports = {
       return state.persons[id] || null
     }
   },
+  objectById (state, getters) {
+    return id => {
+      return state.objects[id] || null
+    }
+  },
 }

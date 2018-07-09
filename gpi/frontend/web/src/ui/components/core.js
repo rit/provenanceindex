@@ -16,10 +16,10 @@ import HeaderLogo from '@ui/header-logo'
 import HeaderNav from '@ui/header-nav'
 import HomepageVisualization from '@ui/homepage-visualization'
 import LanguageSelector from '@ui/language-selector'
+import ObjectHome from '@ui/object-home'
 import PersonMetadata from '@ui/person-metadata'
-// import PersonTabs from '@ui/person-tabs'
-import PersonTitle from '@ui/person-title'
 import ResourceOverview from '@ui/resource-overview'
+import ResourceTitle from '@ui/resource-title'
 import ResourceType from '@ui/resource-type'
 import SearchBar from '@ui/search-bar'
 import Welcome from '@ui/welcome'
@@ -38,10 +38,10 @@ Vue.component('HeaderLogo', HeaderLogo)
 Vue.component('HeaderNav', HeaderNav)
 Vue.component('HomepageVisualization', HomepageVisualization)
 Vue.component('LanguageSelector', LanguageSelector)
+Vue.component('ObjectHome', ObjectHome)
 Vue.component('PersonMetadata', PersonMetadata)
-// Vue.component('PersonTabs', PersonTabs)
-Vue.component('PersonTitle', PersonTitle)
 Vue.component('ResourceOverview', ResourceOverview)
+Vue.component('ResourceTitle', ResourceTitle)
 Vue.component('ResourceType', ResourceType)
 Vue.component('SearchBar', SearchBar)
 Vue.component('Welcome', Welcome)
