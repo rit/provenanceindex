@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pixel 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-18 15:50-0700\n"
+"POT-Creation-Date: 2018-07-10 14:42-0700\n"
 "PO-Revision-Date: 2018-06-01 12:44-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -26,7 +26,7 @@ msgid_plural "%{ count } Records"
 msgstr[0] "%{ count } Registro"
 msgstr[1] "%{ count } Registros"
 
-#: src/ui/components/getty-ellipsis.vue:12
+#: src/ui/components/getty-ellipsis.vue:13
 msgid "%{ moreOrLess }"
 msgstr ""
 
@@ -41,6 +41,14 @@ msgstr "Activo"
 #: src/ui/components/search-bar.vue:26
 msgid "Advanced Search"
 msgstr "Búsqueda Avanzada"
+
+#: src/ui/components/object-metadata.vue:15
+msgid "Artist"
+msgstr "Artista"
+
+#: src/ui/components/object-metadata.vue:27
+msgid "Attributions"
+msgstr "Atribuciones"
 
 #: src/ui/components/person-metadata.vue:14
 msgid "Born"
@@ -58,6 +66,15 @@ msgstr "Contáctenos"
 msgid "Contributors/Partners"
 msgstr "Contribuidores/Socios"
 
+#: src/ui/components/object-metadata.vue:21
+msgid "Created at"
+msgstr "Creado en"
+
+#: src/ui/components/object-metadata.vue:18
+msgid "Creation Date"
+msgstr "Fecha de Creación"
+
+#: src/ui/components/object-metadata.vue:63
 #: src/ui/components/person-metadata.vue:35
 msgid "Description"
 msgstr "Descripción"
@@ -65,6 +82,10 @@ msgstr "Descripción"
 #: src/ui/components/person-metadata.vue:17
 msgid "Died"
 msgstr "Murió"
+
+#: src/ui/components/object-metadata.vue:43
+msgid "Dimensions"
+msgstr "Dimensiones"
 
 #: src/ui/components/header-nav.vue:59
 msgid "Documentation"
@@ -97,6 +118,14 @@ msgstr "Idioma: %{ currentDisplay }"
 #: src/ui/components/language-selector.vue:9
 msgid "Language: %{ language }"
 msgstr "Idioma: %{ language }"
+
+#: src/ui/components/object-metadata.vue:40
+msgid "Material"
+msgstr "Material"
+
+#: src/ui/components/object-metadata.vue:37
+msgid "Medium"
+msgstr "Medio"
 
 #: src/ui/components/person-metadata.vue:20
 msgid "Nationality"
@@ -134,6 +163,22 @@ msgstr "Buscar Ayuda"
 msgid "Search our Database"
 msgstr "Busque en nuestra base de datos"
 
+#: src/ui/components/object-metadata.vue:30
+msgid "Stockbook #"
+msgstr "Inventario #"
+
+#: src/ui/components/object-metadata.vue:55
+msgid "Style"
+msgstr "Estilo"
+
+#: src/ui/components/object-metadata.vue:52
+msgid "Subject"
+msgstr "Tema"
+
+#: src/ui/components/object-metadata.vue:49
+msgid "Technique"
+msgstr "Técnica"
+
 #: src/ui/components/getty-footer.vue:20
 msgid "Terms of Use"
 msgstr "Términos de Uso"
@@ -163,10 +208,10 @@ msgstr ""
 msgid "What's in the Provenance Index?"
 msgstr "¿Qué hay en el Índice de Procedencias?"
 
-#: src/ui/components/getty-ellipsis.vue:31
+#: src/ui/components/getty-ellipsis.vue:33
 msgid "Show Less"
 msgstr "Muestra menos"
 
-#: src/ui/components/getty-ellipsis.vue:31
+#: src/ui/components/getty-ellipsis.vue:33
 msgid "Read More..."
 msgstr "Lee mas..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pixel 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-18 15:50-0700\n"
+"POT-Creation-Date: 2018-07-10 14:42-0700\n"
 "PO-Revision-Date: 2018-06-01 12:44-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -27,7 +27,7 @@ msgid_plural "%{ count } Records"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/ui/components/getty-ellipsis.vue:12
+#: src/ui/components/getty-ellipsis.vue:13
 msgid "%{ moreOrLess }"
 msgstr ""
 
@@ -43,6 +43,14 @@ msgstr ""
 #, fuzzy
 msgid "Advanced Search"
 msgstr "Saved Searches"
+
+#: src/ui/components/object-metadata.vue:15
+msgid "Artist"
+msgstr ""
+
+#: src/ui/components/object-metadata.vue:27
+msgid "Attributions"
+msgstr ""
 
 #: src/ui/components/person-metadata.vue:14
 msgid "Born"
@@ -60,12 +68,25 @@ msgstr ""
 msgid "Contributors/Partners"
 msgstr ""
 
+#: src/ui/components/object-metadata.vue:21
+msgid "Created at"
+msgstr ""
+
+#: src/ui/components/object-metadata.vue:18
+msgid "Creation Date"
+msgstr ""
+
+#: src/ui/components/object-metadata.vue:63
 #: src/ui/components/person-metadata.vue:35
 msgid "Description"
 msgstr ""
 
 #: src/ui/components/person-metadata.vue:17
 msgid "Died"
+msgstr ""
+
+#: src/ui/components/object-metadata.vue:43
+msgid "Dimensions"
 msgstr ""
 
 #: src/ui/components/header-nav.vue:59
@@ -98,6 +119,14 @@ msgstr ""
 
 #: src/ui/components/language-selector.vue:9
 msgid "Language: %{ language }"
+msgstr ""
+
+#: src/ui/components/object-metadata.vue:40
+msgid "Material"
+msgstr ""
+
+#: src/ui/components/object-metadata.vue:37
+msgid "Medium"
 msgstr ""
 
 #: src/ui/components/person-metadata.vue:20
@@ -136,6 +165,22 @@ msgstr "Search Help"
 msgid "Search our Database"
 msgstr ""
 
+#: src/ui/components/object-metadata.vue:30
+msgid "Stockbook #"
+msgstr ""
+
+#: src/ui/components/object-metadata.vue:55
+msgid "Style"
+msgstr ""
+
+#: src/ui/components/object-metadata.vue:52
+msgid "Subject"
+msgstr ""
+
+#: src/ui/components/object-metadata.vue:49
+msgid "Technique"
+msgstr ""
+
 #: src/ui/components/getty-footer.vue:20
 msgid "Terms of Use"
 msgstr ""
@@ -160,10 +205,10 @@ msgstr ""
 msgid "What's in the Provenance Index?"
 msgstr ""
 
-#: src/ui/components/getty-ellipsis.vue:31
+#: src/ui/components/getty-ellipsis.vue:33
 msgid "Show Less"
 msgstr ""
 
-#: src/ui/components/getty-ellipsis.vue:31
+#: src/ui/components/getty-ellipsis.vue:33
 msgid "Read More..."
 msgstr ""
