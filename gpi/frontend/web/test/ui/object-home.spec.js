@@ -1,15 +1,15 @@
-import PersonHome from '@ui/person-home'
+import ObjectHome from '@ui/object-home'
 import { div, stubInterface } from 'iso/vspec'
 import { vspecMount, stubComponent } from '@testing'
 import { spy, stub } from 'sinon'
 
 // TODO: Inject generated fake getters by inspecting `iso/store/getters`
 let getters = {
-  personById: stub().returns({ id: 'abcd-1234' }),
+  objectById: stub().returns({ id: 'abcd-1234' }),
 }
 // TODO: Inject generated fake actions by inspecting `iso/store/actions`
 let actions = {
-  fetchPerson: spy(),
+  fetchObject: spy(),
 }
 let route = {
   params: {
@@ -17,20 +17,20 @@ let route = {
   },
 }
 const components = {
-  'person-home': stubInterface(PersonHome, { getters, route, actions }),
+  'object-home': stubInterface(ObjectHome, { getters, route, actions }),
   'resource-title': stubComponent('ResourceTitle'),
-  'person-metadata': stubComponent('PersonMetadata'),
+  'object-metadata': stubComponent('ObjectMetadata'),
   'router-link': stubComponent('RouterLink'),
   'async-flipper': stubComponent('async-flipper'),
 }
-const template = div`<person-home />`
+const template = div`<object-home />`
 
-describe('PersonHome', () => {
-  it('fetches person data with correct id', () => {
+describe('ObjectHome', () => {
+  it('fetches object data with correct id', () => {
     vspecMount({ template, components }, vm => {
-      expect(actions.fetchPerson).to.have.been.calledWith({id: 'abcd-1234'})
-      expect(getters.personById).to.have.been.calledWith('abcd-1234')
-      expect(vm.person.id).to.equal('abcd-1234')
+      expect(actions.fetchObject).to.have.been.calledWith({id: 'abcd-1234'})
+      expect(getters.objectById).to.have.been.calledWith('abcd-1234')
+      expect(vm.artObject.id).to.equal('abcd-1234')
     })
   })
 })
