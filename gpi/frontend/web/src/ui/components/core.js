@@ -17,6 +17,7 @@ import HeaderNav from '@ui/header-nav'
 import HomepageVisualization from '@ui/homepage-visualization'
 import LanguageSelector from '@ui/language-selector'
 import ObjectHome from '@ui/object-home'
+import ObjectMetadata from '@ui/object-metadata'
 import PersonMetadata from '@ui/person-metadata'
 import ResourceOverview from '@ui/resource-overview'
 import ResourceTitle from '@ui/resource-title'
@@ -39,6 +40,7 @@ Vue.component('HeaderNav', HeaderNav)
 Vue.component('HomepageVisualization', HomepageVisualization)
 Vue.component('LanguageSelector', LanguageSelector)
 Vue.component('ObjectHome', ObjectHome)
+Vue.component('ObjectMetadata', ObjectMetadata)
 Vue.component('PersonMetadata', PersonMetadata)
 Vue.component('ResourceOverview', ResourceOverview)
 Vue.component('ResourceTitle', ResourceTitle)

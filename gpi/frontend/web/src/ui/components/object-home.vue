@@ -1,13 +1,13 @@
 <template>
   <section>
-    <async-flipper :resolved-with="objectProps">
+    <async-flipper :resolved-with="artObjectProps">
       <resource-title
-        :name="object.label"
-        :qualifier="object.qualifier"
-        :icon="object.ui.icon"
+        :name="artObject.label"
+        :qualifier="artObject.qualifier"
+        :icon="artObject.ui.icon"
       />
-    <!---<person-metadata :person="person" />
-      <getty-tabs>
+      <object-metadata :art-object="artObject" />
+      <!--<getty-tabs>
         <div
           slot="tabsLabel"
           class="level-item is-narrow">
@@ -46,11 +46,11 @@ export default {
     id () {
       return this.$route.params.id
     },
-    object () {
+    artObject () {
       // TODO: Investigate crockjs Maybe object
-      return new ArtObject(this.objectProps || {})
+      return new ArtObject(this.artObjectProps || {})
     },
-    objectProps () {
+    artObjectProps () {
       return this.objectById(this.id)
     },
   },
