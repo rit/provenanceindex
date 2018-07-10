@@ -15,7 +15,7 @@ msgstr ""
 "#-#-#-#-#  js.part.pot (UNKNOWN 0.0.0)  #-#-#-#-#\n"
 "Project-Id-Version: UNKNOWN 0.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-18 15:51-0700\n"
+"POT-Creation-Date: 2018-06-29 10:31-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: src/ui/components/blurb-resource.vue:25
+msgid "{{ label }}"
+msgstr ""
 
 #: src/ui/components/getty-footer.vue:16
 msgid "&copy; The J. Paul Getty Trust"
@@ -112,6 +116,14 @@ msgstr ""
 
 #: src/ui/components/getty-footer.vue:17
 msgid "Privacy Policy"
+msgstr ""
+
+#: src/ui/components/blurb-resource.vue:34
+msgid "Related Resources"
+msgstr ""
+
+#: src/ui/components/person-home.vue:13
+msgid "RELATED RESOURCES:"
 msgstr ""
 
 #: src/ui/components/resource-overview.vue:7

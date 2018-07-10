@@ -7,21 +7,47 @@
         :icon="person.ui.icon"
       />
       <person-metadata :person="person" />
-      <getty-tabs>
+      <getty-tabs
+        ref="tabs"
+        @GettyTabPaneSelected="showRelatedResource">
         <div
           slot="tabsLabel"
           class="level-item is-narrow">
-          RELATED RESOURCES:
+          <translate>RELATED RESOURCES:</translate>
         </div>
         <getty-tab-pane
-          label="Provenance Events"
-          icon="calendar">
-          Provenance Event List
+          ref="persons-pane"
+          label="Persons"
+          icon="user-circle"
+          data-cy="persons-pane">
+          <router-view
+            name="related-persons"
+            @RelatedPersonHome="selectPersonTabPane"/>
         </getty-tab-pane>
         <getty-tab-pane
+          ref="events-pane"
+          label="Provenance Events"
+          icon="calendar">
+          <router-view
+            name="related-events"
+            @RelatedEventHome="selectEventTabPane"/>
+        </getty-tab-pane>
+        <getty-tab-pane
+          ref="objects-pane"
           label="Objects"
           icon="paint-brush">
-          Objects List
+          <router-view
+            name="related-objects"
+            @RelatedObjectHome="selectObjectTabPane"/>
+        </getty-tab-pane>
+        <getty-tab-pane
+          ref="documents-pane"
+          label="Documents"
+          icon="book"
+          data-cy="documents-pane">
+          <router-view
+            name="related-documents"
+            @RelatedDocumentHome="selectDocumentTabPane"/>
         </getty-tab-pane>
       </getty-tabs>
 
@@ -38,6 +64,13 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Person from 'iso/models/person'
+
+const labelToNamedRoute = {
+  'Persons': 'person-related-persons',
+  'Provenance Events': 'person-related-events',
+  'Objects': 'person-related-objects',
+  'Documents': 'person-related-documents',
+}
 
 export default {
   name: 'PersonHome',
@@ -64,6 +97,22 @@ export default {
   },
   methods: {
     ...mapActions(['fetchPerson']),
+    showRelatedResource (tabPane) {
+      let name = labelToNamedRoute[tabPane.label]
+      this.$router.push({ name })
+    },
+    selectPersonTabPane () {
+      this.$refs.tabs.activatePane(this.$refs['persons-pane'])
+    },
+    selectEventTabPane () {
+      this.$refs.tabs.activatePane(this.$refs['events-pane'])
+    },
+    selectObjectTabPane () {
+      this.$refs.tabs.activatePane(this.$refs['objects-pane'])
+    },
+    selectDocumentTabPane () {
+      this.$refs.tabs.activatePane(this.$refs['documents-pane'])
+    },
   },
 }
 </script>

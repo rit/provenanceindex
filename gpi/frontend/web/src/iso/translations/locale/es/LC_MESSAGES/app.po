@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pixel 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-18 15:50-0700\n"
+"POT-Creation-Date: 2018-06-29 10:29-0700\n"
 "PO-Revision-Date: 2018-06-01 12:44-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -15,6 +15,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: src/ui/components/blurb-resource.vue:25
+msgid "{{ label }}"
+msgstr ""
 
 #: src/ui/components/getty-footer.vue:16
 msgid "&copy; The J. Paul Getty Trust"
@@ -106,6 +110,14 @@ msgstr "Nacionalidad"
 msgid "Privacy Policy"
 msgstr "Política de privacidad"
 
+#: src/ui/components/blurb-resource.vue:34
+msgid "Related Resources"
+msgstr "Recursos Relacionados"
+
+#: src/ui/components/person-home.vue:13
+msgid "RELATED RESOURCES:"
+msgstr "RECURSOS RELACIONADOS:"
+
 #: src/ui/components/resource-overview.vue:7
 msgid "Resource Types in the Provenance Index"
 msgstr "Tipos de recursos en el Índice de Procedencias"
@@ -170,3 +182,4 @@ msgstr "Muestra menos"
 #: src/ui/components/getty-ellipsis.vue:31
 msgid "Read More..."
 msgstr "Lee mas..."
+
