@@ -1,11 +1,12 @@
 <template>
   <div>
     <div
+      ref="descContent"
       :class="{ 'pi-show-content': showContent }"
       class="pi-slot-wrapper is-size-7">
       <slot/>
     </div>
-    <div>
+    <div v-if="isOverflown">
       <a
         class="is-uppercase is-size-7"
         href="#"
@@ -30,6 +31,9 @@ export default {
     moreOrLess () {
       return this.showContent ? this.$gettext('Show Less') : this.$gettext('Read More...')
     },
+  },
+  mounted () {
+    this.isOverflown = this.$refs.descContent.scrollHeight > this.$refs.descContent.clientHeight
   },
   methods: {
     toggleContent () {
