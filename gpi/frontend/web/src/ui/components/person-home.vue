@@ -18,7 +18,8 @@
         <getty-tab-pane
           ref="persons-pane"
           label="Persons"
-          icon="user-circle">
+          icon="user-circle"
+          data-cy="persons-pane">
           <router-view
             name="related-persons"
             @RelatedPersonHome="selectPersonTabPane"/>
@@ -42,7 +43,8 @@
         <getty-tab-pane
           ref="documents-pane"
           label="Documents"
-          icon="book">
+          icon="book"
+          data-cy="documents-pane">
           <router-view
             name="related-documents"
             @RelatedDocumentHome="selectDocumentTabPane"/>
