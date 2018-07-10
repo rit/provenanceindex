@@ -1,12 +1,10 @@
 <template>
   <div
-    v-if="Object.keys(resource).length !== 0"
     class="box columns getty-blurb-resource">
     <div class="column">
       <div class="media">
         <div class="media-left">
           <font-awesome-icon
-            v-if="resource.ui.icon"
             :icon="resource.ui.icon"
             size="3x"
           />

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="related">
     <blurb-resource :resource="related"/>
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
   name: 'RelatedPersonHome',
   data () {
     return {
-      related: {},
+      related: null,
     }
   },
   mounted () {
