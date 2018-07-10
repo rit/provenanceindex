@@ -25,6 +25,7 @@ export default {
   data () {
     return {
       showContent: false,
+      isOverflown: null,
     }
   },
   computed: {
