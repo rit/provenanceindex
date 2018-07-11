@@ -1,5 +1,6 @@
 <template>
-  <div class="box columns getty-blurb-resource">
+  <div
+    class="box columns getty-blurb-resource">
     <div class="column">
       <div class="media">
         <div class="media-left">
@@ -20,7 +21,7 @@
             <li
               v-for="[label, value] in resource.blurbFields()"
               :key="label" >
-              <span>{{ label }}</span>
+              <span><translate>{{ label }}</translate></span>
               {{ value }}
             </li>
           </ul>
@@ -29,7 +30,7 @@
     </div>
 
     <div class="column getty-related is-3">
-      <h2>Related Resources</h2>
+      <h2 v-translate>Related Resources</h2>
       <section>
         <div
           v-for="badge in resource.relatedCountBadges()"
@@ -38,6 +39,7 @@
           <count-badge
             :count="badge.count"
             :resource="badge.type"
+            :id="id"
           />
         </div>
       </section>
@@ -52,6 +54,12 @@ export default {
     resource: {
       required: true,
       type: Object,
+    },
+  },
+  // Remove after real API is implemented
+  computed: {
+    id () {
+      return this.resource.id.replace('stubbed id ', '')
     },
   },
 }

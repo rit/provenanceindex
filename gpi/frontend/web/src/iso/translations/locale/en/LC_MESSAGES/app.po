@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pixel 1.0.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-10 14:42-0700\n"
+"POT-Creation-Date: 2018-07-11 09:02-0700\n"
 "PO-Revision-Date: 2018-06-01 12:44-0700\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/ui/components/blurb-resource.vue:23
+msgid "{{ label }}"
+msgstr ""
 
 #: src/ui/components/getty-footer.vue:16
 msgid "&copy; The J. Paul Getty Trust"
@@ -135,6 +139,14 @@ msgstr ""
 
 #: src/ui/components/getty-footer.vue:17
 msgid "Privacy Policy"
+msgstr ""
+
+#: src/ui/components/blurb-resource.vue:32
+msgid "Related Resources"
+msgstr ""
+
+#: src/ui/components/person-home.vue:15
+msgid "RELATED RESOURCES:"
 msgstr ""
 
 #: src/ui/components/resource-overview.vue:7

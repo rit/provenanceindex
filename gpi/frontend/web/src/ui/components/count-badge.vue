@@ -1,20 +1,28 @@
 <template>
-  <a class="button">
+  <router-link
+    :to="{ name: namedRoute, params: { id: id }}"
+    class="button">
     <span class="icon">
       <font-awesome-icon :icon="icon" />
     </span>
     <span>{{ count }}</span>
-  </a>
+  </router-link>
 </template>
 
 <script>
 const icons = {
   'document': 'book',
   'event': 'calendar',
-  'object': 'image',
+  'object': 'paint-brush',
   'person': 'person',
 }
 
+const typeToNamedRoute = {
+  'person': 'person-related-persons',
+  'event': 'person-related-events',
+  'object': 'person-related-objects',
+  'document': 'person-related-documents',
+}
 export default {
   name: 'CountBadge',
   props: {
@@ -30,10 +38,17 @@ export default {
       required: true,
       type: Number,
     },
+    id: {
+      required: true,
+      type: String,
+    },
   },
   computed: {
     icon () {
       return icons[this.resource]
+    },
+    namedRoute () {
+      return typeToNamedRoute[this.resource]
     },
   },
 }

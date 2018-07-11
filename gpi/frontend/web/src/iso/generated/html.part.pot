@@ -5,6 +5,10 @@ msgstr ""
 "Generated-By: easygettext\n"
 "Project-Id-Version: \n"
 
+#: src/ui/components/blurb-resource.vue:23
+msgid "{{ label }}"
+msgstr ""
+
 #: src/ui/components/getty-footer.vue:16
 msgid "&copy; The J. Paul Getty Trust"
 msgstr ""
@@ -122,6 +126,14 @@ msgstr ""
 
 #: src/ui/components/getty-footer.vue:17
 msgid "Privacy Policy"
+msgstr ""
+
+#: src/ui/components/blurb-resource.vue:32
+msgid "Related Resources"
+msgstr ""
+
+#: src/ui/components/person-home.vue:15
+msgid "RELATED RESOURCES:"
 msgstr ""
 
 #: src/ui/components/resource-overview.vue:7

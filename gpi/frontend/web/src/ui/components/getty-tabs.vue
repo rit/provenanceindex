@@ -7,16 +7,17 @@ export default {
       panes: [],
     }
   },
-  mounted () {
-    this.currentPane = this.panes[0]
-  },
   methods: {
     handleTabClick (tab, e) {
       e.preventDefault()
       this.currentPane = tab
+      this.$emit('GettyTabPaneSelected', this.currentPane)
     },
     addPanes (pane) {
       this.panes.push(pane)
+    },
+    activatePane (pane) {
+      this.currentPane = pane
     },
   },
   render (h) {
@@ -46,7 +47,7 @@ export default {
                           <font-awesome-icon
                             icon={ pane.icon } />
                         </span>
-                        { pane.label }
+                        <translate>{ pane.label }</translate>
                       </a>
                     </li>
                   )
