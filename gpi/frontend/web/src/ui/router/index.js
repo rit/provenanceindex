@@ -80,6 +80,29 @@ export default new Router({
               path: '',
               name: 'object-home',
               component: ObjectHome,
+              children: [
+                {
+                  path: 'persons',
+                  alias: '',
+                  name: 'object-related-persons',
+                  components: { 'related-persons': RelatedPersonHome },
+                },
+                {
+                  path: 'events',
+                  name: 'object-related-events',
+                  components: { 'related-events': RelatedEventHome },
+                },
+                {
+                  path: 'objects',
+                  name: 'object-related-objects',
+                  components: { 'related-objects': RelatedObjectHome },
+                },
+                {
+                  path: 'documents',
+                  name: 'object-related-documents',
+                  components: { 'related-documents': RelatedDocumentHome },
+                },
+              ],
             },
           ],
         },
