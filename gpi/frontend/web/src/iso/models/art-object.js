@@ -33,7 +33,9 @@ class ArtObject extends Resource {
   }
   blurbFields () {
     return [
-      [],
+      ['Artist', this.artist],
+      ['Medium', this.medium],
+      ['Dimensions', this.dimensions],
     ]
   }
 
