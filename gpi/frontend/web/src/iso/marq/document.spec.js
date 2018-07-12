@@ -11,6 +11,6 @@ describe('Document', () => {
 
   it('flattens the props', () => {
     expect(doc.id).to.eq('http://lod.example.org/museum/LinguisticObject/K-10682')
-    expect(doc.label).to.equal('purchasing')
+    expect(doc.rowNumber).to.equal(11)
   })
 })

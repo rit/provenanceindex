@@ -49,6 +49,7 @@ const typeDefs = `
 
   type Document {
     id: ID!
+    rowNumber: Int
   }
 `
 

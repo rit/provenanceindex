@@ -58,6 +58,7 @@ const document = `
 {
   document {
     id
+    rowNumber
   }
 }
 `
