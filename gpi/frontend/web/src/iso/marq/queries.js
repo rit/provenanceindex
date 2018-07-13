@@ -54,11 +54,13 @@ const purchase = `
 }
 `
 
-const document = `
+const entry = `
 {
-  document {
+  entry {
     id
     rowNumber
+    note
+    genre
   }
 }
 `
@@ -69,5 +71,5 @@ module.exports = {
   'Person': person,
   // TODO: Assume all acquisitions are of type purchase
   'Acquisition': purchase,
-  'LinguisticObject': document,
+  'LinguisticObject': entry,
 }

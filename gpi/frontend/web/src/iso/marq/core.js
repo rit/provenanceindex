@@ -12,6 +12,7 @@ const ROOT_VALUE = null
 class Marq {
   walk ({ doc, context }) {
     let schema = this.resolve(doc)
+    // TODO determine the query with both doc.type and doc.classified_as.id
     let query = queries[doc.type]
     return graphql(schema, query, ROOT_VALUE, context)
   }
@@ -32,7 +33,7 @@ class Marq {
         purchase (obj, args, context, info) {
           return linkedData
         },
-        document (obj, args, context, info) {
+        entry (obj, args, context, info) {
           return linkedData
         },
       },
