@@ -1,5 +1,5 @@
 const { parser } = require('./index')
-const data = require('iso/json-ld/document')
+const data = require('iso/json-ld/stockbook-entry')
 
 describe('Document', () => {
   let doc
