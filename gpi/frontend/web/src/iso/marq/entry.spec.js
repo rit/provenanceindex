@@ -21,4 +21,12 @@ describe('Entry', () => {
   it('has genre', function() {
     expect(doc.genre).to.equal('Portrait')
   })
+
+  it('has attribute', function() {
+    expect(doc.attribute).to.equal('Painting')
+  })
+
+  it('has dimension', function() {
+    expect(doc.dimension).to.equal('20 1/8 x 24 1/8')
+  })
 })

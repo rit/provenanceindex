@@ -61,6 +61,8 @@ const entry = `
     rowNumber
     note
     genre
+    attribute
+    dimension
   }
 }
 `

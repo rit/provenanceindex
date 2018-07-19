@@ -21,6 +21,18 @@ const entryResolver = {
     let pairs = makePairs(doc.includes)
     let json = pairs['aat:300056462']
     return json.label
+  },
+
+  attribute (doc) {
+    let pairs = makePairs(doc.includes)
+    let json = pairs['aat:300191790']
+    return json.label
+  },
+
+  dimension (doc) {
+    let pairs = makePairs(doc.includes)
+    let json = pairs['aat:300266036']
+    return json.label
   }
 }
 

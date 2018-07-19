@@ -52,6 +52,8 @@ const typeDefs = `
     rowNumber: Int
     note: String
     genre: String
+    attribute: String
+    dimension: String
   }
 `
 
