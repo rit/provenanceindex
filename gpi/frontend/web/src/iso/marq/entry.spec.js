@@ -14,20 +14,20 @@ describe('Entry', () => {
     expect(doc.rowNumber).to.equal(11)
   })
 
-  it.only('has note', function() {
+  it('has note', function() {
     let note = doc.notes[0]
     expect(note).to.match(/^the only child of Colonel Nathaniel (.+)/)
   })
 
   it('has genre', function() {
-    expect(doc.genre).to.equal('Portrait')
+    expect(doc.genres).to.eql(['Portrait'])
   })
 
   it('has attribute', function() {
-    expect(doc.attribute).to.equal('Painting')
+    expect(doc.attributes).to.eql(['Painting'])
   })
 
   it('has dimension', function() {
-    expect(doc.dimension).to.equal('20 1/8 x 24 1/8')
+    expect(doc.dimensions).to.equal(['20 1/8 x 24 1/8'])
   })
 })

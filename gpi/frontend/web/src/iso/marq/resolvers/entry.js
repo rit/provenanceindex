@@ -1,6 +1,8 @@
 const { find, map } = require('lodash')
 const { makePairs } = require('iso/marq/utils')
 
+const toLabel = ({ label }) => label
+
 const entryResolver = {
   id (doc) {
     return doc.id
@@ -14,25 +16,25 @@ const entryResolver = {
   notes (doc) {
     let pairs = makePairs(doc.includes)
     let jsons = pairs['aat:300027200']
-    return map(jsons, ({ label }) => label)
+    return map(jsons, toLabel)
   },
 
-  genre (doc) {
+  genres (doc) {
     let pairs = makePairs(doc.includes)
-    let json = pairs['aat:300056462']
-    return json.label
+    let jsons = pairs['aat:300056462']
+    return map(jsons, toLabel)
   },
 
-  attribute (doc) {
+  attributes (doc) {
     let pairs = makePairs(doc.includes)
-    let json = pairs['aat:300191790']
-    return json.label
+    let jsons = pairs['aat:300191790']
+    return map(jsons, toLabel)
   },
 
-  dimension (doc) {
+  dimensions (doc) {
     let pairs = makePairs(doc.includes)
-    let json = pairs['aat:300266036']
-    return json.label
+    let jsons = pairs['aat:300266036']
+    return map(jsons, toLabel)
   }
 }
 

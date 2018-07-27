@@ -51,9 +51,9 @@ const typeDefs = `
     id: ID!
     rowNumber: Int
     notes: [String]
-    genre: String
-    attribute: String
-    dimension: String
+    genres: [String]
+    attributes: [String]
+    dimensions: [String]
   }
 `
 

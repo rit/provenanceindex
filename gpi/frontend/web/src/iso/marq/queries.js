@@ -60,9 +60,9 @@ const entry = `
     id
     rowNumber
     notes
-    genre
-    attribute
-    dimension
+    genres
+    attributes
+    dimensions
   }
 }
 `
