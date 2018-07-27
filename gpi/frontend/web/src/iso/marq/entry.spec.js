@@ -14,8 +14,9 @@ describe('Entry', () => {
     expect(doc.rowNumber).to.equal(11)
   })
 
-  it('has note', function() {
-    expect(doc.note).to.match(/^the only child of Colonel Nathaniel (.+)/)
+  it.only('has note', function() {
+    let note = doc.notes[0]
+    expect(note).to.match(/^the only child of Colonel Nathaniel (.+)/)
   })
 
   it('has genre', function() {

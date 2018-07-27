@@ -59,7 +59,7 @@ const entry = `
   entry {
     id
     rowNumber
-    note
+    notes
     genre
     attribute
     dimension

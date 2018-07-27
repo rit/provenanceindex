@@ -1,4 +1,4 @@
-const { find, includes, map, reduce } = require('lodash')
+const { find, includes, map, reduce, each } = require('lodash')
 
 function aat2Label ({ attId, groups }) {
   let found = find(groups, ({ classified_as }) => includes(classified_as, attId))
@@ -7,8 +7,12 @@ function aat2Label ({ attId, groups }) {
 
 function makePairs(jsons) {
   return reduce(jsons, (acc, json) => {
-    let key = json['classified_as'][0]['id']
-    acc[key] = json
+    let keys = map(json.classified_as, ({ id }) => id)
+    each(keys, (key) => {
+      let tally = acc[key] || []
+      tally.push(json)
+      acc[key] = tally
+    })
     return acc
   }, {})
 }

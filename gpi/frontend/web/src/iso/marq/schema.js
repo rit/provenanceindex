@@ -50,7 +50,7 @@ const typeDefs = `
   type Entry {
     id: ID!
     rowNumber: Int
-    note: String
+    notes: [String]
     genre: String
     attribute: String
     dimension: String

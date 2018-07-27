@@ -1,4 +1,4 @@
-const { find } = require('lodash')
+const { find, map } = require('lodash')
 const { makePairs } = require('iso/marq/utils')
 
 const entryResolver = {
@@ -11,10 +11,10 @@ const entryResolver = {
     return obj.value
   },
 
-  note (doc) {
+  notes (doc) {
     let pairs = makePairs(doc.includes)
-    let json = pairs['aat:300027200']
-    return json.label
+    let jsons = pairs['aat:300027200']
+    return map(jsons, ({ label }) => label)
   },
 
   genre (doc) {
